@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Henricus" script="inquisition.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="325" head="114" body="94" legs="114" feet="0" addons="2" />
+	<parameters>
+		<parameter key="message_greet" value="Hello! Do you want to {permission} in the inquisition?" />
+	</parameters>
+</npc>

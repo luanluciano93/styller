@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Protect Castle" nameDescription="a Protect Castle" race="undead" experience="25000" speed="0" manacost="0">
+<health now="110000" max="110000"/>
+<look typeex="9779"/>
+<targetchange interval="5000" chance="20"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="0"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="100"/>
+<flag hidehealth="0"/>
+</flags>
+<attacks>
+<attack name="energy" interval="2000" chance="100" target="3" range="10" radius="3" min="-50" max="-100">
+<attribute key="areaEffect" value="teleport"/>
+<attribute key="shootEffect" value="energyball"/>
+</attack>
+<attack name="fire" interval="2000" chance="100" target="3" range="10" radius="4" min="-50" max="-100">
+<attribute key="areaEffect" value="fireattack"/>
+<attribute key="shootEffect" value="energyball"/>
+</attack>
+</attacks>
+<defenses armor="1" defense="1"/>
+<immunities>
+<immunity physical="0"/>
+<immunity energy="1"/>
+<immunity fire="1"/>
+<immunity poison="0"/>
+<immunity ice="0"/>
+<immunity holy="0"/>
+<immunity death="0"/>
+<immunity lifedrain="1"/>
+<immunity manadrain="1"/>
+<immunity paralyze="1"/>
+<immunity drunk="1"/>
+<immunity outfit="1"/>
+<immunity invisible="1"/>
+</immunities>
+<loot>
+<item id="2518" countmax="1" chance="100000000"/><!-- gold coin -->
+</loot>
+</monster>

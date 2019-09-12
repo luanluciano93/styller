@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Riona" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="138" head="57" body="59" legs="40" feet="76" addons="0" />
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="backpack,1988,20;pick,2553,10;shovel,2554,20;rope,2120,50" />
+		<parameter key="shop_buyable" value="backpack,1988,20;pick,2553,10;blessed wooden stake,5942,10000;shovel,2554,20;rope,2120,50;brocade backpack,9774,50;camouflage backpack,3940,50;moon backpack,10521,50;
+		crown backpack,10522,50;rust remover,9930,7000;minotaur backpack,11238,100;dragon backpack,11237,150;expedition bag,11236,90;expedition backpack,11235,100;machete,2420,10000"/>
+	</parameters>
+</npc>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Aldo" script="soft.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="133" head="95" body="86" legs="86" feet="38" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I've been working hard these days in this project, I can now repair your dear friend {soft boots}." />
+	</parameters>
+</npc>

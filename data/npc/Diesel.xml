@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Diesel" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="325" head="0" body="114" legs="0" feet="0" addons="3" />
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I will soon have the auction system for the website." />
+	</parameters>
+</npc>

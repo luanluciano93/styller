@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Anderson" script="default.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="134" head="114" body="12" legs="90" feet="115" addons="1" />
+	<parameters>
+		<parameter key="module_travel" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. You don't know my ship rotes? say {travel} and I help you!"/>
+		<parameter key="travel_destinations" value="vampire volcano,543,209,7,100; dragon lair,682,225,7,100; hell human,931,113,6,100; magic cathedral,866,227,7,100; giants  lair,639,434,6,100"/>
+	</parameters>
+</npc>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talkactions>
+	<!-- commands -->
+	<talkaction words="/ban" separator=" " script="TFS/ban.lua" />
+	<talkaction words="/ipban" separator=" " script="TFS/ipban.lua" />
+	<talkaction words="/unban" separator=" " script="TFS/unban.lua" />
+	<talkaction words="/up" script="TFS/up.lua" />
+	<talkaction words="/down" script="TFS/down.lua" />
+	<talkaction words="/c" separator=" " script="TFS/teleport_creature_here.lua" />
+	<talkaction words="/goto" separator=" " script="TFS/teleport_to_creature.lua" />
+	<talkaction words="/owner" separator=" " script="TFS/owner.lua" />
+	<talkaction words="/t" script="TFS/teleport_home.lua" />
+	<talkaction words="/town" separator=" " script="TFS/teleport_to_town.lua" />
+	<talkaction words="/a" separator=" " script="TFS/teleport_ntiles.lua" />
+	<!-- <talkaction words="/pos" separator=" " script="TFS/position.lua" /> -->
+	<talkaction words="/info" separator=" " script="TFS/info.lua" />
+	<talkaction words="/r" separator=" " script="TFS/removething.lua" />
+	<talkaction words="/kick" separator=" " script="TFS/kick.lua" />
+	<talkaction words="/openserver" script="TFS/openserver.lua" />
+	<talkaction words="/closeserver" separator=" " script="TFS/closeserver.lua" />
+	<talkaction words="/B" separator=" " script="TFS/broadcast.lua" />
+	<talkaction words="/m" separator=" " script="TFS/place_monster.lua" />
+	<talkaction words="/i" separator=" " script="TFS/create_item.lua" />
+	<talkaction words="/s" separator=" " script="TFS/place_npc.lua" />
+	<talkaction words="/addtutor" separator=" " script="TFS/add_tutor.lua" />
+	<talkaction words="/removetutor" separator=" " script="TFS/remove_tutor.lua" />
+	<talkaction words="/looktype" separator=" " script="TFS/looktype.lua" />
+	<talkaction words="/summon" separator=" " script="TFS/place_summon.lua" />
+	<talkaction words="/chameleon" separator=" " script="TFS/chameleon.lua" />
+	<talkaction words="/addskill" separator=" " script="TFS/add_skill.lua" />
+	<talkaction words="/mccheck" script="TFS/mccheck.lua" />
+	<talkaction words="/ghost" script="TFS/ghost.lua" />
+	<talkaction words="/clean" script="TFS/clean.lua" />
+	<talkaction words="/hide" script="TFS/hide.lua" />
+	<talkaction words="/reload" separator=" " script="TFS/reload.lua" />
+	<talkaction words="/raid" separator=" " script="TFS/force_raid.lua" />
+
+	<!-- player talkactions -->
+	<talkaction words="!buypremium" script="TFS/buyprem.lua" />
+	<talkaction words="!buyhouse" script="TFS/buyhouse.lua" />
+	<talkaction words="!sellhouse" separator=" " script="TFS/sellhouse.lua" />
+	<talkaction words="!leavehouse" script="TFS/leavehouse.lua" />
+	<talkaction words="!uptime" script="TFS/uptime.lua" />
+	<talkaction words="!kills" script="TFS/kills.lua" />
+	<talkaction words="!online" script="TFS/online.lua" />
+	<talkaction words="!serverinfo" script="TFS/serverinfo.lua" />
+	<!-- <talkaction words="!deathlist" script="TFS/deathlist.lua" /> -->
+	<!-- <talkaction words="!changesex" script="TFS/changesex.lua" /> -->
+
+	<!-- test talkactions
+		<talkaction words="!z" separator=" " script="TFS/magiceffect.lua" />
+		<talkaction words="!x" separator=" " script="TFS/animationeffect.lua" />
+	-->
+
+	<!-- Custom Systems -->
+		<!-- commands -->
+		<talkaction words="/serversave" script="serversave.lua" />
+		<talkaction words="/addons" separator=" " script="alladdons.lua" />
+		<talkaction words="/pos" separator=" " script="teleport_to_pos.lua" />
+		<talkaction words="/attr" separator=" " script="attributes.lua" />
+
+		<!-- Player -->
+		<!-- <talkaction words="!spells" script="spells.lua" /> -->
+		<talkaction words="!save" script="save.lua" />
+		<talkaction words="!commands" script="commands.lua" />
+		<talkaction words="!aol" script="aol.lua" />
+		<talkaction words="!bless" script="bless.lua" />
+		<talkaction words="!addon" separator=" " script="addondoll.lua" />
+		<!-- <talkaction words="!offer" separator=" " script="auction_system.lua" /> -->
+</talkactions>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gust" script="default.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="151" head="114" body="12" legs="90" feet="115" addons="1" />
+	<parameters>
+		<parameter key="module_travel" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. You don't know my ship rotes? say {travel} and I help you!"/>
+		<parameter key="travel_destinations" value="frost nevada,847,570,7,100;blood city,160,54,7,100"/>
+	</parameters>
+</npc>

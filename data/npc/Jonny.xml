@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Jonny" script="default.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150" />
+	<look type="151" head="114" body="12" legs="90" feet="115" addons="1" />
+	<parameters>
+		<parameter key="module_travel" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Wanna you meet my ship rotes? If you say {travel}, I'll can help you!"/>
+		<parameter key="travel_destinations" value="blue city,485,45,13,100;darashia,1191,1115,6,150;light city,756,1052,6,100"/>
+	</parameters>
+</npc>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Dude" script="default.lua" walkinterval="2000">
+	<health now="100" max="100" />
+	<look type="160" head="20" body="100" legs="50" feet="99" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Welcome to my tavern!" />
+		<parameter key="message_decline" value="Okay." />
+		<parameter key="message_farewell" value="Goodbye, and come again!" />
+		<parameter key="message_walkaway" value="Goodbye?" />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="wine,2006,10,15;mug of beer,2012,3,3;" />
+	</parameters>
+</npc>

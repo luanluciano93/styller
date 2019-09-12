@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Old Jumper" script="default.lua" walkinterval="0" skull="green" floorchange="0">
+	<health now="150" max="150" />
+	<look type="129" head="95" body="116" legs="121" feet="115" addons="1" />
+	<parameters>
+		<parameter key="module_travel" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. If you don't know where to flow, say {temple}."/>
+		<parameter key="travel_destinations" value="temple,160,47,7,0"/>
+	</parameters>
+</npc>

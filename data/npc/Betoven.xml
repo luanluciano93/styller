@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Betoven" script="default.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="151" head="114" body="12" legs="90" feet="115" addons="1" corpse="2212"/>
+	<parameters>
+		<parameter key="module_travel" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. If you don't know where to flow, say {travel}."/>
+		<parameter key="travel_destinations" value="blood city,1022,986,6,200;tiquanda,1056,1005,7,200"/>
+	</parameters>
+</npc>

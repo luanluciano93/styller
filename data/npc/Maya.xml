@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Maya" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="58" head="20" body="30" legs="40" feet="50" />
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I can sell you an energy very difficult to be extracted. With it you can strengthen your equipment just once." />
+		<parameter key="shop_buyable" value="pure energy,8306,300000" />
+	</parameters>
+</npc>

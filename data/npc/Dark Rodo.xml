@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Dark Rodo" script="runes.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="133" head="0" body="86" legs="0" feet="38" addons="1"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell runes, potions, wands and rods. Say {trade}." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+	</parameters>
+</npc>

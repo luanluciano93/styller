@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Castle" nameDescription="a Gate" race="undead" experience="25000" speed="0" manacost="0">
+<health now="400000" max="400000"/>
+<look typeex="9408"/>
+<targetchange interval="5000" chance="20"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="0"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="100"/>
+<flag hidehealth="0"/>
+</flags>
+<attacks>
+<attack name="melee" interval="50000" skill="0" attack="0"/>
+</attacks>
+<defenses armor="1" defense="1"/>
+<immunities>
+<immunity physical="0"/>
+<immunity energy="0"/>
+<immunity fire="0"/>
+<immunity poison="0"/>
+<immunity ice="0"/>
+<immunity holy="0"/>
+<immunity death="0"/>
+<immunity lifedrain="1"/>
+<immunity manadrain="1"/>
+<immunity paralyze="1"/>
+<immunity drunk="1"/>
+<immunity outfit="1"/>
+<immunity invisible="1"/>
+</immunities>
+<loot>
+<item id="2148" countmax="20" chance="100000"/><!-- gold coin -->
+</loot>
+</monster>

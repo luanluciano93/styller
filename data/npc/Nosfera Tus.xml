@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Nosfera Tus" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="237" head="0" body="0" legs="0" feet="0" />
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="divine frag remover,11098,200000;mysterious pet,11191,100000" />
+	</parameters>
+</npc>

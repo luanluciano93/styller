@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Morgan" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="128" head="114" body="0" legs="114" feet="0" addons="3" />
+	<parameters>
+		<parameter key="shop_sellable" value="ring of the sky,2123,5000; gold ring,2179,2500"/>
+		<parameter key="shop_buyable" value="ring of healing,2214,2000;energy ring,2167,2000;time ring,2169,2000;sword ring,2207,2000;axe ring,2208,2000;club ring,2209,2000"/>
+	</parameters>
+</npc>
