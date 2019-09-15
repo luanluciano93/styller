@@ -2,6 +2,7 @@
 <creaturescripts>
 	<event type="login" name="PlayerLogin" script="login.lua" />
 	<event type="logout" name="PlayerLogout" script="logout.lua" />
+	<event type="login" name="FirstItems" script="firstitems.lua" />
 	<event type="login" name="RegenerateStamina" script="regenerate_stamina.lua" />
 	<event type="death" name="PlayerDeath" script="player_death.lua" />
 	<event type="death" name="DropLoot" script="drop_loot.lua" />
