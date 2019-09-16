@@ -1,6 +1,6 @@
 function onSay(player, words, param)
-	if player:getExhaustion(1000) <= 0 then
-		player:setExhaustion(1000, 2)
+	if player:getExhaustion() <= 0 then
+		player:setExhaustion(2)
 
 		if not Tile(player:getPosition()):hasFlag(TILESTATE_PROTECTIONZONE) then
 			player:sendCancelMessage("To buy amulet of loss you need to be in protection zone.")

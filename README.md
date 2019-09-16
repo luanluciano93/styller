@@ -4,12 +4,12 @@ Desenvolvimento de um servidor styller usando a OTX3 (projeto baseado no TFS 1.3
 
 ### Informações do Servidor e Sistemas:
 - Versão: 8.60
-- Engine: OTX3 [rev948](https://github.com/mattyx14/otxserver)
+- Engine: [OTX3](https://github.com/mattyx14/otxserver) nas últimas revisões.
 - [Cidades](https://github.com/luanluciano93/styller/wiki/CIDADES), [sistemas](https://github.com/luanluciano93/styller/wiki/SISTEMAS) e [quests](https://github.com/luanluciano93/styller/wiki/QUESTS).
 - [Atualizações](https://github.com/luanluciano93/styller/wiki/CHANGES).
 
 ### Dúvidas, erros, dicas e contribuições:
-Caso tenha dúvidas, ou queira resolver algum bug/erro, dar dicas para o projeto, ou também ajudar em sua construção, crie um [issue](https://github.com/luanluciano93/styller/issues/new) / [pull requests](https://github.com/luanluciano93/styller/pulls) pelo github ou use o [tópico do projeto](https://tibiaking.com/forums/topic/96672-styller-2019/) no fórum tibiaking.
+Caso tenha dúvidas, ou queira resolver algum bug/erro, dar dicas para o projeto, ou também ajudar em sua construção, crie um [issue](https://github.com/luanluciano93/styller/issues/new) / [pull requests](https://github.com/luanluciano93/styller/pulls) pelo github ou use o [tópico do projeto](https://tibiaking.com/forums/topic/96672-otx3-860-styller-2019/) no fórum tibiaking.
 
 ### Créditos:
 - luanluciano93
@@ -19,4 +19,4 @@ Caso tenha dúvidas, ou queira resolver algum bug/erro, dar dicas para o projeto
 - [outros](https://github.com/luanluciano93/styller/wiki/COLABORADORES)
 
 ### Download:
-- [Download-1](https://www.dropbox.com/s/7ggh1gefwksg9ee/styller.rar?dl=0) ou [Download-2](https://www.4shared.com/rar/uE6O6yqrgm/styller.html).
+- [Download-1](https://www.4shared.com/rar/bkv-Uw_Tgm/styller.html) ou [Download-2](https://www.dropbox.com/s/tk7lfr7ja2mjrn5/styller.rar?dl=0).

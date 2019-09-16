@@ -12,7 +12,6 @@
 	<talkaction words="/t" script="TFS/teleport_home.lua" />
 	<talkaction words="/town" separator=" " script="TFS/teleport_to_town.lua" />
 	<talkaction words="/a" separator=" " script="TFS/teleport_ntiles.lua" />
-	<!-- <talkaction words="/pos" separator=" " script="TFS/position.lua" /> -->
 	<talkaction words="/info" separator=" " script="TFS/info.lua" />
 	<talkaction words="/r" separator=" " script="TFS/removething.lua" />
 	<talkaction words="/kick" separator=" " script="TFS/kick.lua" />
@@ -37,34 +36,26 @@
 
 	<!-- player talkactions -->
 	<talkaction words="!buypremium" script="TFS/buyprem.lua" />
-	<talkaction words="!buyhouse" script="TFS/buyhouse.lua" />
 	<talkaction words="!sellhouse" separator=" " script="TFS/sellhouse.lua" />
 	<talkaction words="!leavehouse" script="TFS/leavehouse.lua" />
 	<talkaction words="!uptime" script="TFS/uptime.lua" />
 	<talkaction words="!kills" script="TFS/kills.lua" />
 	<talkaction words="!online" script="TFS/online.lua" />
 	<talkaction words="!serverinfo" script="TFS/serverinfo.lua" />
-	<!-- <talkaction words="!deathlist" script="TFS/deathlist.lua" /> -->
-	<!-- <talkaction words="!changesex" script="TFS/changesex.lua" /> -->
 
-	<!-- test talkactions
-		<talkaction words="!z" separator=" " script="TFS/magiceffect.lua" />
-		<talkaction words="!x" separator=" " script="TFS/animationeffect.lua" />
-	-->
+	<!----------------------- Custom Systems ------------------------->
+	<!-- commands -->
+	<talkaction words="/serversave" script="serversave.lua" />
+	<talkaction words="/addons" separator=" " script="alladdons.lua" />
+	<talkaction words="/pos" separator=" " script="teleport_to_pos.lua" />
+	<talkaction words="/attr" separator=" " script="attributes.lua" />
 
-	<!-- Custom Systems -->
-		<!-- commands -->
-		<talkaction words="/serversave" script="serversave.lua" />
-		<talkaction words="/addons" separator=" " script="alladdons.lua" />
-		<talkaction words="/pos" separator=" " script="teleport_to_pos.lua" />
-		<talkaction words="/attr" separator=" " script="attributes.lua" />
-
-		<!-- Player -->
-		<!-- <talkaction words="!spells" script="spells.lua" /> -->
-		<talkaction words="!save" script="save.lua" />
-		<talkaction words="!commands" script="commands.lua" />
-		<talkaction words="!aol" script="aol.lua" />
-		<talkaction words="!bless" script="bless.lua" />
-		<talkaction words="!addon" separator=" " script="addondoll.lua" />
-		<!-- <talkaction words="!offer" separator=" " script="auction_system.lua" /> -->
+	<!-- Player -->
+	<talkaction words="!buyhouse" script="buyhouse.lua" />
+	<talkaction words="!save" script="save.lua" />
+	<talkaction words="!commands" script="commands.lua" />
+	<talkaction words="!aol" script="aol.lua" />
+	<talkaction words="!bless" script="bless.lua" />
+	<talkaction words="!addon" separator=" " script="addondoll.lua" />
+	<talkaction words="!offer" separator=" " script="auction_system.lua" />
 </talkactions>

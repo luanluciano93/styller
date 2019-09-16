@@ -1,6 +1,6 @@
 function onSay(player, words, param)
-	if player:getExhaustion(1000) <= 0 then
-		player:setExhaustion(1000, 2)
+	if player:getExhaustion() <= 0 then
+		player:setExhaustion(2)
 
 		if not Tile(player:getPosition()):hasFlag(TILESTATE_PROTECTIONZONE) then
 			player:sendCancelMessage("To buy bless you need to be in protection zone.")
@@ -29,7 +29,7 @@ function onSay(player, words, param)
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		end
 	else
-		player:sendCancelMessage("You're exhausted for: "..player:getExhaustion(1000).." seconds.")
+		player:sendCancelMessage("You're exhausted.")
 	end
 	return false
 end

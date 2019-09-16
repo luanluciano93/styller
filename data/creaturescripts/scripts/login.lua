@@ -56,7 +56,7 @@ function onLogin(player)
 	if stats then
 		stats.playerId = player:getId()
 	end
-	
+
     -- Events
     for i = 1, #events do
         player:registerEvent(events[i])
@@ -66,74 +66,8 @@ function onLogin(player)
 		player:setStorageValue(Storage.combatProtectionStorage, os.time() + 10)
 		onMovementRemoveProtection(playerId, player:getPosition(), 10)
 	end
-	db.query('INSERT INTO `players_online` (`player_id`) VALUES (' .. playerId .. ')')
-	
-	-- Msg to Premium
-	-- if player:isPremium() then
-	-- end
-	
-	--[[
-	if (InitArenaScript ~= 0) then
-		InitArenaScript = 1
-		-- make arena rooms free
-		for i = 42300, 42309 do
-			setGlobalStorageValue(i, 0)
-			setGlobalStorageValue(i+100, 0)
-		end
-    end
-    -- if he did not make full arena 1 he must start from zero
-    if getPlayerStorageValue(cid, 42309) < 1 then
-        for i = 42300, 42309 do
-            setPlayerStorageValue(cid, i, 0)
-        end
-    end
-    -- if he did not make full arena 2 he must start from zero
-    if getPlayerStorageValue(cid, 42319) < 1 then
-        for i = 42310, 42319 do
-            setPlayerStorageValue(cid, i, 0)
-        end
-    end
-    -- if he did not make full arena 3 he must start from zero
-    if getPlayerStorageValue(cid, 42329) < 1 then
-        for i = 42320, 42329 do
-            setPlayerStorageValue(cid, i, 0)
-        end
-    end
-    if getPlayerStorageValue(cid, 42355) == -1 then
-        setPlayerStorageValue(cid, 42355, 0) -- did not arena level
-    end
-    setPlayerStorageValue(cid, 42350, 0) -- time to kick 0
-    setPlayerStorageValue(cid, 42352, 0) -- is not in arena
-	
-		-- Set Client XP Gain Rate
-	if Game.getStorageValue(GlobalStorage.XpDisplayMode) > 0 then
-		displayRate = Game.getExperienceStage(player:getLevel())
-		else
-		displayRate = 1
-	end
-	local staminaMinutes = player:getStamina()
-	local storeBoost = player:getExpBoostStamina()
-	if staminaMinutes > 2400 and player:isPremium() and storeBoost > 0 then
-		player:setBaseXpGain(displayRate*2*100) -- Premium + Stamina boost + Store boost
-	elseif staminaMinutes > 2400 and player:isPremium() and storeBoost <= 0 then
-		player:setBaseXpGain(displayRate*1.5*100) -- Premium + Stamina boost
-	elseif staminaMinutes <= 2400 and staminaMinutes > 840 and player:isPremium() and storeBoost > 0 then
-		player:setBaseXpGain(displayRate*1.5*100) -- Premium + Store boost
-	elseif staminaMinutes > 840 and storeBoost > 0 then
-		player:setBaseXpGain(displayRate*1.5*100) -- FACC + Store boost
-	elseif staminaMinutes <= 840 and storeBoost > 0 then
-		player:setBaseXpGain(displayRate*1*100) -- ALL players low stamina + Store boost
-	elseif staminaMinutes <= 840 then
-		player:setBaseXpGain(displayRate*0.5*100) -- ALL players low stamina
-	end
 
-	if player:getClient().version > 1110 then
-		local worldTime = getWorldTime()
-		local hours = math.floor(worldTime / 60)
-		local minutes = worldTime % 60
-		player:sendTibiaTime(hours, minutes)
-	end
-	]]--
+	db.query('INSERT INTO `players_online` (`player_id`) VALUES (' .. playerId .. ')')
 
 	return true
 end

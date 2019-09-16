@@ -289,6 +289,31 @@ function Player.withdrawMoney(self, amount)
 	return true
 end
 
+function Player.removeMoneyNpc(self, amount)
+	local amount = tonumber(amount)
+	if not amount then
+		return false
+	end
+
+	local moneyCount = self:getMoney()
+	local bankCount = self:getBankBalance()
+	if amount > (moneyCount + bankCount) then
+		return false
+	end
+
+	if not self:removeMoney(math.min(amount, moneyCount)) then
+		return false
+	elseif amount > moneyCount then
+		self:setBankBalance(bankCount - math.max(amount - moneyCount, 0))
+		if moneyCount == 0 then
+			self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d gold from bank account. Your account balance is now %d gold."):format(amount, self:getBankBalance()))
+		else
+			self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d from inventory and %d gold from bank account. Your account balance is now %d gold."):format(moneyCount, amount - moneyCount, self:getBankBalance()))
+		end
+	end
+	return true
+end
+
 function Item.setDescription(self, description)
 	if description ~= '' then
 		self:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, description)
@@ -500,12 +525,12 @@ function table.unserialize(str)
 	return loadstring("return " .. str)()
 end
 
-function Player.setExhaustion(self, value, time)
-	return self:setStorageValue(value, time + os.time())
+function Player.setExhaustion(self, time)
+	return self:setStorageValue(Storage.exhaustion, time + os.time())
 end
 
-function Player.getExhaustion(self, value)
-	local storage = self:getStorageValue(value)
+function Player.getExhaustion(self)
+	local storage = self:getStorageValue(Storage.exhaustion)
 	if storage <= 0 then
 		return 0
 	end

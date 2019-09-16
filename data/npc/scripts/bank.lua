@@ -55,7 +55,7 @@ function creatureSayCallback(cid, type, msg)
     end
     
 	local player = Player(cid)
-	if player:getExhaustion(Storage.exausted) > 0 then
+	if player:getExhaustion() > 0 then
 		npcHandler:say('You need to wait a time.', cid)
 		Topic[cid] = nil
 	
@@ -110,7 +110,7 @@ function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, 'yes') and Topic[cid] == 2 then
 		if player:removeMoney(count[cid]) then
 			player:setBankBalance(player:getBankBalance() + count[cid])
-			player:setExhaustion(Storage.exausted, 2)
+			player:setExhaustion(2)
 			npcHandler:say('Alright, we have added the amount of ' .. count[cid] .. ' gold to your balance. You can withdraw your money anytime you want to.', cid)
 		else
 			npcHandler:say('I am inconsolable, but it seems you have lost your gold. I hope you get it back.', cid)
@@ -160,7 +160,7 @@ function creatureSayCallback(cid, type, msg)
 			if player:getFreeCapacity() >= getMoneyWeight(count[cid]) then
 				player:addMoney(count[cid])
 				player:setBankBalance(player:getBankBalance() - count[cid])
-				player:setExhaustion(Storage.exausted, 2)
+				player:setExhaustion(2)
 				npcHandler:say('Here you are, ' .. count[cid] .. ' gold. Please let me know if there is something else I can do for you.', cid)
 			else
                 npcHandler:say('Whoah, hold on, you have no room in your inventory to carry all those coins. I don\'t want you to drop it on the floor, maybe come back with a cart!', cid)
@@ -242,11 +242,11 @@ function creatureSayCallback(cid, type, msg)
 			if transferToPlayer then
 				player:setBankBalance(player:getBankBalance() - count[cid])
 				transferToPlayer:setBankBalance(transferToPlayer:getBankBalance() + count[cid])
-				player:setExhaustion(Storage.exausted, 2)
+				player:setExhaustion(2)
 				npcHandler:say('Very well. You have transferred ' .. count[cid] .. ' gold to ' .. getPlayerName(v) .. '.', cid)
 			elseif findPlayer(transfer[cid]):lower() == transfer[cid]:lower() then
 				player:setBankBalance(player:getBankBalance() - count[cid])
-				player:setExhaustion(Storage.exausted, 2)
+				player:setExhaustion(2)
 				db.query("UPDATE `players` SET `balance` = `balance` + '" .. count[cid] .. "' WHERE `name` = " .. db.escapeString(transfer[cid]))
 				npcHandler:say('Very well. You have transferred ' .. count[cid] .. ' gold to ' .. findPlayer(transfer[cid]) .. '.', cid)
 			else
