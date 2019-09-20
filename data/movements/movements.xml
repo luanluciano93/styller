@@ -18,7 +18,10 @@
 	<movevent event="StepIn" fromuid="2021" touid="2028" script="quests/hotaQuestTeleport.lua" /> <!-- HOTA Quest -->
 	<movevent event="StepIn" fromuid="2029" touid="2030" script="quests/inquisitionQuestTeleport.lua" /> <!-- Inquisition Quest -->
 	<movevent event="StepIn" uniqueid="9609" script="quests/inquisitionQuestOutfit.lua" /> <!-- Inquisition Quest Outfit -->
-	
+
+	<!-- Events -->
+	<movevent event="StepIn" actionid="9612" script="events/battlefield.lua"/> <!-- Battlefield Event -->
+
 	<!-- Decaying tiles -->
 	<movevent event="StepIn" itemid="293" script="decay.lua" />
 	<movevent event="StepIn" itemid="461" script="decay.lua" />

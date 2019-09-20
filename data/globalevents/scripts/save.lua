@@ -1,7 +1,7 @@
 local function cleanServer()
 	cleanMap()
 	saveServer()
-	broadcastMessage("Clean map completed and the next clean at on 2 hours.", MESSAGE_STATUS_CONSOLE_RED)
+	broadcastMessage("Clean map completed and the next clean at on 4 hours.", MESSAGE_STATUS_CONSOLE_RED)
 end
 
 function onThink(interval)

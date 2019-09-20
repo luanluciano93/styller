@@ -38,13 +38,13 @@
 		<action uniqueid="8854" script="quests/inquisition_reward.lua" /> <!-- warsinger bow -->
 		<action uniqueid="8924" script="quests/inquisition_reward.lua" /> <!-- hellforged axe -->
 
-		<action uniqueid="2476" script="quests/quests.lua"/>
-		<action uniqueid="2477" script="quests/quests.lua"/>
-		<action uniqueid="2392" script="quests/quests.lua"/>
-		<action uniqueid="2432" script="quests/quests.lua"/>
-		<action uniqueid="2514" script="quests/quests.lua"/> <!-- mastermind shield -->
-		<action uniqueid="2480" script="quests/quests.lua"/>
-		<action uniqueid="2475" script="quests/quests.lua"/>
+		<action uniqueid="2476" script="quests/quests.lua"/> <!-- knight armor -->
+		<action uniqueid="2477" script="quests/quests.lua"/> <!-- knight legs -->
+		<action uniqueid="2392" script="quests/quests.lua"/> <!-- fire sword -->
+		<action uniqueid="2432" script="quests/quests.lua"/> <!-- fire axe -->
+		<action uniqueid="2514" script="quests/quests.lua"/> <!-- legion helmet -->
+		<action uniqueid="2480" script="quests/quests.lua"/> <!-- mastermind shield -->
+		<action uniqueid="2475" script="quests/quests.lua"/> <!-- warrior helmet -->
 		<action uniqueid="2656" script="quests/quests.lua"/> <!-- blue robe -->
 		<action uniqueid="2436" script="quests/quests.lua"/> <!-- skull staff -->
 		<action uniqueid="2187" script="quests/quests.lua"/> <!-- wand of inferno -->

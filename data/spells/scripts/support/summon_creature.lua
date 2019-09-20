@@ -34,6 +34,12 @@ function onCastSpell(creature, variant)
 		return false
 	end
 
+	if creature:getStorageValue(Storage.events) > 0 then
+		creature:sendCancelMessage("You can not use spell in the event.")
+		creature:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+	
 	local position = creature:getPosition()
 	local summon = Game.createMonster(monsterName, position, true)
 	if not summon then

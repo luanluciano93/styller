@@ -12,5 +12,6 @@ function onSay(player, words, param)
 		return false
 	else
 		player:sendCancelMessage("You're exhausted.")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 	end
 end

@@ -68,6 +68,11 @@ function onLogin(player)
 	end
 
 	db.query('INSERT INTO `players_online` (`player_id`) VALUES (' .. playerId .. ')')
+	
+	if player:getStorageValue(Storage.events) > 0 then
+		player:setStorageValue(Storage.events, 0)
+		player:teleportTo(player:getTown():getTemplePosition())
+	end
 
 	return true
 end

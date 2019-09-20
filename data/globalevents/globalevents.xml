@@ -4,4 +4,8 @@
 	<globalevent type="record" name="PlayerRecord" script="record.lua" />
 	<globalevent name="Save" interval="14400000" script="save.lua" />
 	<globalevent name="ServerSave" time="05:55:00" script="serversave.lua" />
+
+	<!-- Battlefield Event -->
+	<globalevent name="Battlefield1" time="10:00:00" script="battlefield.lua" />
+	<globalevent name="Battlefield2" time="19:00:00" script="battlefield.lua" />
 </globalevents>

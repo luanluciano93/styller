@@ -30,12 +30,5 @@
 	<event class="Player" method="onCombatSpell" enabled="0" />
 
 	<!-- Custom methods -->
-	<!-- OTX Systems -->
-		<!-- Modified Scripts from TFS
-			onTargetCombat - removeCombatProtection on secure modes protection
-			onMoveItem - protections on rewardsystem and global depots
-			onTurn - move with ( ctrl + arrows ) like to TFS 0.3.x : 0.4
-			onTradeRequest - move with ( ctrl + arrows ) like to TFS 0.3.x : 0.4
-		-->
 	<event class="Monster" method="onSpawn" enabled="0" />
 </events>

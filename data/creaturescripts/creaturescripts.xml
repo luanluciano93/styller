@@ -6,19 +6,6 @@
 	<event type="death" name="PlayerDeath" script="player_death.lua" />
 	<event type="death" name="DropLoot" script="drop_loot.lua" />
 	<event type="extendedopcode" name="ExtendedOpcode" script="extended_opcode.lua" />
-
-	<!-- OTX Systems -->
-		<!-- Modified Scripts from TFS
-			firstitems.lua
-			login.lua
-				- onMovementRemoveProtection
-				- RewardSystem
-			logout.luya
-				- RewardSystem
-			playerdeath.lua
-				- sendWarStatus
-		-->
-
 	<event type="advance" name="AdvanceSave" script="advance_save.lua" />
 	<event type="login" name="AntiMc" script="anti_mc.lua" />
 	<event type="login" name="LevelProtection" script="level_protection.lua" />
@@ -36,4 +23,7 @@
 	<event type="login" name="Arena-Login" script="pvp_arena.lua"/>
 	<event type="logout" name="Arena-Logout" script="pvp_arena.lua"/>
 	<event type="preparedeath" name="Arena-Death" script="pvp_arena.lua"/>
+
+	<!-- Battlefield Event -->
+	<event type="preparedeath" name="Battlefield" script="events/battlefield.lua"/>
 </creaturescripts>

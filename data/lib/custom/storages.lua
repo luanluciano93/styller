@@ -24,5 +24,6 @@ Storage = {
 	bigQuest = 50015,
 	pvpArena = 50016,
 	blueLegsQuest = 50017,
-	exhaustion = 50018
+	exhaustion = 50018,
+	events = 50019
 }

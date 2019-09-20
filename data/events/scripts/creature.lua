@@ -1,5 +1,10 @@
 __picif = {}
 function Creature:onChangeOutfit(outfit)
+	if self:isPlayer() then
+		if self:getStorageValue(Storage.events) > 0 then
+			return false
+		end
+	end
 	return true
 end
 
@@ -98,6 +103,15 @@ function Creature:onTargetCombat(target)
 	if ADVANCED_SECURE_MODE ~= 0 then
 		if self:isPlayer() and target:isPlayer() then
 			if self:hasSecureMode() then
+				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
+			end
+		end
+	end
+	
+	-- events
+	if self:isPlayer() and target:isPlayer() then
+		if self:getStorageValue(Storage.events) > 0 then
+			if self:getStorageValue(Storage.events) == target:getStorageValue(Storage.events) then
 				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
 			end
 		end
