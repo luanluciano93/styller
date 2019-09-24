@@ -1646,14 +1646,6 @@
 		<monster name="Bug" x="0" y="0" z="8" spawntime="10" />
 		<monster name="Poison spider" x="-2" y="1" z="8" spawntime="60" />
 	</spawn>
-	<spawn centerx="965" centery="951" centerz="8" radius="5">
-		<monster name="Poison spider" x="-4" y="0" z="8" spawntime="60" />
-	</spawn>
-	<spawn centerx="977" centery="952" centerz="8" radius="5">
-		<monster name="Wasp" x="1" y="-3" z="8" spawntime="60" />
-		<monster name="Wasp" x="3" y="-3" z="8" spawntime="60" />
-	</spawn>
-	<spawn centerx="966" centery="953" centerz="8" radius="5" />
 	<spawn centerx="924" centery="955" centerz="8" radius="5" />
 	<spawn centerx="956" centery="958" centerz="8" radius="4">
 		<monster name="Bug" x="-2" y="-1" z="8" spawntime="60" />

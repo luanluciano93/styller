@@ -549,3 +549,13 @@ function delayedSay(text, delay)
 	local cid = getNpcCid()
 	addEvent(say, delay, {cid = cid, text = text})
 end
+
+-- function to events
+function eventActive()
+	for _, player in ipairs(Game.getPlayers()) do
+		if player:getStorageValue(Storage.events) > 0 then
+			return true
+		end
+	end
+	return false
+end

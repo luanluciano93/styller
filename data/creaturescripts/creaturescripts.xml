@@ -26,4 +26,10 @@
 
 	<!-- Battlefield Event -->
 	<event type="preparedeath" name="Battlefield" script="events/battlefield.lua"/>
+	
+	<!-- Zombie Event -->
+	<event type="healthchange" name="Zombie" script="events/zombie.lua" />
+	
+	<!-- DUCA Event -->
+	<event type="preparedeath" name="Duca" script="events/duca.lua"/>
 </creaturescripts>

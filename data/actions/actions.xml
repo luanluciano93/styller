@@ -10,7 +10,6 @@
 
 		<!-- Quests -->
 		<action actionid="2000" script="custom/system.lua" />
-		
 		<action uniqueid="7000" script="quests/annihilator_lever.lua" />
 		<action uniqueid="2494" script="quests/annihilator_reward.lua" /> <!-- demon armor -->
 		<action uniqueid="2400" script="quests/annihilator_reward.lua" /> <!-- magic sword -->
@@ -79,11 +78,56 @@
 		<action uniqueid="2488" script="quests/quests.lua"/> <!-- crown legs -->
 		<action uniqueid="2523" script="quests/quests.lua"/> <!-- blessed shield -->
 		<action uniqueid="2123" script="quests/quests.lua"/> <!-- ring of the sky -->
+
+		<!-- Levers -->
+		<action fromuid="8001" touid="8003" script="custom/levers.lua" />
+
+		<!-- Tools -->
+		<action itemid="5865" script="custom/juice squeezer.lua" />
+		<action itemid="5942" script="custom/skinning.lua" />
+		<action itemid="5908" script="custom/skinning.lua" />
+		<action itemid="9930" script="custom/rustremover.lua" />
+		<action itemid="10309" script="custom/noxiousclaw.lua" />
+		<action itemid="10511" script="custom/toolgear.lua" />
+		<action itemid="10513" script="custom/toolgear.lua" />
+		<action itemid="10515" script="custom/toolgear.lua" />
+
+		<!-- Ceremonial ankh - Ornamented brooch & Blessings -->
+		<action itemid="6561" script="custom/checkbless.lua" />
+		<action itemid="12424" script="custom/checkbless.lua" />
+		<action fromid="11258" toid="11262" script="custom/blessingCharms.lua" />
+
+		<!-- Offline Training -->
+		<!-- <action itemid="12397" script="custom/trainingbook.lua" /> -->
+		<action itemid="1444" script="custom/skilltrainer.lua" />
+		<action itemid="8836" script="custom/skilltrainer.lua" />
+		<action itemid="8626" script="custom/skilltrainer.lua" />
+		<action itemid="10353" script="custom/skilltrainer.lua" />
+		<action itemid="8777" script="custom/skilltrainer.lua" />
+
+		<!-- Dolls -->
+		<action itemid="5080" script="custom/dolls.lua" />
+		<action itemid="5669" script="custom/dolls.lua" />
+		<action itemid="6388" script="custom/dolls.lua" />
+		<action itemid="6512" script="custom/dolls.lua" />
+		<action itemid="6566" script="custom/dolls.lua" />
+		<action itemid="8974" script="custom/dolls.lua" />
+		<action itemid="8977" script="custom/dolls.lua" />
+		<action itemid="8981" script="custom/dolls.lua" />
+		<action itemid="8982" script="custom/dolls.lua" />
+
+		<!-- Others -->
+		<action itemid="3955" script="custom/voodoodoll.lua" />
+		<action itemid="5468" script="custom/firebug.lua" />
+		<action fromid="5792" toid="5797" script="custom/dice.lua" />
+		<action itemid="5957" script="custom/lotteryticket.lua" />
+		<action fromaid="1515" toaid="1522" script="custom/potions_lever.lua" />
+		<!-- <action itemid="16101" script="custom/premiumscroll.lua" /> -->
 	<!-- ---------------------------------------------------------------------------------------------------------------------- -->
 	
 	<!-- Chests (Quests) -->
 	<action itemid="1740" script="quests/quests.lua" />
-	<action fromid="1747" toid="1749" script="quests/quests.lua" />
+	<action fromid="1746" toid="1749" script="quests/quests.lua" />
 	
 	<!-- Enchanting -->
 	<action fromid="2146" toid="2147" script="other/enchanting.lua" />
@@ -261,56 +305,4 @@
 	<action fromid="12202" toid="12205" script="other/doors.lua" />	
 	<action itemid="3743" script="other/transforms.lua" />
 	<action itemid="4404" script="other/transforms.lua" />
-
-	<!-- _Scripts Custom -->
-		<!-- Modified Scripts from TFS
-			actions.lua
-			quest.lua
-			teleport.lua
-			fluids.lua
-			potions.lua
-			doors.lua
-			"tools scripts"
-		-->
-
-		<!-- Levers -->
-		<action fromuid="8001" touid="8003" script="custom/levers.lua" />
-
-		<!-- Tools -->
-		<action itemid="5865" script="custom/juice squeezer.lua" />
-		<action itemid="5942" script="custom/skinning.lua" />
-		<action itemid="5908" script="custom/skinning.lua" />
-		<action itemid="9930" script="custom/rustremover.lua" />
-		<action itemid="10309" script="custom/noxiousclaw.lua" />
-		<action itemid="10511" script="custom/toolgear.lua" />
-		<action itemid="10513" script="custom/toolgear.lua" />
-		<action itemid="10515" script="custom/toolgear.lua" />
-
-		<!-- Ceremonial ankh - Ornamented brooch & Blessings -->
-		<action itemid="6561" script="custom/checkbless.lua" />
-		<action itemid="12424" script="custom/checkbless.lua" />
-		<action fromid="11258" toid="11262" script="custom/blessingCharms.lua" />
-
-		<!-- Offline Training
-		<action itemid="12397" script="custom/trainingbook.lua" />
-		<action fromid="18488" toid="18492" script="other/skilltrainer.lua" /> -->
-
-		<!-- Dolls -->
-		<action itemid="5080" script="custom/dolls.lua" />
-		<action itemid="5669" script="custom/dolls.lua" />
-		<action itemid="6388" script="custom/dolls.lua" />
-		<action itemid="6512" script="custom/dolls.lua" />
-		<action itemid="6566" script="custom/dolls.lua" />
-		<action itemid="8974" script="custom/dolls.lua" />
-		<action itemid="8977" script="custom/dolls.lua" />
-		<action itemid="8981" script="custom/dolls.lua" />
-		<action itemid="8982" script="custom/dolls.lua" />
-
-		<!-- Others -->
-		<action itemid="3955" script="custom/voodoodoll.lua" />
-		<action itemid="5468" script="custom/firebug.lua" />
-		<action fromid="5792" toid="5797" script="custom/dice.lua" />
-		<action itemid="5957" script="custom/lotteryticket.lua" />
-		<action fromaid="1515" toaid="1522" script="custom/potions_lever.lua" />
-		<!-- <action itemid="16101" script="custom/premiumscroll.lua" /> -->
 </actions>

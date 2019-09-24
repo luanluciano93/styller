@@ -8,4 +8,12 @@
 	<!-- Battlefield Event -->
 	<globalevent name="Battlefield1" time="10:00:00" script="battlefield.lua" />
 	<globalevent name="Battlefield2" time="19:00:00" script="battlefield.lua" />
+
+	<!-- Zombie Event -->
+	<globalevent name="Zombie1" time="09:00:00" script="zombie.lua" />
+	<globalevent name="Zombie2" time="18:00:00" script="zombie.lua" />
+
+	<!-- Duca Event -->
+	<globalevent name="Duca1" time="12:00:00" script="duca.lua" />
+	<globalevent name="Duca2" time="20:00:00" script="duca.lua" />
 </globalevents>

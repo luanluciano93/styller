@@ -50,6 +50,8 @@
 	<talkaction words="/pos" separator=" " script="teleport_to_pos.lua" />
 	<talkaction words="/attr" separator=" " script="attributes.lua" />
 	<talkaction words="/battlefield" script="battlefield.lua" />
+	<talkaction words="/zombie" script="zombie.lua" />
+	<talkaction words="/duca" script="duca.lua" />
 
 	<!-- Player -->
 	<talkaction words="!buyhouse" script="buyhouse.lua" />

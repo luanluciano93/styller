@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters>
 	<!-- Custom -->
+	<monster name="Zombie Event" file="Custom/zombie_event.xml" />
 	<monster name="Target" file="Custom/target.xml" />
 	<monster name="Protect Statue" file="Custom/protect_statue.xml"/>
 	<monster name="Castle" file="Custom/castle.xml"/>

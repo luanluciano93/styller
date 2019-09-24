@@ -3,13 +3,13 @@ dofile('data/lib/custom/battlefield.lua')
 local function battlefieldBalanceTeam()
 	local time1, time2 = 0, 0
 	for _, uid in ipairs(Game.getPlayers()) do
-		if uid:getStorageValue(Storage.events) == 1 then
+		if uid:getStorageValue(Storage.events) == 5 then
 			time1 = time1 + 1
-		elseif uid:getStorageValue(Storage.events) == 2 then
+		elseif uid:getStorageValue(Storage.events) == 6 then
 			time2 = time2 + 1
 		end
 	end
-	return (time1 <= time2) and 1 or 2
+	return (time1 <= time2) and 5 or 6
 end
 
 function onStepIn(creature, item, position, fromPosition)
@@ -19,12 +19,12 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	if player:getGroup():getAccess() then
-		player:teleportTo(BATTLEFIELD.TEAMS[1].temple)
+		player:teleportTo(BATTLEFIELD.teamsBattlefield[5].temple)
 		return true
 	end
 
-	if player:getLevel() < BATTLEFIELD.LEVEL_MIN then
-		player:sendCancelMessage("You need level " .. BATTLEFIELD.LEVEL_MIN .. " to enter in Battlefield event.")
+	if player:getLevel() < BATTLEFIELD.levelMin then
+		player:sendCancelMessage("You need level " .. BATTLEFIELD.levelMin .. " to enter in battlefield event.")
 		player:teleportTo(fromPosition)
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
@@ -57,17 +57,16 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	local team = battlefieldBalanceTeam()
-	player:setOutfit(BATTLEFIELD.TEAMS[team].outfit)
+	player:setOutfit(BATTLEFIELD.teamsBattlefield[team].outfit)
 	player:setStorageValue(Storage.events, team)
-	player:sendTextMessage(MESSAGE_INFO_DESCR, "You will join the " .. BATTLEFIELD.TEAMS[team].color .. ".")
+	player:sendTextMessage(MESSAGE_INFO_DESCR, "You will join the " .. BATTLEFIELD.teamsBattlefield[team].color .. ".")
 	player:addHealth(player:getMaxHealth())
 	player:addMana(player:getMaxMana())
 	player:registerEvent("Battlefield")
-	player:teleportTo(BATTLEFIELD.TEAMS[team].temple)
+	player:teleportTo(BATTLEFIELD.teamsBattlefield[team].temple)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 
-	Game.setStorageValue(BATTLEFIELD.LAST_PLAYER, player:getGuid())
-	Game.setStorageValue(BATTLEFIELD.TOTAL_PLAYERS, Game.getStorageValue(BATTLEFIELD.TOTAL_PLAYERS) + 1)
+	Game.setStorageValue(BATTLEFIELD.lastPlayer, player:getGuid())
 
 	return true
 end

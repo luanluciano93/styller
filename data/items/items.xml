@@ -18013,7 +18013,7 @@
 		<attribute key="writeable" value="1" />
 		<attribute key="maxTextLen" value="128" />
 	</item>
-	<item id="10127" article="a" name="golden warrior trophy">
+	<item id="10127" article="a" name="duca event trophy">
 		<attribute key="weight" value="1900" />
 		<attribute key="writeable" value="1" />
 		<attribute key="maxTextLen" value="128" />
@@ -18023,7 +18023,7 @@
 		<attribute key="writeable" value="1" />
 		<attribute key="maxTextLen" value="128" />
 	</item>
-	<item id="10129" article="a" name="bronze warrior trophy">
+	<item id="10129" article="a" name="zombie event trophy">
 		<attribute key="weight" value="1800" />
 		<attribute key="writeable" value="1" />
 		<attribute key="maxTextLen" value="128" />

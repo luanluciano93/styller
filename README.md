@@ -19,4 +19,4 @@ Caso tenha dúvidas, ou queira resolver algum bug/erro, dar dicas para o projeto
 - [outros](https://github.com/luanluciano93/styller/wiki/COLABORADORES)
 
 ### Download:
-- [Download-1](https://www.4shared.com/rar/bkv-Uw_Tgm/styller.html) ou [Download-2](https://www.dropbox.com/s/tk7lfr7ja2mjrn5/styller.rar?dl=0).
+- Download completo no [tópico do projeto](https://tibiaking.com/forums/topic/96672-otx3-860-styller-2019/) no fórum Tibiaking.
