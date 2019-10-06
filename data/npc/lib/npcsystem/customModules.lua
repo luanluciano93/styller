@@ -169,7 +169,7 @@ function KeywordHandler:addSpellKeyword(keys, parameters)
 		function(player)
 			local baseVocationId = player:getVocation():getBase():getId()
 			if type(vocationId) == 'table' then
-				return isInArray(vocationId, baseVocationId)
+				return table.contains(vocationId, baseVocationId)
 			else
 				return vocationId == baseVocationId
 			end

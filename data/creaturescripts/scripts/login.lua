@@ -16,10 +16,13 @@ end
 local events = {
     'PlayerDeath',
 	'DropLoot',
-	'BossParticipation',
+	'AdvanceSave',
 	'LevelReward',
+	'BossParticipation',
 	'KosheiKill',
-	'PythiusTheRotten'
+	'PythiusTheRotten',
+	'Tasks',
+	'BossAchievements'
 }
 
 function onLogin(player)
@@ -57,10 +60,10 @@ function onLogin(player)
 		stats.playerId = player:getId()
 	end
 
-    -- Events
-    for i = 1, #events do
-        player:registerEvent(events[i])
-    end
+	-- Events
+	for i = 1, #events do
+		player:registerEvent(events[i])
+	end
 
 	if player:getStorageValue(Storage.combatProtectionStorage) <= os.time() then
 		player:setStorageValue(Storage.combatProtectionStorage, os.time() + 10)

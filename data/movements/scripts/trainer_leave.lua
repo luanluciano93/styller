@@ -20,7 +20,7 @@ function onStepIn(creature, item, position, fromPosition)
 	removeTrainers(fromPosition)
 	player:teleportTo(player:getTown():getTemplePosition())
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player:setExhaustion(1000, 5)
+	player:setExhaustion(5)
 
 	return true
 end

@@ -2,7 +2,6 @@ DUCA = {
 	minutesTotalEvent = 3,
 	positionTeleportOpen = Position(972, 964, 7),
 	levelMin = 10,
-	totalPlayers = 27000, -- global storage
 	rewardFirst = {12411, 10},
 	rewardSecond = {12411, 3},
 	teamsDuca = {
@@ -104,7 +103,7 @@ function ducaUpdateRank()
 	end
 end
 
-local function ducaFinishEvent()
+function ducaFinishEvent()
 	ducaUpdateRank()
 	for _, player in ipairs(Game.getPlayers()) do
 		if player:getStorageValue(Storage.events) == 4 then

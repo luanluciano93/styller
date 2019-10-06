@@ -13,6 +13,8 @@
 	<event type="advance" name="LevelReward" script="level_reward.lua"/>
 	<event type="kill" name="KosheiKill" script="koshei_the_deathless.lua"/>
 	<event type="kill" name="PythiusTheRotten" script="pythius_the_rotten.lua" />
+	<event type="kill" name="Tasks" script="task.lua" />
+	<event type="kill" name="BossAchievements" script="boss_achievements.lua" />
 
 	<!-- Reward System -->
 	<event type="death" name="BossDeath" script="boss.lua" />

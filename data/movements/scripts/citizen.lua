@@ -1,5 +1,6 @@
 local config = {
-	[9601] = 2
+	[9601] = 2,
+	[9617] = 3
 }
 
 function onStepIn(creature, item, position, fromPosition)

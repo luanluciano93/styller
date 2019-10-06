@@ -30,7 +30,7 @@ function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, "hell") and npcHandler.topic[cid] == 2 then
 		npcHandler:say("You really want to pay 300000 gold coins in the permissions pits of inferno quest, knowing you back there dead?", cid)
 		npcHandler.topic[cid] = 3
-	elseif sgcontains(msg, "yes") and npcHandler.topic[cid] == 3 then
+	elseif msgcontains(msg, "yes") and npcHandler.topic[cid] == 3 then
 		local player = Player(cid)
 		if player:getStorageValue(Storage.pitsOfInferno.permission) == -1 then
 			if not player:removeMoney(300000) then
@@ -43,7 +43,7 @@ function creatureSayCallback(cid, type, msg)
 			npcHandler:say("As you wish! You can pass the door now and enter the door...", cid)
 		end
 		npcHandler.topic[cid] = 0
-	elseif(msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser])) then
+	elseif(msgcontains(msg, 'no') and table.contains({1}, talkState[talkUser])) then
 		npcHandler.topic[cid] = 0
 		selfSay('Ok then.', cid)
 	end

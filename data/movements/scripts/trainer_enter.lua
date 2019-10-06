@@ -75,7 +75,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return false
 	end
 
-	if player:getExhaustion(1000) <= 0 then
+	if player:getExhaustion() <= 0 then
 		calculatingRoom(creature.uid, config.first_room_pos, 0, 0)
 	else
 		player:teleportTo(fromPosition, true)

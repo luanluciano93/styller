@@ -10,6 +10,9 @@
 	<movevent event="StepIn" actionid="9606" script="trainer_leave.lua"/>
 	<movevent event="StepIn" actionid="9607" script="teleports_room.lua" />
 	<movevent event="StepIn" actionid="9608" script="premium_teleport.lua" />
+	<movevent event="StepIn" actionid="9615" script="boss_room_enter.lua" />
+	<movevent event="StepIn" actionid="9616" script="boss_room_leave.lua" />
+	<movevent event="StepIn" actionid="9617" script="citizen.lua" />
 
 	<!-- Quests -->
 	<movevent event="StepIn" fromuid="2016" touid="2020" script="quests/poi_thrones.lua" /> <!-- Pits Of Inferno Quest -->
