@@ -15672,7 +15672,7 @@
 	<item id="8843" article="an" name="onion">
 		<attribute key="weight" value="140" />
 	</item>
-	<item id="8844" name="jalapeño pepper" article="a">
+	<item id="8844" name="jalapeno pepper" article="a">
 		<attribute key="weight" value="30" />
 	</item>
 	<item id="8845" article="a" name="beetroot">
@@ -17026,9 +17026,17 @@
 	<item id="9734" article="an" name="animal cure">
 		<attribute key="weight" value="180" />
 	</item>
-	<item id="9735" name="Morik's helmet">
+	<item id="9735" name="kina helmet"> <!-- Morik's helmet -->
 		<attribute key="description" value="It belonged to a famous gladiator." />
-		<attribute key="weight" value="4600" />
+		<attribute key="skillSword" value="3" />
+		<attribute key="skillAxe" value="3" />
+		<attribute key="skillClub" value="4" />
+		<attribute key="absorbPercentFire" value="5" />
+		<attribute key="absorbPercentIce" value="-5" />
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="13" />
+		<attribute key="slotType" value="head" />
+		<attribute key="showattributes" value="1" />
 	</item>
 	<item id="9736" article="an" name="armor">
 		<attribute key="weight" value="900" />
@@ -17705,7 +17713,7 @@
 		<attribute key="description" value="This one would be quite healthy if it wasn't for all the melted cheese on top." />
 		<attribute key="weight" value="1100" />
 	</item>
-	<item id="9998" article="a" name="filled jalapeño peppers">
+	<item id="9998" article="a" name="filled jalapeno peppers">
 		<attribute key="description" value="The creamy cheese makes a great combination with the spicy peppers." />
 		<attribute key="weight" value="650" />
 	</item>

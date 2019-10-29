@@ -1,3 +1,5 @@
+dofile('data/lib/custom/achievements.lua')
+
 local BOSSES = {
 	["thul"] = {storage = Storage.achievements.thul, achievement = 2}, -- Back into the Abyss
 	["the old widow"] = {storage = Storage.achievements.theOldWidow, achievement = 3}, -- Choking on Her Venom

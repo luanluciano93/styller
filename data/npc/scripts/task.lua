@@ -4,10 +4,10 @@ local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
 
-function onCreatureAppear(cid)			 npcHandler:onCreatureAppear(cid)		   end
-function onCreatureDisappear(cid)		 npcHandler:onCreatureDisappear(cid)	   end
-function onCreatureSay(cid, type, msg)	 npcHandler:onCreatureSay(cid, type, msg)  end
-function onThink()		                 npcHandler:onThink()                      end
+function onCreatureAppear(cid)              npcHandler:onCreatureAppear(cid)            end
+function onCreatureDisappear(cid)           npcHandler:onCreatureDisappear(cid)         end
+function onCreatureSay(cid, type, msg)      npcHandler:onCreatureSay(cid, type, msg)    end
+function onThink()                          npcHandler:onThink()                        end
 
 local choose = {}
 local cancel = {}
@@ -109,7 +109,7 @@ local function onBuy(cid, item, subType, amount, ignoreCap, inBackpacks)
 	if not ignoreCap and player:getFreeCapacity() < ItemType(items[item].id):getWeight(amount) then
 		return player:sendTextMessage(MESSAGE_INFO_DESCR, 'You don\'t have enough cap.')
 	end
-	if not doPlayerRemoveMoney(cid, items[item].buy * amount) then
+	if not player:removeMoney(items[item].buy * amount) then
 		selfSay("You don't have enough money.", cid)
 	else
 		player:addItem(items[item].id, amount)

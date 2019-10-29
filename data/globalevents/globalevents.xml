@@ -2,8 +2,17 @@
 <globalevents>
 	<globalevent type="startup" name="ServerStartup" script="startup.lua" />
 	<globalevent type="record" name="PlayerRecord" script="record.lua" />
-	<globalevent name="Save" interval="14400000" script="save.lua" />
 	<globalevent name="ServerSave" time="05:55:00" script="serversave.lua" />
+	
+	<!-- Save -->
+	<globalevent name="Save1" time="09:00:00" script="save.lua" />
+	<globalevent name="Save2" time="12:00:00" script="save.lua" />
+	<globalevent name="Save3" time="15:00:00" script="save.lua" />
+	<globalevent name="Save4" time="18:00:00" script="save.lua" />
+	<globalevent name="Save5" time="21:00:00" script="save.lua" />
+	<globalevent name="Save6" time="00:00:00" script="save.lua" />
+	<globalevent name="Save7" time="03:00:00" script="save.lua" />
+	<globalevent name="Save8" time="05:30:00" script="save.lua" />
 
 	<!-- Battlefield Event -->
 	<globalevent name="Battlefield1" time="10:00:00" script="battlefield.lua" />

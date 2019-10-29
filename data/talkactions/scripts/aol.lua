@@ -13,9 +13,8 @@ function onSay(player, words, param)
 			if not player:removeMoney(10000) then
 				player:sendCancelMessage("You don't have 10000 gold coins to buy an amulet of loss.")
 				player:getPosition():sendMagicEffect(CONST_ME_POFF)
-			elseif not player:addItem(2173, 1) then
-				print("[ERROR] TALKACTION: aol, FUNCTION: addItem, PLAYER: "..player:getName())
 			else
+				player:addItem(2173, 1)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)
 			end
 		else

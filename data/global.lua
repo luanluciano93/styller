@@ -1,3 +1,4 @@
+math.randomseed(os.time())
 dofile('data/lib/lib.lua')
 
 NOT_MOVEABLE_ACTION = 8000
@@ -61,6 +62,14 @@ string.split = function(str, sep)
 	local res = {}
 	for v in str:gmatch("([^" .. sep .. "]+)") do
 		res[#res + 1] = v
+	end
+	return res
+end
+
+string.splitTrimmed = function(str, sep)
+	local res = {}
+	for v in str:gmatch("([^" .. sep .. "]+)") do
+		res[#res + 1] = v:trim()
 	end
 	return res
 end

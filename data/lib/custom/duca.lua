@@ -1,14 +1,14 @@
 DUCA = {
-	minutesTotalEvent = 3,
+	minutesTotalEvent = 60,
 	positionTeleportOpen = Position(972, 964, 7),
-	levelMin = 10,
+	levelMin = 80,
 	rewardFirst = {12411, 10},
 	rewardSecond = {12411, 3},
 	teamsDuca = {
-		[1] = {color = "Black", temple = Position(1099, 855, 7), outfit = {lookType = 128, lookAddons = 114, lookHead = 114, lookLegs = 114, lookBody = 114, lookFeet = 114}},
-		[2] = {color = "White", temple = Position(1141, 915, 7), outfit = {lookType = 128, lookAddons = 19, lookHead = 19, lookLegs = 19, lookBody = 19, lookFeet = 19}},
-		[3] = {color = "Red", outfit = {lookType = 134, lookAddons = 94, lookHead = 94, lookLegs = 94, lookBody = 94, lookFeet = 94}},
-		[4] = {color = "Green", outfit = {lookType = 134, lookAddons = 101, lookHead = 101, lookLegs = 101, lookBody = 101, lookFeet = 101}},
+		[1] = {color = "Black", temple = Position(1099, 855, 7), outfit = {lookType = 128, lookHead = 114, lookBody = 114, lookLegs = 114, lookFeet = 114}},
+		[2] = {color = "White", temple = Position(1141, 915, 7), outfit = {lookType = 128, lookHead = 19, lookBody = 19, lookLegs = 19, lookFeet = 19}},
+		[3] = {color = "Red", outfit = {lookType = 134, lookHead = 94, lookBody = 94, lookLegs = 94, lookFeet = 94}},
+		[4] = {color = "Green", outfit = {lookType = 134, lookHead = 101, lookBody = 101, lookLegs = 101, lookFeet = 101}},
 	}
 }
 
@@ -49,11 +49,14 @@ end
 function ducaAddPlayerinTeam(uid, team)
 	local player = Player(uid)
 	if player then
-		player:setOutfit(DUCA.teamsDuca[team].outfit)
-		player:setStorageValue(Storage.events, team)
-		player:sendTextMessage(MESSAGE_INFO_DESCR, "You will join the " .. DUCA.teamsDuca[team].color .. " Team.")
-		player:addHealth(player:getMaxHealth())
-		player:addMana(player:getMaxMana())
+		if player:getStorageValue(Storage.events) ~= team then
+			player:setStorageValue(Storage.events, 0)
+			player:setOutfit(DUCA.teamsDuca[team].outfit)
+			player:setStorageValue(Storage.events, team)
+			player:sendTextMessage(MESSAGE_INFO_DESCR, "You will join the " .. DUCA.teamsDuca[team].color .. " Team.")
+			player:addHealth(player:getMaxHealth())
+			player:addMana(player:getMaxMana())
+		end
 	end
 end
 

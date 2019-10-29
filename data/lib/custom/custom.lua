@@ -290,28 +290,32 @@ function Player.withdrawMoney(self, amount)
 end
 
 function Player.removeMoneyNpc(self, amount)
-	local amount = tonumber(amount)
-	if not amount then
-		return false
+
+	if type(amount) == 'string' then
+		amount = tonumber(amount)
 	end
 
 	local moneyCount = self:getMoney()
 	local bankCount = self:getBankBalance()
-	if amount > (moneyCount + bankCount) then
-		return false
-	end
 
-	if not self:removeMoney(math.min(amount, moneyCount)) then
-		return false
-	elseif amount > moneyCount then
-		self:setBankBalance(bankCount - math.max(amount - moneyCount, 0))
-		if moneyCount == 0 then
-			self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d gold from bank account. Your account balance is now %d gold."):format(amount, self:getBankBalance()))
-		else
+	if amount <= moneyCount then -- The player have all the money with him
+		self:removeMoney(amount) -- Removes player inventory money
+		self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d from inventory."):format(amount))
+		return true
+	elseif amount <= (moneyCount + bankCount) then -- The player doens't have all the money with him
+		if moneyCount ~= 0 then -- Check if the player has some money
+			self:removeMoney(moneyCount) -- Removes player inventory money
+			local remains = amount - moneyCount
+			self:setBankBalance(bankCount - remains) -- Removes player bank money
 			self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d from inventory and %d gold from bank account. Your account balance is now %d gold."):format(moneyCount, amount - moneyCount, self:getBankBalance()))
+			return true
+		else
+			self:setBankBalance(bankCount - amount)
+			self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d gold from bank account. Your account balance is now %d gold."):format(amount, self:getBankBalance()))
+			return true
 		end
 	end
-	return true
+	return false
 end
 
 function Item.setDescription(self, description)
@@ -568,11 +572,11 @@ do
 		elseif key == "type" then
 			local creatureType = 0
 			if methods.isPlayer(self) then
-				creatureType = THING_TYPE_PLAYER
+				creatureType = CREATURETYPE_PLAYER + 1
 			elseif methods.isMonster(self) then
-				creatureType = THING_TYPE_MONSTER
+				creatureType = CREATURETYPE_MONSTER + 1
 			elseif methods.isNpc(self) then
-				creatureType = THING_TYPE_NPC
+				creatureType = CREATURETYPE_NPC + 1
 			end
 			return creatureType
 		elseif key == "itemid" then

@@ -10,23 +10,24 @@
 
 		<!-- Quests -->
 		<action actionid="2000" script="custom/system.lua" />
-		<action uniqueid="7000" script="quests/annihilator_lever.lua" />
-		<action uniqueid="2494" script="quests/annihilator_reward.lua" /> <!-- demon armor -->
-		<action uniqueid="2400" script="quests/annihilator_reward.lua" /> <!-- magic sword -->
-		<action uniqueid="2431" script="quests/annihilator_reward.lua" /> <!-- stonecutter axe -->
-		<action uniqueid="2421" script="quests/annihilator_reward.lua" /> <!-- thunder hammer -->
-		<action uniqueid="7001" script="quests/demonhelmet_lever.lua" />
-		<action uniqueid="2493" script="quests/demonhelmet_reward.lua" /> <!-- demon helmet -->
-		<action uniqueid="2520" script="quests/demonhelmet_reward.lua" /> <!-- demon shield -->
-		<action uniqueid="2645" script="quests/demonhelmet_reward.lua" /> <!-- steel boots -->
-		<action uniqueid="8883" script="quests/bigquest.lua" /> <!-- windborn colossus armor -->
-		<action uniqueid="8869" script="quests/bigquest.lua" /> <!-- greenwood coat -->
-		<action uniqueid="8867" script="quests/bigquest.lua" /> <!-- dragon robe -->
-		<action uniqueid="8853" script="quests/bigquest.lua" /> <!-- the ironworker -->
-		<action uniqueid="2453" script="quests/poi_reward.lua" /> <!-- arcane staff -->
-		<action uniqueid="6528" script="quests/poi_reward.lua" /> <!-- avenger -->
-		<action uniqueid="5803" script="quests/poi_reward.lua" /> <!--  arbalest -->
-		<action fromuid="7003" touid="7006" script="quests/poi_vocations_door.lua" />	
+		<action fromuid="7011" touid="7013" script="quests/daily_quest.lua" />
+		<action uniqueid="7000" script="quests/annihilator/annihilator_lever.lua" />
+		<action uniqueid="2494" script="quests/annihilator/annihilator_reward.lua" /> <!-- demon armor -->
+		<action uniqueid="2400" script="quests/annihilator/annihilator_reward.lua" /> <!-- magic sword -->
+		<action uniqueid="2431" script="quests/annihilator/annihilator_reward.lua" /> <!-- stonecutter axe -->
+		<action uniqueid="2421" script="quests/annihilator/annihilator_reward.lua" /> <!-- thunder hammer -->
+		<action uniqueid="7001" script="quests/demon helmet/demonhelmet_lever.lua" />
+		<action uniqueid="2493" script="quests/demon helmet/demonhelmet_reward.lua" /> <!-- demon helmet -->
+		<action uniqueid="2520" script="quests/demon helmet/demonhelmet_reward.lua" /> <!-- demon shield -->
+		<action uniqueid="2645" script="quests/demon helmet/demonhelmet_reward.lua" /> <!-- steel boots -->
+		<action uniqueid="8883" script="quests/big_quest.lua" /> <!-- windborn colossus armor -->
+		<action uniqueid="8869" script="quests/big_quest.lua" /> <!-- greenwood coat -->
+		<action uniqueid="8867" script="quests/big_quest.lua" /> <!-- dragon robe -->
+		<action uniqueid="8853" script="quests/big_quest.lua" /> <!-- the ironworker -->
+		<action uniqueid="2453" script="quests/pits of inferno/poi_reward.lua" /> <!-- arcane staff -->
+		<action uniqueid="6528" script="quests/pits of inferno/poi_reward.lua" /> <!-- avenger -->
+		<action uniqueid="5803" script="quests/pits of inferno/poi_reward.lua" /> <!--  arbalest -->
+		<action fromuid="7003" touid="7006" script="quests/pits of inferno/poi_vocations_door.lua" />	
 		<action uniqueid="8930" script="quests/inquisition_reward.lua" /> <!-- emerald sword -->
 		<action uniqueid="8918" script="quests/inquisition_reward.lua" /> <!-- spellbook of dark mysteriesd -->
 		<action uniqueid="8888" script="quests/inquisition_reward.lua" /> <!-- master archer's armor -->	
@@ -129,7 +130,7 @@
 	
 	<!-- Chests (Quests) -->
 	<action itemid="1740" script="quests/quests.lua" />
-	<action fromid="1746" toid="1749" script="quests/quests.lua" />
+	<action fromid="1747" toid="1749" script="quests/quests.lua" />
 	
 	<!-- Enchanting -->
 	<action fromid="2146" toid="2147" script="other/enchanting.lua" />

@@ -20,10 +20,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if player:getFreeCapacity() >= itemWeight then
 		if not player:removeMoney(potion.value) then
 			player:sendCancelMessage("You don't have ".. potion.value .." gold coins to buy ".. potion.charges .." ".. potionId:getName() ..".")
-		elseif not player:addItem(potion.id, potion.charges) then
-			print("[ERROR] ACTION: potions_lever, FUNCTION: addItem, PLAYER: "..player:getName())
 		else
 			player:getPosition():sendMagicEffect(CONST_ME_DRAWBLOOD)
+			player:addItem(potion.id, potion.charges)
 		end
 		
 	else

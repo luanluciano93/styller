@@ -24,12 +24,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		local itemWeight = itemType:getWeight()
 		local playerCap = player:getFreeCapacity()
 		if playerCap >= itemWeight then
-			if not player:addItem(itemUid, 1) then
-				print("[ERROR] ACTION: demonoak_reward, FUNCTION: addItem, PLAYER: "..player:getName())
-			else
-				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found a ' .. itemType:getName() .. '.')
-				player:setStorageValue(Storage.demonOak.progress, 3)
-			end
+			player:addItem(itemUid, 1)
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found a ' .. itemType:getName() .. '.')
+			player:setStorageValue(Storage.demonOak.progress, 3)
 		else
 			player:sendCancelMessage("You don't have capacity.")
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)

@@ -31,15 +31,11 @@ function onStepIn(creature, item, position, fromPosition)
 			return true
 		end
 
-		if player:getStorageValue(Storage.demonOak.progress) < 1 then
-			if not player:removeItem(10305, 1) then
-				player:say("You need a holy icon to enter.!", TALKTYPE_MONSTER_YELL, false, player, pos.DEMON_OAK_KICK_POSITION)
-				player:teleportTo(pos.DEMON_OAK_KICK_POSITION)
-				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-				return true
-			else
-				player:setStorageValue(Storage.demonOak.progress, 1)
-			end
+		if player:getStorageValue(Storage.bossRoom.demons) < 1 then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You must have finished the demons task.')
+			player:teleportTo(pos.DEMON_OAK_KICK_POSITION)
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			return true
 		end
 
 		player:teleportTo(pos.DEMON_OAK_ENTER_POSITION)

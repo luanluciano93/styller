@@ -1,7 +1,7 @@
 BATTLEFIELD = {
 	positionTeleportOpen = Position(972, 964, 7),
 	teleportTimeClose = 5,
-	minutesOpenGate = 3,
+	minutesOpenGate = 2,
 	lastPlayer = 27001, -- global storage
 	levelMin = 80,
 	reward = {12411, 1},
@@ -14,8 +14,8 @@ BATTLEFIELD = {
 	},
 
 	teamsBattlefield = {
-		[5] = {color = "Black Assassins", temple = Position(1094, 986, 6), outfit = {lookType = 134, lookAddons = 114, lookHead = 114, lookLegs = 114, lookBody = 114, lookFeet = 114}},
-		[6] = {color = "Red Barbarians", temple = Position(1118, 986, 6), outfit = {lookType = 143, lookAddons = 94, lookHead = 94, lookLegs = 94, lookBody = 94, lookFeet = 94}},
+		[5] = {color = "Black Assassins", temple = Position(1094, 986, 6), outfit = {lookType = 134, lookHead = 114, lookBody = 114, lookLegs = 114, lookFeet = 114}},
+		[6] = {color = "Red Barbarians", temple = Position(1118, 986, 6), outfit = {lookType = 143, lookHead = 94, lookBody = 94, lookLegs = 94, lookFeet = 94}},
 	}
 }
 

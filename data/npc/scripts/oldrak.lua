@@ -22,11 +22,10 @@ function creatureSayCallback(cid, type, msg)
 				print("[ERROR] NPC: Oldrak, FUNCTION: removeMoney, PLAYER: "..player:getName())
 			elseif not player:removeItem(2386, 1) then
 				print("[ERROR] NPC: Oldrak, FUNCTION: removeItem, PLAYER: "..player:getName())
-			elseif not player:addItem(8293, 1) then
-				print("[ERROR] NPC: Oldrak, FUNCTION: addItem, PLAYER: "..player:getName())
 			else
 				npcHandler:say("Here you are. You can now defeat the demon oak with this axe.", cid)
 				Npc():getPosition():sendMagicEffect(CONST_ME_YELLOWENERGY)
+				player:addItem(8293, 1)
 			end
 		else
 			npcHandler:say("I need 100000 gold coins and an axe to make you a {hallowed axe}.", cid)

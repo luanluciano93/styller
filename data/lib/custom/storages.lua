@@ -53,5 +53,7 @@ Storage = {
 		killsTaskBase = 61000,
 		pointsTask = 62000,
 		storageJoin = 62001
-	}
+	},
+	dailyQuest = 62002,
+	dailyQuestTime = 62003
 }

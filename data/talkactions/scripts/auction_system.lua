@@ -25,7 +25,7 @@ function onSay(player, words, param)
 		return false
 	end
 
-	local word = param:split(",")
+	local word = param:splitTrimmed(",")
 	if word[1] == "add" then
 		if not word[2] or not word[3] or not word[4] then
 			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Command param required. Ex: !offer add, ItemName, ItemCount, ItemPrice")
@@ -70,9 +70,6 @@ function onSay(player, words, param)
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
 			return false
 		end
-
-		-- Trim left
-		word[2] = word[2]:gsub("^%s*(.-)$", "%1")
 
 		local itemId = ItemType(word[2]):getId()
 		itemCount = math.floor(itemCount)

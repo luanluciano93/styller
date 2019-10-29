@@ -1,10 +1,9 @@
 dofile('data/lib/custom/duca.lua')
 
 function onPrepareDeath(player, killer)
-
 	if killer then
 		local team = player:getStorageValue(Storage.events)
-		local teamKiller = player:getStorageValue(Storage.events)
+		local teamKiller = killer:getStorageValue(Storage.events)
 		if team > 0 and teamKiller > 0 then
 			local points = {[1] = 1, [2] = 1, [3] = 10, [4] = 30}
 			local pointsPerKill = points[team]
@@ -15,6 +14,5 @@ function onPrepareDeath(player, killer)
 			ducaUpdateRank()
 		end
 	end
-
 	return false
 end

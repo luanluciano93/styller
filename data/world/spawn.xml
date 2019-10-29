@@ -351,7 +351,9 @@
 	<spawn centerx="946" centery="959" centerz="6" radius="1">
 		<npc name="Dark Rodo" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="983" centery="959" centerz="6" radius="1" />
+	<spawn centerx="983" centery="959" centerz="6" radius="1">
+		<npc name="Diesel" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="1038" centery="966" centerz="6" radius="1">
 		<monster name="Crystal Spider" x="-1" y="0" z="6" spawntime="20" />
 		<monster name="Winter Wolf" x="1" y="0" z="6" spawntime="20" />

@@ -14,12 +14,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		local playerCap = player:getFreeCapacity()
 		if player:getStorageValue(Storage.inquisition) < 3 then
 				if playerCap >= itemWeight then
-					if not player:addItem(item.uid, 1) then
-						print("[ERROR] ACTION: inquisition, FUNCTION: addItem, PLAYER: "..player:getName())
-					else
-						player:sendTextMessage(MESSAGE_INFO_DESCR, 'You have found a ' .. itemType:getName() .. '.')
-						player:setStorageValue(item.uid, 3)
-					end
+					player:addItem(item.uid, 1)
+					player:sendTextMessage(MESSAGE_INFO_DESCR, 'You have found a ' .. itemType:getName() .. '.')
+					player:setStorageValue(item.uid, 3)
 				else
 					player:sendTextMessage(MESSAGE_INFO_DESCR, 'You have found a ' .. itemType:getName() .. ' weighing ' .. itemWeight .. ' oz it\'s too heavy.')
 				end
