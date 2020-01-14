@@ -4,7 +4,7 @@ Desenvolvimento de um servidor styller usando a OTX3 (projeto baseado no TFS 1.3
 
 ### Informações do Servidor e Sistemas:
 - Versão: 8.60
-- Engine: [OTX3](https://github.com/mattyx14/otxserver) nas últimas revisões.
+- Engine: [OTX3](https://github.com/mattyx14/otxserver/tree/otxserv3) nas últimas revisões.
 - [Cidades](https://github.com/luanluciano93/styller/wiki/CIDADES), [sistemas](https://github.com/luanluciano93/styller/wiki/SISTEMAS) e [quests](https://github.com/luanluciano93/styller/wiki/QUESTS).
 - [Atualizações](https://github.com/luanluciano93/styller/wiki/CHANGES).
 
