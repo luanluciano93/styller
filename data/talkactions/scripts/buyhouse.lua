@@ -1,7 +1,22 @@
+local config = {
+	level = 1,
+	onlyPremium = true
+}
+
 function onSay(player, words, param)
 	local housePrice = configManager.getNumber(configKeys.HOUSE_PRICE)
 	if housePrice == -1 then
 		return true
+	end
+
+	if player:getLevel() < config.level then
+		player:sendCancelMessage("You need level " .. config.level .. " or higher to buy a house.")
+		return false
+	end
+
+	if config.onlyPremium and not player:isPremium() then
+		player:sendCancelMessage("You need a premium account.")
+		return false
 	end
 
 	local position = player:getPosition()
@@ -25,7 +40,7 @@ function onSay(player, words, param)
 	end
 
 	local price = house:getTileCount() * housePrice
-	if not player:removeMoney(price) then
+	if not player:removeTotalMoney(price) then
 		player:sendCancelMessage("You do not have enough money.")
 		return false
 	end

@@ -3,9 +3,8 @@ function onStepIn(creature, item, position, fromPosition)
 		return false
 	end
 
-	local x = item.actionid - 1000
-	if creature:getLevel() < x then
-		creature:sendTextMessage(MESSAGE_INFO_DESCR, "Required level "..x.." to pass this door.")
+	if creature:getLevel() < item.actionid - actionIds.levelDoor then
+		creature:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Only the worthy may pass.")
 		creature:teleportTo(fromPosition, true)
 		return false
 	end

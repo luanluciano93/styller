@@ -84,7 +84,7 @@ end
 
 function doPlayerBuyItemContainer(cid, containerid, itemid, count, cost, charges)
 	local player = Player(cid)
-	if not player:removeMoney(cost) then
+	if not player:removeTotalMoney(cost) then
 		return false
 	end
 
@@ -103,5 +103,39 @@ end
 
 function getCount(string)
 	local b, e = string:find("%d+")
-	return b and e and tonumber(string:sub(b, e)) or -1
+	local tonumber = tonumber(string:sub(b, e))
+	if tonumber > 2 ^ 32 - 1 then
+		print("Warning: Casting value to 32bit to prevent crash\n"..debug.traceback())
+	end
+	return b and e and math.min(2 ^ 32 - 1, tonumber) or -1
+end
+
+function Player.getTotalMoney(self)
+	return self:getMoney() + self:getBankBalance()
+end
+
+function isValidMoney(money)
+	return isNumber(money) and money > 0
+end
+
+function getMoneyCount(string)
+	local b, e = string:find("%d+")
+	local tonumber = tonumber(string:sub(b, e))
+	if tonumber > 2 ^ 32 - 1 then
+		print("Warning: Casting value to 32bit to prevent crash\n"..debug.traceback())
+	end
+	local money = b and e and math.min(2 ^ 32 - 1, tonumber) or -1
+	if isValidMoney(money) then
+		return money
+	end
+	return -1
+end
+
+function getMoneyWeight(money)
+	local gold = money
+	local crystal = math.floor(gold / 10000)
+	gold = gold - crystal * 10000
+	local platinum = math.floor(gold / 100)
+	gold = gold - platinum * 100
+	return (ItemType(ITEM_CRYSTAL_COIN):getWeight() * crystal) + (ItemType(ITEM_PLATINUM_COIN):getWeight() * platinum) + (ItemType(ITEM_GOLD_COIN):getWeight() * gold)
 end

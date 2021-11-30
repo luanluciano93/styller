@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spells>
-	<!-- Attack Spells -->	
+	<!-- Attack Spells -->
 	<instant group="attack" name="Berserk" words="exori" level="35" mana="115" premium="0" needweapon="1" cooldown="4000" needlearn="0" script="attack/berserk.lua">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
@@ -552,10 +552,10 @@
 	</instant>
 
 	<!-- House Spells -->
-	<instant name="House Door List" words="aleta grav" casterTargetOrDirection="1" aggressive="0" script="house/edit_door_list.lua" />
-	<instant name="House Guest List" words="aleta sio" aggressive="0" script="house/edit_guest_list.lua" />
-	<instant name="House Kick" words="alana sio" aggressive="0" playernameparam="1" params="1" script="house/kick.lua" />
-	<instant name="House Subowner List" words="aleta som" aggressive="0" script="house/edit_subowner_list.lua" />
+	<instant name="Edit Door" words="aleta grav" aggressive="0" script="house/edit_door.lua" />
+	<instant name="Invite Guests" words="aleta sio" aggressive="0" script="house/invite_guests.lua" />
+	<instant name="Kick Guest" words="alana sio" aggressive="0" playernameparam="1" params="1" script="house/kick_guest.lua" />
+	<instant name="Invite Subowners" words="aleta som" aggressive="0" script="house/invite_subowners.lua" />
 
 	<!-- Monster Spells -->
 	<instant name="ghastly dragon curse" words="###1" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/ghastly_dragon_curse.lua" />
@@ -601,4 +601,5 @@
 	<instant name="betrayed wraith skill reducer" words="###48" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/betrayed_wraith_skill_reducer.lua" />
 	<instant name="pirate corsair skill reducer" words="###49" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/pirate_corsair_skill_reducer.lua" />
 	<instant name="monster soulfire" words="###50" aggressive="1" blockwalls="1" range="7" needtarget="1" needlearn="1" script="monster/monster_soulfire.lua" />
+	<instant name="dipthrah skill reducer" words="###51" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/dipthrah_skill_reducer.lua" />
 </spells>

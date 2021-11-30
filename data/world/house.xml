@@ -1,2 +1,88 @@
 <?xml version="1.0"?>
-<houses />
+<houses>
+	<house name="Premium City House #01" houseid="1" entryx="813" entryy="1050" entryz="7" rent="0" townid="3" size="43" />
+	<house name="Premium City House #02" houseid="2" entryx="813" entryy="1046" entryz="7" rent="0" townid="3" size="36" />
+	<house name="Premium City House #03" houseid="3" entryx="816" entryy="1041" entryz="7" rent="0" townid="3" size="4" />
+	<house name="Premium City House #04" houseid="4" entryx="820" entryy="1041" entryz="7" rent="0" townid="3" size="4" />
+	<house name="Premium City House #05" houseid="5" entryx="816" entryy="1032" entryz="7" rent="0" townid="3" size="4" />
+	<house name="Premium City House #06" houseid="6" entryx="820" entryy="1032" entryz="7" rent="0" townid="3" size="4" />
+	<house name="Premium City House #07" houseid="7" entryx="816" entryy="1030" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Premium City House #08" houseid="8" entryx="820" entryy="1030" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Premium City House #09" houseid="9" entryx="808" entryy="1025" entryz="7" rent="0" townid="3" size="13" />
+	<house name="Premium City House #10" houseid="10" entryx="801" entryy="1025" entryz="7" rent="0" townid="3" size="7" />
+	<house name="Premium City House #11" houseid="11" entryx="805" entryy="1028" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #12" houseid="12" entryx="804" entryy="1028" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #14" houseid="14" entryx="808" entryy="1038" entryz="7" rent="0" townid="3" size="13" />
+	<house name="Premium City House #15" houseid="15" entryx="801" entryy="1038" entryz="7" rent="0" townid="3" size="7" />
+	<house name="Premium City House #16" houseid="16" entryx="805" entryy="1035" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #17" houseid="17" entryx="804" entryy="1035" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #18" houseid="18" entryx="808" entryy="1039" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Premium City House #19" houseid="19" entryx="802" entryy="1039" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Premium City House #20" houseid="20" entryx="808" entryy="1051" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Premium City House #21" houseid="21" entryx="802" entryy="1051" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Premium City House #22" houseid="22" entryx="805" entryy="1042" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #23" houseid="23" entryx="805" entryy="1046" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #24" houseid="24" entryx="804" entryy="1042" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #25" houseid="25" entryx="804" entryy="1046" entryz="6" rent="0" townid="3" size="7" />
+	<house name="Premium City House #26" houseid="26" entryx="793" entryy="1038" entryz="7" rent="0" townid="3" size="22" />
+	<house name="Premium City House #27" houseid="27" entryx="788" entryy="1038" entryz="7" rent="0" townid="3" size="22" />
+	<house name="Premium City House #28" houseid="28" entryx="793" entryy="1025" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Premium City House #29" houseid="29" entryx="788" entryy="1025" entryz="7" rent="0" townid="3" size="10" />
+	<house name="Tiquanda House #01" houseid="30" entryx="1074" entryy="1018" entryz="7" rent="0" townid="2" size="27" />
+	<house name="Tiquanda House #02" houseid="31" entryx="1074" entryy="1033" entryz="7" rent="0" townid="2" size="30" />
+	<house name="Tiquanda House #03" houseid="32" entryx="1074" entryy="1039" entryz="7" rent="0" townid="2" size="30" />
+	<house name="Tiquanda House #04" houseid="33" entryx="1044" entryy="1033" entryz="7" rent="0" townid="2" size="42" />
+	<house name="Tiquanda House #05" houseid="34" entryx="1036" entryy="1033" entryz="7" rent="0" townid="2" size="42" />
+	<house name="Tiquanda House #06" houseid="35" entryx="1031" entryy="1030" entryz="7" rent="0" townid="2" size="30" />
+	<house name="Tiquanda House #07" houseid="36" entryx="1031" entryy="1024" entryz="7" rent="0" townid="2" size="30" />
+	<house name="Tiquanda House #08" houseid="37" entryx="1038" entryy="1017" entryz="7" rent="0" townid="2" size="28" />
+	<house name="Tiquanda House #09" houseid="38" entryx="1038" entryy="1011" entryz="7" rent="0" townid="2" size="28" />
+	<house name="Tiquanda House #10" houseid="39" entryx="1034" entryy="1018" entryz="6" rent="0" townid="2" size="47" />
+	<house name="Blood House #03" houseid="42" entryx="950" entryy="943" entryz="7" rent="0" townid="1" size="25" />
+	<house name="Blood House #04" houseid="43" entryx="954" entryy="941" entryz="6" rent="0" townid="1" size="25" />
+	<house name="Blood House #05" houseid="44" entryx="954" entryy="938" entryz="5" rent="0" townid="1" size="25" />
+	<house name="Blood House #06" houseid="45" entryx="961" entryy="947" entryz="7" rent="0" townid="1" size="56" />
+	<house name="Blood House #07" houseid="46" entryx="966" entryy="940" entryz="6" rent="0" townid="1" size="54" />
+	<house name="Blood House #08" houseid="47" entryx="963" entryy="940" entryz="5" rent="0" townid="1" size="20" />
+	<house name="Blood House #09" houseid="48" entryx="973" entryy="947" entryz="7" rent="0" townid="1" size="45" />
+	<house name="Blood House #10" houseid="49" entryx="979" entryy="947" entryz="7" rent="0" townid="1" size="45" />
+	<house name="Blood House #11" houseid="50" entryx="973" entryy="945" entryz="6" rent="0" townid="1" size="35" />
+	<house name="Blood House #12" houseid="51" entryx="980" entryy="945" entryz="6" rent="0" townid="1" size="35" />
+	<house name="Blood House #13" houseid="52" entryx="990" entryy="939" entryz="7" rent="0" townid="1" size="20" />
+	<house name="Blood House #14" houseid="53" entryx="992" entryy="944" entryz="7" rent="0" townid="1" size="30" />
+	<house name="Blood House #15" houseid="54" entryx="994" entryy="938" entryz="6" rent="0" townid="1" size="34" />
+	<house name="Blood House #16" houseid="55" entryx="995" entryy="940" entryz="6" rent="0" townid="1" size="30" />
+	<house name="Blood House #17" houseid="56" entryx="995" entryy="939" entryz="6" rent="0" townid="1" size="75" />
+	<house name="Blood House #18" houseid="57" entryx="987" entryy="951" entryz="7" rent="0" townid="1" size="69" />
+	<house name="Blood House #19" houseid="58" entryx="993" entryy="957" entryz="7" rent="0" townid="1" size="80" />
+	<house name="Blood House #20" houseid="59" entryx="1000" entryy="962" entryz="7" rent="0" townid="1" size="64" />
+	<house name="Blood House #21" houseid="60" entryx="993" entryy="965" entryz="5" rent="0" townid="1" size="84" />
+	<house name="Blood House #22" houseid="61" entryx="1010" entryy="960" entryz="7" rent="0" townid="1" size="30" />
+	<house name="Blood House #23" houseid="62" entryx="1002" entryy="960" entryz="7" rent="0" townid="1" size="28" />
+	<house name="Blood House #24" houseid="63" entryx="1006" entryy="952" entryz="7" rent="0" townid="1" size="33" />
+	<house name="Blood House #25" houseid="64" entryx="1005" entryy="944" entryz="7" rent="0" townid="1" size="24" />
+	<house name="Blood House #26" houseid="65" entryx="1010" entryy="944" entryz="7" rent="0" townid="1" size="20" />
+	<house name="Blood House #27" houseid="66" entryx="1018" entryy="949" entryz="7" rent="0" townid="1" size="25" />
+	<house name="Blood House #28" houseid="67" entryx="1025" entryy="949" entryz="7" rent="0" townid="1" size="30" />
+	<house name="Blood House #29" houseid="68" entryx="1017" entryy="949" entryz="6" rent="0" townid="1" size="25" />
+	<house name="Blood House #30" houseid="69" entryx="1026" entryy="949" entryz="6" rent="0" townid="1" size="30" />
+	<house name="Blood House #31" houseid="70" entryx="996" entryy="975" entryz="6" rent="0" townid="1" size="18" />
+	<house name="Blood House #32" houseid="71" entryx="993" entryy="975" entryz="6" rent="0" townid="1" size="19" />
+	<house name="Blood House #33" houseid="72" entryx="1005" entryy="984" entryz="7" rent="0" townid="1" size="30" />
+	<house name="Blood House #34" houseid="73" entryx="968" entryy="973" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Blood House #35" houseid="74" entryx="972" entryy="973" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Blood House #36" houseid="75" entryx="974" entryy="978" entryz="7" rent="0" townid="1" size="24" />
+	<house name="Blood House #37" houseid="76" entryx="966" entryy="978" entryz="7" rent="0" townid="1" size="24" />
+	<house name="Blood House #38" houseid="77" entryx="966" entryy="976" entryz="6" rent="0" townid="1" size="64" />
+	<house name="Blood House #39" houseid="78" entryx="966" entryy="980" entryz="6" rent="0" townid="1" size="47" />
+	<house name="Blood House #40" houseid="79" entryx="983" entryy="978" entryz="6" rent="0" townid="1" size="47" />
+	<house name="Blood House #41" houseid="80" entryx="983" entryy="973" entryz="6" rent="0" townid="1" size="64" />
+	<house name="Blood House #42" houseid="81" entryx="946" entryy="971" entryz="7" rent="0" townid="1" size="35" />
+	<house name="Blood House #43" houseid="82" entryx="946" entryy="977" entryz="6" rent="0" townid="1" size="35" />
+	<house name="Blood House #44" houseid="83" entryx="940" entryy="977" entryz="7" rent="0" townid="1" size="130" />
+	<house name="Blood House #45" houseid="84" entryx="940" entryy="974" entryz="6" rent="0" townid="1" size="40" />
+	<house name="Blood House #52" houseid="91" entryx="947" entryy="985" entryz="7" rent="0" townid="1" size="57" />
+	<house name="Blood House #53" houseid="92" entryx="972" entryy="1017" entryz="7" rent="0" townid="1" size="108" />
+	<house name="Blood House #54" houseid="93" entryx="937" entryy="1037" entryz="7" rent="0" townid="1" size="17" />
+	<house name="Blood House #55" houseid="94" entryx="979" entryy="1025" entryz="7" rent="0" townid="1" size="199" />
+</houses>

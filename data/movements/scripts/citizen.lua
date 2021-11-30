@@ -1,28 +1,14 @@
-local config = {
-	[9601] = 2,
-	[9617] = 3
-}
-
 function onStepIn(creature, item, position, fromPosition)
-	local player = creature:getPlayer()
-	if not player then
-		return true
+	if item.actionid > actionIds.citizenship and item.actionid < actionIds.citizenshipLast then
+		if not creature:isPlayer() then
+			return false
+		end
+		local town = Town(item.actionid - actionIds.citizenship)
+		if not town then
+			return false
+		end
+		creature:setTown(town)
+		creature:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are now a citizen of " .. town:getName() .. ".")
 	end
-
-	local townId = config[item.uid]
-	if not townId then
-		return true
-	end
-
-	local town = Town(townId)
-	if not town then
-		return true
-	end
-
-	player:setTown(town)
-	player:teleportTo(town:getTemplePosition())
-	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You are now a citizen of ' .. town:getName() .. '.')
-
 	return true
 end

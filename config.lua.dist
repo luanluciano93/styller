@@ -1,0 +1,177 @@
+-- Configurações de combate
+-- NOTA: os valores válidos para worldType são: "pvp", "no-pvp" e "pvp-enforced"
+worldType = "pvp"
+hotkeyAimbotEnabled = true
+protectionLevel = 1
+killsToRedSkull = 5
+killsToBlackSkull = 8
+pzLocked = 20000
+removeChargesFromRunes = false
+removeChargesFromPotions = true
+removeWeaponAmmunition = false
+removeWeaponCharges = false
+timeToDecreaseFrags = 3 * 60 * 60
+whiteSkullTime = 5 * 60
+stairJumpExhaustion = 1000
+experienceByKillingPlayers = false
+expFromPlayersLevelRange = 75
+
+-- Configuração 8.60 nekiro
+pzLockSkullAttacker = false						   
+
+-- Configuração de conexão
+-- NOTA: maxPlayers definido como 0 significa sem limite
+-- NOTA: allowWalkthrough (permitir passo a passo) é aplicável apenas a jogadores
+ip = "127.0.0.1"
+bindOnlyGlobalAddress = false
+loginProtocolPort = 7171
+gameProtocolPort = 7172
+statusProtocolPort = 7171
+maxPlayers = 0
+motd = "Welcome to The Styller 2021 Server!"
+onePlayerOnlinePerAccount = true
+allowClones = false
+allowWalkthrough = true
+serverName = "Styller"
+statusTimeout = 5000
+replaceKickOnLogin = true
+maxPacketsPerSecond = 25
+
+-- Mortes
+-- NOTA: Deixe deathLosePercent como -1 se quiser usar a fórmula padrão
+-- padrão da pena de morte. Para a fórmula antiga, defina-o como 10.
+-- Para sem perda de habilidade / experiência, defina-o como 0.
+deathLosePercent = -1
+
+-- Casas
+-- NOTA: defina housePriceEachSQM como -1 para desativar a funcionalidade de compra de casa dentro do jogo
+-- NOTA: os valores válidos para houseRentPeriod são:: "daily", "weekly", "monthly", "yearly"
+-- use qualquer outro valor para desabilitar o sistema de aluguel
+housePriceEachSQM = 10000
+houseRentPeriod = "weekly"
+houseOwnedByAccount = false
+houseDoorShowPrice = true
+onlyInvitedCanMoveHouseItems = true
+
+-- Uso de item
+timeBetweenActions = 200
+timeBetweenExActions = 1000
+
+-- Mapa
+-- NOTA: defina mapName SEM .otbm no final
+mapName = "styller"
+mapAuthor = "Styller"
+
+-- Mercado (não usado na versão 8.60)
+marketOfferDuration = 30 * 24 * 60 * 60
+premiumToCreateMarketOffer = true
+checkExpiredMarketOffersEachMinutes = 60
+maxMarketOffersAtATimePerPlayer = 100
+
+-- MySQL
+mysqlHost = "127.0.0.1"
+mysqlUser = "root"
+mysqlPass = "3062455"
+mysqlDatabase = "styller"
+mysqlPort = 3307
+mysqlSock = ""
+
+-- Misc.
+-- NOTA: classicAttackSpeed ​​definido como true faz com que os jogadores ataquem 
+-- constantemente de forma regular, independentemente de outras ações, como o 
+-- uso de itens (poções). Esta configuração pode causar alto uso da CPU com muitos 
+-- jogadores e potencialmente afetar o desempenho!
+-- NOTA: forceMonsterTypesOnLoad carrega todos os tipos de monstro na inicialização 
+-- para validá-los. Você pode desativá-lo para economizar memória, se não houver erros na 
+-- inicialização.
+allowChangeOutfit = true
+freePremium = false
+kickIdlePlayerAfterMinutes = 15
+maxMessageBuffer = 4
+emoteSpells = true
+classicEquipmentSlots = false
+classicAttackSpeed = false
+showScriptsLogInConsole = false
+showOnlineStatusInCharlist = false
+yellMinimumLevel = 2
+yellAlwaysAllowPremium = false
+minimumLevelToSendPrivate = 1
+premiumToSendPrivate = false
+forceMonsterTypesOnLoad = true
+cleanProtectionZones = false
+luaItemDesc = false
+showPlayerLogInConsole = true
+
+-- VIP e Depot limites
+-- NOTA: você pode definir limites personalizados por grupo em data/XML/groups.xml
+vipFreeLimit = 20
+vipPremiumLimit = 100
+depotFreeLimit = 2000
+depotPremiumLimit = 10000
+
+-- Luz do mundo
+-- NOTA: se defaultWorldLight for definido como verdadeiro, o algoritmo de luz mundial irá
+-- ser tratada nas fontes. defina-o como falso para evitar conflitos se desejar
+-- fazer uso da função setWorldLight(nível, cor)
+defaultWorldLight = true
+
+-- Salvar servidor
+-- NOTA: serverSaveNotifyDuration em minutos
+serverSaveNotifyMessage = true
+serverSaveNotifyDuration = 5
+serverSaveCleanMap = false
+serverSaveClose = false
+serverSaveShutdown = true
+
+-- Estágios de experiência
+-- NOTA: para usar um multiplicador de experiência simples, defina experienceStages como "nil"
+-- minlevel e multiplier são OBRIGATÓRIOS
+-- maxlevel é OPCIONAL, mas é considerado infinito por padrão
+-- para desabilitar estágios, crie um estágio com minlevel 1 e sem maxlevel
+experienceStages = {
+	{ minlevel = 1, maxlevel = 50, multiplier = 300 },
+	{ minlevel = 51, maxlevel = 100, multiplier = 150 },
+	{ minlevel = 101, maxlevel = 150, multiplier = 100 },
+	{ minlevel = 151, maxlevel = 200, multiplier = 50 },
+	{ minlevel = 201, maxlevel = 250, multiplier = 30 },
+	{ minlevel = 251, maxlevel = 300, multiplier = 20 },
+	{ minlevel = 301, maxlevel = 350, multiplier = 10 },
+	{ minlevel = 351, multiplier = 5 }
+}
+
+-- Experiência Fixa
+-- NOTA: rateExp não é usado se você habilitou os estágios acima
+rateExp = 5
+rateSkill = 3
+rateLoot = 2
+rateMagic = 3
+rateSpawn = 1
+
+-- Config do Monstro Voltar ao spawn
+-- despawnRange é a quantidade de andares que um monstro pode ter desde sua posição de desova
+-- despawnRadius é a distância de quantas peças ele pode estar de sua posição de desova
+-- removeOnDespawn irá remover o monstro se for "true" ou teletransportá-lo de volta para sua posição de spawn se for "false"
+-- walkToSpawnRadius é a distância permitida que o monstro vai ficar longe da posição de spawn quando deixado sem alvos, 0 para desabilitar
+deSpawnRange = 2
+deSpawnRadius = 50
+removeOnDespawn = true
+walkToSpawnRadius = 15
+
+-- Stamina
+staminaSystem = true
+
+-- Scripts
+warnUnsafeScripts = true
+convertUnsafeScripts = true
+
+-- Iniciação do servidor
+-- NOTA: defaultPriority só funciona no Windows e define o processo
+-- prioridade, os valores válidos são: "normal", "above-normal", "high"
+defaultPriority = "high"
+startupDatabaseOptimization = false
+
+-- Informações do status do servidor
+ownerName = "luanluciano93"
+ownerEmail = "luanluciano@outlook.com"
+url = "https://tibiaking.com/"
+location = "Brazil"
