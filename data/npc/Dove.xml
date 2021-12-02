@@ -3,7 +3,9 @@
 	<health now="100" max="100" />
 	<look type="139" head="20" body="39" legs="45" feet="7" addons="3"/>
 	<parameters>
+		<parameter key="message_greet" value="Be greeted, noble |PLAYERNAME| and welcome to the post office."/>
+		<parameter key="message_farewell" value="Come back soon, noble |PLAYERNAME|."/>
 		<parameter key="module_shop" value="1" />
-		<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,10" />
+		<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;"/>
 	</parameters>
 </npc>

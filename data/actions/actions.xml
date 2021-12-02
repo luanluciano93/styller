@@ -2,7 +2,11 @@
 <actions>
 	<!-- -----------------------------------------   CUSTOM STYLLER   --------------------------------------------------------- -->
 		<!-- <action itemid="8976" script="test/autoloot.lua"/> -->
-
+		<action itemid="12328" script="custom/stamina_refill.lua"/>
+		
+		<!-- Events -->
+		<action itemid="1435" script="custom/events/capturetheflag.lua"/> <!-- Capture the Flag event -->
+		<action itemid="1437" script="custom/events/capturetheflag.lua"/> <!-- Capture the Flag event -->
 		<!-- Demon Oak Quest -->
 		<action uniqueid="7002" script="custom/quests/demon oak/demonOakGravestone.lua" />
 		<action fromuid="7007" touid="7010" script="custom/quests/demon oak/demonOakChest.lua" /> <!-- demon oak reward -->
@@ -79,21 +83,16 @@
 		<action uniqueid="2488" script="custom/quests/quests.lua"/> <!-- crown legs -->
 		<action uniqueid="2523" script="custom/quests/quests.lua"/> <!-- blessed shield -->
 		<action uniqueid="2123" script="custom/quests/quests.lua"/> <!-- ring of the sky -->
+		<action uniqueid="5924" script="custom/quests/quests.lua"/> <!-- damaged steel helmet -->
+		<action uniqueid="5947" script="custom/quests/quests.lua"/> <!-- elane's crossbow -->
+		<action uniqueid="5938" script="custom/quests/quests.lua"/> <!-- ceiron's waterskin -->
+		<action uniqueid="5940" script="custom/quests/quests.lua"/> <!-- ceiron's wolf tooth chain -->
+		<action uniqueid="11423" script="custom/quests/quests.lua"/> <!-- coral comb -->
+		<action uniqueid="6107" script="custom/quests/quests.lua"/> <!-- simon the beggar's favorite staff -->
 
 		<!-- Levers -->
 		<action fromuid="8001" touid="8003" script="custom/levers.lua" />
 
-		<!-- Tools -->
-		<!--<action itemid="5865" script="custom/juice squeezer.lua" />-->
-		<!--<action itemid="5942" script="custom/skinning.lua" />-->
-		<!--<action itemid="5908" script="custom/skinning.lua" />-->
-		<!--<action itemid="9930" script="custom/rustremover.lua" />-->
-		<!--<action itemid="10309" script="custom/noxiousclaw.lua" />-->
-
-		<!-- Ceremonial ankh - Ornamented brooch & Blessings -->
-		<!--<action itemid="6561" script="custom/checkbless.lua" />-->
-		<!--<action itemid="12424" script="custom/checkbless.lua" />-->
-		<!--<action fromid="11258" toid="11262" script="custom/blessingCharms.lua" />
 
 		<!-- Offline Training -->
 		<action itemid="1444" script="custom/skilltrainer.lua" />
@@ -103,8 +102,6 @@
 		<action itemid="8777" script="custom/skilltrainer.lua" />
 
 		<!-- Others -->
-		<!--<action itemid="3955" script="custom/voodoodoll.lua" />-->
-		<!--<action itemid="5468" script="custom/firebug.lua" />-->
 		<!--<action fromid="5792" toid="5797" script="custom/dice.lua" />-->
 		<!--<action itemid="5957" script="custom/lotteryticket.lua" />-->
 		<action fromaid="1515" toaid="1522" script="custom/potions_lever.lua" />

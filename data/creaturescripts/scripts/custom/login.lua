@@ -7,14 +7,17 @@ local events = {
 	'KosheiKill',
 	'PythiusTheRotten',
 	'Tasks',
-	'BossAchievements'
+	'BossAchievements',
+	'DeathCast'
 }
+
 function onLogin(player)
 	local serverName = configManager.getString(configKeys.SERVER_NAME)
 	local loginStr = "Welcome to " .. serverName .. "!"
 	if player:getLastLoginSaved() <= 0 then
 		loginStr = loginStr .. " Please choose your outfit."
 		player:sendOutfitWindow()
+		player:setBankBalance(0)
 	else
 		if loginStr ~= "" then
 			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
@@ -30,6 +33,23 @@ function onLogin(player)
 	-- Events
 	for i = 1, #events do
 		player:registerEvent(events[i])
+	end
+
+	if not player:isPremium() then
+		if player:getStorageValue(Storage.premiumCheck) == 1 then
+			player:teleportTo(player:getTown():getTemplePosition())
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:setStorageValue(Storage.premiumCheck, 0)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Your premium account time is over.")
+		end
+	else
+		player:setStorageValue(Storage.premiumCheck, 1)
+	end
+
+	if not player:isPremium() then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You are not yet a premium account, enter our website and enjoy the benefits of being premium.")
+	else
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You have "..player:getPremiumDays().." days of premium account.")
 	end
 
 	return true

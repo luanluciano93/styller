@@ -5,6 +5,6 @@
 	<parameters>
 		<parameter key="module_travel" value="1"/>
 		<parameter key="message_greet" value="Hello |PLAYERNAME|. If you don't know where to flow, say {travel}."/>
-		<parameter key="travel_destinations" value="blood city,1022,986,6,200;tiquanda,1056,1005,7,200"/>
+		<parameter key="travel_destinations" value="blood city,1022,986,6,200;tiquanda,1056,1005,7,200;addon city,668,1153,7,200;"/>
 	</parameters>
 </npc>

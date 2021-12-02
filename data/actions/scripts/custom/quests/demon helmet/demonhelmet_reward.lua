@@ -10,18 +10,19 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	if table.contains(demonHelmetReward, item.uid) then
-		local itemWeight = itemType:getWeight()
-		local playerCap = player:getFreeCapacity()
 		if player:getStorageValue(item.uid) == -1 then
-				if playerCap >= itemWeight then
-					player:addItem(item.uid, 1)
-					player:sendTextMessage(MESSAGE_INFO_DESCR, 'You have found a ' .. itemType:getName() .. '.')
-					player:setStorageValue(item.uid, 1)
-				else
-					player:sendTextMessage(MESSAGE_INFO_DESCR, 'You have found a ' .. itemType:getName() .. ' weighing ' .. itemWeight .. ' oz it\'s too heavy.')
-				end
+			local itemWeight = itemType:getWeight()
+			local playerCap = player:getFreeCapacity()
+			if playerCap >= itemWeight then
+				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found a ' .. itemType:getName() .. '.')
+				player:addItem(item.uid, 1)
+				player:setStorageValue(item.uid, 1)
+			else
+				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found a ' .. itemType:getName() .. ' weighing ' .. itemWeight .. ' oz it\'s too heavy.')
+				player:getPosition():sendMagicEffect(CONST_ME_POFF)
+			end
 		else
-			player:sendCancelMessage("It is empty.")
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'It is empty.')
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		end
 	else

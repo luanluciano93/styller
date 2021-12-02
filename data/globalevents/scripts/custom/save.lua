@@ -5,7 +5,7 @@ local function cleanServer()
 end
 
 function onTime(interval)
-	Game.broadcastMessage("Cleaning map in 1 minute.", MESSAGE_STATUS_WARNING)
-	addEvent(cleanServer, 60000)
+	Game.broadcastMessage("Cleaning map in 3 minutes.", MESSAGE_STATUS_WARNING)
+	addEvent(cleanServer, 180 * 1000)
 	return true
 end

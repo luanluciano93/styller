@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters>
 	<!-- Custom -->
-	<monster name="Zombie Event" file="custom/zombie_event.xml" />
-	<monster name="Target" file="custom/target.xml" />
-	<monster name="Protect Statue" file="custom/protect_statue.xml"/>
-	<monster name="Castle" file="custom/castle.xml"/>
-	<monster name="Protect Castle" file="custom/protect_castle.xml"/>
+	<monster name="Trainer" file="monsters/custom/trainer.xml" />
+	<monster name="Zombie Event" file="monsters/custom/zombie_event.xml" />
+	<monster name="Target" file="monsters/custom/target.xml" />
+	<monster name="Protect Statue" file="/monsters/custom/protect_statue.xml" />
+	<monster name="Castle" file="monsters/custom/castle.xml" />
+	<monster name="Protect Castle" file="monsters/custom/protect_castle.xml" />
+	<monster name="Assassin" file="monsters/custom/assassin.xml" />
+	<monster name="Ferumbras" file="monsters/custom/ferumbras.xml" />
+	<monster name="Mahrdis" file="monsters/custom/mahrdis.xml" />
+	<monster name="Ushuriel" file="monsters/custom/ushuriel.xml" />
 
 	<!-- Monsters -->
 	<monster name="a carved stone tile" file="monsters/a_carved_stone_tile.xml" />
@@ -29,7 +34,7 @@
 	<monster name="Askarak Demon" file="monsters/askarak_demon.xml" />
 	<monster name="Askarak Lord" file="monsters/askarak_lord.xml" />
 	<monster name="Askarak Prince" file="monsters/askarak_prince.xml" />
-	<monster name="Assassin" file="monsters/assassin.xml" />
+	<!--<monster name="Assassin" file="monsters/assassin.xml" />-->
 	<monster name="Avalanche" file="monsters/avalanche.xml" />
 	<monster name="Axeitus Headbanger" file="monsters/axeitus_headbanger.xml" />
 	<monster name="Azerus" file="monsters/azerus.xml" />
@@ -231,7 +236,7 @@
 	<monster name="Fatality" file="monsters/fatality.xml" />
 	<monster name="Fernfang" file="monsters/fernfang.xml" />
 	<monster name="Ferumbras Mortal Shell" file="monsters/ferumbras_mortal_shell.xml" />
-	<monster name="Ferumbras" file="monsters/ferumbras.xml" />
+	<!--<monster name="Ferumbras" file="monsters/ferumbras.xml" />-->
 	<monster name="Feverish Citizen" file="monsters/feverish_citizen.xml" />
 	<monster name="Feversleep" file="monsters/feversleep.xml" />
 	<monster name="Filth Toad" file="monsters/filth_toad.xml" />
@@ -403,7 +408,7 @@
 	<monster name="Magic Pillar" file="monsters/magic_pillar.xml" />
 	<monster name="Magicthrower" file="monsters/magicthrower.xml" />
 	<monster name="Magma Crawler" file="monsters/magma_crawler.xml" />
-	<monster name="Mahrdis" file="monsters/mahrdis.xml" />
+	<!--<monster name="Mahrdis" file="monsters/mahrdis.xml" />-->
 	<monster name="Mammoth" file="monsters/mammoth.xml" />
 	<monster name="Man In The Cave" file="monsters/man_in_the_cave.xml" />
 	<monster name="Manta Ray" file="monsters/manta_ray.xml" />
@@ -686,7 +691,7 @@
 	<monster name="Undead Minion" file="monsters/undead_minion.xml" />
 	<monster name="Undead Prospector" file="monsters/undead_prospector.xml" />
 	<monster name="Ungreez" file="monsters/ungreez.xml" />
-	<monster name="Ushuriel" file="monsters/ushuriel.xml" />
+	<!--<monster name="Ushuriel" file="monsters/ushuriel.xml" />-->
 	<monster name="Valkyrie" file="monsters/valkyrie.xml" />
 	<monster name="Vampire Bride" file="monsters/vampire_bride.xml" />
 	<monster name="Vampire Pig" file="monsters/vampire_pig.xml" />

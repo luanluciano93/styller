@@ -4,8 +4,11 @@
 	<globalevent type="record" name="PlayerRecord" script="record.lua" />
 	<globalevent name="Server Save" time="05:55:00" script="serversave.lua" />
 	
-	<!-- Startup -->
-	<globalevent type="startup" name="StartupCustom" script="custom/startup_custom.lua" />	
+	<!-- Custom -->
+	<!--<globalevent type="startup" name="StartupCustom" script="custom/startup_custom.lua" />-->
+	<globalevent type="startup" name="CleanDatabase" script="custom/clean_database.lua" />
+	<globalevent name="PowerGamers" interval="60000" script="custom/znote_powergamers.lua"/>
+	<globalevent name="ZnoteShop" interval="30000" script="custom/znote_shopsystem.lua"/>
 	
 	<!-- Save -->
 	<globalevent name="Save1" time="09:00:00" script="custom/save.lua" />
@@ -18,14 +21,36 @@
 	<globalevent name="Save8" time="05:30:00" script="custom/save.lua" />
 
 	<!-- Battlefield Event -->
-	<globalevent name="Battlefield1" time="10:00:00" script="custom/battlefield.lua" />
-	<globalevent name="Battlefield2" time="19:00:00" script="custom/battlefield.lua" />
+	<globalevent name="Battlefield1" time="00:00:00" script="custom/events/battlefield.lua" />
+	<globalevent name="Battlefield2" time="05:00:00" script="custom/events/battlefield.lua" />
+	<globalevent name="Battlefield3" time="10:00:00" script="custom/events/battlefield.lua" />
+	<globalevent name="Battlefield4" time="15:00:00" script="custom/events/battlefield.lua" />
+	<globalevent name="Battlefield5" time="20:00:00" script="custom/events/battlefield.lua" />
 
 	<!-- Zombie Event -->
-	<globalevent name="Zombie1" time="09:00:00" script="custom/zombie.lua" />
-	<globalevent name="Zombie2" time="18:00:00" script="custom/zombie.lua" />
+	<globalevent name="Zombie1" time="03:00:00" script="custom/events/zombie.lua" />
+	<globalevent name="Zombie2" time="08:00:00" script="custom/events/zombie.lua" />
+	<globalevent name="Zombie3" time="13:00:00" script="custom/events/zombie.lua" />
+	<globalevent name="Zombie4" time="18:00:00" script="custom/events/zombie.lua" />
+	<globalevent name="Zombie5" time="23:00:00" script="custom/events/zombie.lua" />
 
 	<!-- Duca Event -->
-	<globalevent name="Duca1" time="12:00:00" script="custom/duca.lua" />
-	<globalevent name="Duca2" time="20:00:00" script="custom/duca.lua" />
+	<globalevent name="Duca1" time="01:00:00" script="custom/events/duca.lua" />
+	<globalevent name="Duca2" time="06:10:00" script="custom/events/duca.lua" />
+	<globalevent name="Duca3" time="11:00:00" script="custom/events/duca.lua" />
+	<globalevent name="Duca4" time="16:00:00" script="custom/events/duca.lua" />
+	<globalevent name="Duca5" time="21:00:00" script="custom/events/duca.lua" />
+	
+	<!-- Safezone Event -->
+	<globalevent name="Safezone1" time="02:00:00" script="custom/events/safezone.lua" />
+	<globalevent name="Safezone2" time="07:00:00" script="custom/events/safezone.lua" />
+	<globalevent name="Safezone3" time="12:00:00" script="custom/events/safezone.lua" />
+	<globalevent name="Safezone4" time="17:00:00" script="custom/events/safezone.lua" />
+	<globalevent name="Safezone5" time="22:00:00" script="custom/events/safezone.lua" />
+	
+	<!-- Capture the Flag Event -->
+	<globalevent name="CaptureTheFlag1" time="04:00:00" script="custom/events/capturetheflag.lua" />
+	<globalevent name="CaptureTheFlag2" time="09:00:00" script="custom/events/capturetheflag.lua" />
+	<globalevent name="CaptureTheFlag3" time="14:00:00" script="custom/events/capturetheflag.lua" />
+	<globalevent name="CaptureTheFlag4" time="19:00:00" script="custom/events/capturetheflag.lua" />
 </globalevents>

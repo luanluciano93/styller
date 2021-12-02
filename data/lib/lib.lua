@@ -9,5 +9,5 @@ dofile('data/lib/debugging/dump.lua')
 dofile('data/lib/debugging/lua_version.lua')
 
 -- Custom LIB styller
-dofile('data/lib/custom/compat.lua')
+dofile('data/lib/custom/compatCustom.lua')
 dofile('data/lib/custom/storages.lua')

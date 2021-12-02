@@ -60,7 +60,7 @@ function creatureSayCallback(cid, type, msg)
 		Topic[cid] = nil
 	
 	elseif msgcontains(msg, 'balance') then
-		npcHandler:say('Your account balance is ' .. getPlayerBalance(cid) .. ' gold.', cid)
+		npcHandler:say('Your account balance is ' .. player:getBankBalance() .. ' gold.', cid)
 		Topic[cid] = nil
 
 	elseif msgcontains(msg, 'deposit') and msgcontains(msg, 'all') then

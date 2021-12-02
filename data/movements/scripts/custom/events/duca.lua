@@ -36,7 +36,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	for _, check in ipairs(Game.getPlayers()) do
-		if player:getIp() == check:getIp() and check:getStorageValue(Storage.events) > 0 then
+		if player:getIp() == check:getIp() and check:getStorageValue(DUCA.storage) > 0 then
 			player:sendCancelMessage("You already have another player inside the event.")
 			player:teleportTo(fromPosition)
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
@@ -44,12 +44,14 @@ function onStepIn(creature, item, position, fromPosition)
 		end
 	end
 
-	local team = ducaBalanceTeam()
-	ducaAddPlayerinTeam(player:getGuid(), team)
+	eventsOutfit[player:getGuid()] = player:getOutfit()												
+
+	local team = duca_balanceTeam()
+	duca_addPlayerinTeam(player:getGuid(), team)
 	player:registerEvent("Duca")
 	player:teleportTo(DUCA.teamsDuca[team].temple)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player:setStorageValue(Storage.ducaPoints, 0)
+	player:setStorageValue(DUCA.ducaPoints, 0)
 
 	return true
 end

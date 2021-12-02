@@ -57,11 +57,14 @@
 	<talkaction words="/serversave" script="custom/serversave.lua" />
 	<talkaction words="/addons" separator=" " script="custom/alladdons.lua" />
 	<talkaction words="/pos" separator=" " script="custom/teleport_to_pos.lua" />
+	<talkaction words="!report" separator=" " script="custom/znote_adminreport.lua"/>
 	
 	<!-- events talkactions -->
-	<talkaction words="/battlefield" script="custom/battlefield.lua" />
-	<talkaction words="/zombie" script="custom/zombie.lua" />
-	<talkaction words="/duca" script="custom/duca.lua" />
+	<talkaction words="/battlefield" script="custom/events/battlefield.lua" />
+	<talkaction words="/zombie" script="custom/events/zombie.lua" />
+	<talkaction words="/duca" script="custom/events/duca.lua" />
+	<talkaction words="/safezone" script="custom/events/safezone.lua" />
+	<talkaction words="/capturetheflag" script="custom/events/capturetheflag.lua" />
 
 	<!-- player talkactions -->
 	<talkaction words="!buyhouse" script="custom/buyhouse.lua" />
@@ -71,4 +74,5 @@
 	<talkaction words="!bless" script="custom/bless.lua" />
 	<talkaction words="!addon" separator=" " script="custom/addondoll.lua" />
 	<talkaction words="!offer" separator=" " script="custom/auction_system.lua" />
+	<talkaction words="!shop" script="custom/znote_shop.lua"/>
 </talkactions>

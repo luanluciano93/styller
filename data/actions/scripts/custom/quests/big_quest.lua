@@ -9,20 +9,20 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	local itemWeight = itemType:getWeight()
-	local playerCap = player:getFreeCapacity()
 	if table.contains(bigQuestReward, item.uid) then
 		if player:getStorageValue(Storage.bigQuest) == -1 then
+			local itemWeight = itemType:getWeight()
+			local playerCap = player:getFreeCapacity()
 			if playerCap >= itemWeight then
-				player:addItem(item.uid, 1)
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found a ' .. itemType:getName() .. '.')
+				player:addItem(item.uid, 1)
 				player:setStorageValue(Storage.bigQuest, 1)
 			else
-				player:sendCancelMessage("You don't have capacity.")
+				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found a ' .. itemType:getName() .. ' weighing ' .. itemWeight .. ' oz it\'s too heavy.')
 				player:getPosition():sendMagicEffect(CONST_ME_POFF)
 			end
 		else
-			player:sendCancelMessage("It is empty.")
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'It is empty.')
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		end
 	else

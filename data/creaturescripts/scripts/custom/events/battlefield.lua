@@ -1,45 +1,60 @@
 dofile('data/lib/custom/battlefield.lua')
 
-local function battlefieldWinners(team)
+function onLogin(player)
+	if player:getStorageValue(BATTLEFIELD.storage) > 0 then
+		player:setStorageValue(BATTLEFIELD.storage, 0)
+		player:teleportTo(player:getTown():getTemplePosition())
+	end
+	return true
+end
+
+function onLogout(player)
+	if player:getStorageValue(BATTLEFIELD.storage) > 0 then
+		player:sendCancelMessage("You can not logout in event!")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+	return true
+end
+
+function battlefield_removeAllPlayers()
+	for _, player in ipairs(Game.getPlayers()) do
+		if player:getStorageValue(BATTLEFIELD.storage) > 0 then
+			battlefield_removePlayer(player:getGuid())
+		end
+	end
+end
+
+local function battlefield_winners(team)
 	for _, winner in ipairs(Game.getPlayers()) do
-		if winner:getStorageValue(Storage.events) == team then	
+		if winner:getStorageValue(BATTLEFIELD.storage) == team then	
 			winner:sendTextMessage(MESSAGE_INFO_DESCR, "Congratulations, your team won the battlefield event.")
 			winner:addItem(BATTLEFIELD.reward[1], BATTLEFIELD.reward[2])
-			battlefieldRemovePlayer(winner:getGuid())
+			battlefield_removePlayer(winner:getGuid())
 		end
 	end
 
 	Game.broadcastMessage("The BattleEvent is finish, team ".. BATTLEFIELD.teamsBattlefield[team].color .." win.", MESSAGE_STATUS_WARNING)
-	battlefieldCheckGate()
+	battlefield_checkGate()
 
-	print("> BattleField Event was finished.")
+	print(">>> BattleField Event was finished.")
 
-	addEvent(checkFinishEvent, 3000)
-end
-
-local function checkFinishEvent()
-	for _, player in ipairs(Game.getPlayers()) do
-		if player:getStorageValue(Storage.events) == 5 or player:getStorageValue(Storage.events) == 6 then
-			battlefieldRemovePlayer(player:getGuid())
-		end
-	end
+	addEvent(battlefield_removeAllPlayers, 3000)
 end
 
 function onPrepareDeath(player, killer)
-
 	if killer then
-		local team = player:getStorageValue(Storage.events)
-		if team == 5 or team == 6 then
-			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You are dead in Battlefield Event!")
-			battlefieldRemovePlayer(player:getGuid())
+		local team = player:getStorageValue(BATTLEFIELD.storage)
+		if team > 0 then
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You are dead in battlefield event!")
+			battlefield_removePlayer(player:getGuid())
 
-			if battlefieldCountPlayers(team) == 0 then
-				battlefieldWinners((team == 5) and 6 or 5)
+			if battlefield_totalPlayersTeam(team) == 0 then
+				battlefield_winners((team == 1) and 2 or 1)
 			else
-				battlefieldMsg()
+				battlefield_msg()
 			end
 		end
 	end
-
 	return false
 end

@@ -2933,11 +2933,13 @@
 		<attribute key="description" value="It looks like a little king." />
 		<attribute key="weight" value="650" />
 	</item>
-	<item id="2323" article="a" name="hat of the mad">
+	<item id="2323" article="a" name="VIP hat"> <!-- hat of the mad -->
 		<attribute key="description" value="You have a vague feeling that it looks somewhat silly." />
 		<attribute key="weight" value="700" />
-		<attribute key="armor" value="3" />
-		<attribute key="magiclevelpoints" value="1" />
+		<attribute key="armor" value="12" />
+		<attribute key="speed" value="20" />
+		<attribute key="magiclevelpoints" value="3" />
+		<attribute key="absorbPercentFire" value="10" />
 		<attribute key="slotType" value="head" />
 	</item>
 	<item id="2324" article="a" name="witchesbroom">
@@ -3088,10 +3090,16 @@
 		<attribute key="weight" value="90" />
 		<attribute key="slotType" value="ring" />
 	</item>
-	<item id="2358" name="boots of waterwalking">
+	<item id="2358" name="VIP boots"> <!-- boots of waterwalking -->
 		<attribute key="description" value="(This item has 5 charges left)." />
 		<attribute key="weight" value="770" />
 		<attribute key="slotType" value="feet" />
+		<attribute key="healthGain" value="30" />
+		<attribute key="healthTicks" value="1000" />
+		<attribute key="manaGain" value="30" />
+		<attribute key="manaTicks" value="1000" />
+		<attribute key="speed" value="35" />
+		<attribute key="showattributes" value="1" />
 	</item>
 	<item id="2359" article="a" name="djinn's lamp">
 		<attribute key="description" value="(This item has 2 charges left)." />
@@ -3803,10 +3811,12 @@
 		<attribute key="armor" value="4" />
 		<attribute key="slotType" value="head" />
 	</item>
-	<item id="2474" article="a" name="winged helmet">
-		<attribute key="description" value="It's the Helmet of Hermes." />
+	<item id="2474" article="a" name="VIP winged helmet"> <!-- winged helmet -->
 		<attribute key="weight" value="1200" />
-		<attribute key="armor" value="10" />
+		<attribute key="armor" value="14" />
+		<attribute key="speed" value="10" />
+		<attribute key="skillDist" value="2" />
+		<attribute key="absorbPercentDeath" value="10" />
 		<attribute key="slotType" value="head" />
 	</item>
 	<item id="2475" article="a" name="warrior helmet">
@@ -3915,9 +3925,12 @@
 		<attribute key="armor" value="9" />
 		<attribute key="slotType" value="legs" />
 	</item>
-	<item id="2496" article="a" name="horned helmet">
+	<item id="2496" article="a" name="VIP horned helmet"> <!-- horned helmet -->
 		<attribute key="weight" value="5100" />
-		<attribute key="armor" value="11" />
+		<attribute key="armor" value="15" />
+		<attribute key="absorbPercentPhysical" value="5" />
+		<attribute key="absorbPercentDeath" value="5" />
+		<attribute key="skillShield" value="2" />
 		<attribute key="slotType" value="head" />
 	</item>
 	<item id="2497" article="a" name="crusader helmet">
@@ -3942,9 +3955,12 @@
 		<attribute key="skillDist" value="3" />
 		<attribute key="slotType" value="body" />
 	</item>
-	<item id="2501" article="a" name="ceremonial mask">
+	<item id="2501" article="a" name="VIP mask"> <!-- ceremonial mask -->
 		<attribute key="weight" value="4000" />
-		<attribute key="armor" value="9" />
+		<attribute key="armor" value="12" />
+		<attribute key="speed" value="20" />
+		<attribute key="magiclevelpoints" value="3" />
+		<attribute key="absorbPercentIce" value="10" />
 		<attribute key="slotType" value="head" />
 	</item>
 	<item id="2502" article="a" name="dwarven helmet">
@@ -4133,20 +4149,29 @@
 		<attribute key="defense" value="33" />
 		<attribute key="weaponType" value="shield" />
 	</item>
-	<item id="2537" article="an" name="amazon shield">
+	<item id="2537" article="an" name="VIP RP shield"> <!-- amazon shield -->
 		<attribute key="weight" value="6200" />
-		<attribute key="defense" value="32" />
+		<attribute key="defense" value="40" />
+		<attribute key="skillShield" value="2" />
+		<attribute key="skillDist" value="2" />
+		<attribute key="absorbPercentDeath" value="10" />
 		<attribute key="weaponType" value="shield" />
 	</item>
-	<item id="2538" article="an" name="eagle shield">
+	<item id="2538" article="an" name="VIP EK shield"> <!-- eagle shield -->
 		<attribute key="weight" value="6200" />
-		<attribute key="defense" value="32" />
+		<attribute key="defense" value="45" />
+		<attribute key="skillSword" value="2" />
+		<attribute key="skillAxe" value="2" />
+		<attribute key="skillClub" value="2" />
+		<attribute key="skillShield" value="4" />
 		<attribute key="weaponType" value="shield" />
 	</item>
-	<item id="2539" article="a" name="phoenix shield">
-		<attribute key="description" value="This shield feels warm to the touch." />
+	<item id="2539" article="a" name="VIP MS shield"> <!-- phoenix shield -->
 		<attribute key="weight" value="3500" />
-		<attribute key="defense" value="34" />
+		<attribute key="defense" value="37" />
+		<attribute key="speed" value="10" />
+		<attribute key="magiclevelpoints" value="4" />
+		<attribute key="absorbPercentFire" value="10" />
 		<attribute key="weaponType" value="shield" />
 	</item>
 	<item id="2540" article="a" name="scarab shield">
@@ -4159,9 +4184,12 @@
 		<attribute key="defense" value="20" />
 		<attribute key="weaponType" value="shield" />
 	</item>
-	<item id="2542" article="a" name="tempest shield">
+	<item id="2542" article="a" name="VIP ED shield"> <!-- tempest shield -->
 		<attribute key="weight" value="5100" />
-		<attribute key="defense" value="36" />
+		<attribute key="defense" value="37" />
+		<attribute key="speed" value="10" />
+		<attribute key="magiclevelpoints" value="4" />
+		<attribute key="absorbPercentIce" value="10" />
 		<attribute key="weaponType" value="shield" />
 	</item>
 	<item id="2543" article="a" name="bolt">
@@ -4435,10 +4463,10 @@
 		<attribute key="decayTo" value="10021" />
 		<attribute key="transformDeEquipTo" value="6132" />
 		<attribute key="duration" value="14400" />
-		<attribute key="healthGain" value="3" />
-		<attribute key="healthTicks" value="6000" />
-		<attribute key="manaGain" value="12" />
-		<attribute key="manaTicks" value="6000" />
+		<attribute key="healthGain" value="20" />
+		<attribute key="healthTicks" value="2000" />
+		<attribute key="manaGain" value="20" />
+		<attribute key="manaTicks" value="1000" />
 		<attribute key="showduration" value="1" />
 		<attribute key="showattributes" value="1" />
 	</item>
@@ -11386,7 +11414,7 @@
 	<item id="6526" article="a" name="skeleton decoration">
 		<attribute key="weight" value="1000" />
 	</item>
-	<item id="6527" article="a" name="christmas token">
+	<item id="6527" article="a" name="event token">
 		<attribute key="description" value="Collect enough of these to trade them for valuable prizes." />
 		<attribute key="weight" value="5" />
 	</item>
@@ -12415,13 +12443,12 @@
 		<attribute key="shootType" value="onyxarrow" />
 		<attribute key="maxHitChance" value="94" />
 	</item>
-	<item id="7366" article="a" name="viper star">
-		<attribute key="weight" value="200" />
-		<attribute key="attack" value="28" />
-		<attribute key="hitChance" value="80" />
+	<item id="7366" article="a" name="VIP star"> <!-- viper star -->
+		<attribute key="weight" value="100" />
+		<attribute key="attack" value="70" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="greenstar" />
-		<attribute key="maxHitChance" value="76" />
+		<attribute key="maxHitChance" value="100" />
 		<attribute key="range" value="4" />
 	</item>
 	<item id="7367" article="an" name="enchanted spear">
@@ -12570,12 +12597,12 @@
 		<attribute key="extradef" value="3" />
 		<attribute key="description" value="This sword is only granted to a warlord of the Svargrond arena." />
 	</item>
-	<item id="7391" article="a" name="thaian sword">
+	<item id="7391" article="a" name="VIP thaian sword"> <!-- -->
 		<attribute key="weight" value="6100" />
-		<attribute key="defense" value="29" />
-		<attribute key="attack" value="45" />
+		<attribute key="defense" value="40" />
+		<attribute key="attack" value="56" />
+		<attribute key="skillSword" value="4" />
 		<attribute key="weaponType" value="sword" />
-		<attribute key="slotType" value="two-handed" />
 	</item>
 	<item id="7392" article="an" name="orcish maul">
 		<attribute key="weight" value="5400" />
@@ -15592,7 +15619,12 @@
 	</item>
 	<item id="8718" name="vines" />
 	<item id="8719" article="a" name="window" />
-	<item id="8720" article="a" name="sturdy chest" />
+	<item id="8720" article="a" name="sturdy chest" >
+		<attribute key="description" value="This chest contains your rewards earned in battles." />
+		<attribute key="containersize" value="32" />
+		<attribute key="pickupable" value="0" />
+		<attribute key="moveable" value="0" />
+	</item>
 	<item id="8721" name="demonic residue">
 		<attribute key="containerSize" value="24" />
 		<attribute key="decayTo" value="0" />
@@ -17116,9 +17148,17 @@
 	<item id="9734" article="an" name="animal cure">
 		<attribute key="weight" value="180" />
 	</item>
-	<item id="9735" name="Morik's helmet">
+	<item id="9735" name="VIP EK helmet"> <!-- Morik's helmet -->
 		<attribute key="description" value="It belonged to a famous gladiator." />
-		<attribute key="weight" value="4600" />
+		<attribute key="skillSword" value="3" />
+		<attribute key="skillAxe" value="3" />
+		<attribute key="skillClub" value="4" />
+		<attribute key="absorbPercentFire" value="5" />
+		<attribute key="absorbPercentIce" value="-5" />
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="13" />
+		<attribute key="slotType" value="head" />
+		<attribute key="showattributes" value="1" />
 	</item>
 	<item id="9736" article="an" name="armor">
 		<attribute key="weight" value="900" />

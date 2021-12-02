@@ -141,11 +141,15 @@ function Player:onGainExperience(source, exp, rawExp)
 		useStamina(self)
 
 		local staminaMinutes = self:getStamina()
-		if staminaMinutes > 2400 then
+		if staminaMinutes > 2340 then
 			exp = exp * 1.5
 		elseif staminaMinutes <= 840 then
 			exp = exp * 0.5
 		end
+	end
+
+	if self:isPremium() then
+		exp = exp * 0.2
 	end
 
 	return hasEventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE) and EventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE, self, source, exp, rawExp) or exp

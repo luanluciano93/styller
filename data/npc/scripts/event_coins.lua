@@ -12,7 +12,7 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 
-	local event_coin = 12411
+	local event_coin = 6527
 	local shopWindow = {}
 	local items = {
 		[9693] = {price = 100}

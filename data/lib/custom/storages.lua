@@ -55,5 +55,24 @@ Storage = {
 		storageJoin = 62001
 	},
 	dailyQuest = 62002,
-	dailyQuestTime = 62003
+	dailyQuestTime = 62003,
+	
+	-- used for 40000 at 41000
+	znoteSyncoutfit = 40000,
+	
+	znoteAdminReport = 62004,
+	znoteShop = 62005,
+	safezoneEvent = 62006,
+	battlefieldEvent = 62007,
+	zombieEvent = 62008,
+	ducaEvent = 62009,
+	ducaPoints = 62010,
+	captureTheFlagEvent = 62011,
+	premiumCheck = 62012
+}
+
+GlobalStorage = {
+	battlefieldEvent = 70000,
+	ducaEvent = 70001,
+	captureTheFlagEvent = 70002
 }

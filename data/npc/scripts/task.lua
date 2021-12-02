@@ -42,7 +42,7 @@ local grizzlyAdamsConfig = {
 			{id = 11369, buy = 0, sell = 170, name = 'terramite shell'},
 			{id = 11190, buy = 0, sell = 95, name = 'terrorbird beak'},
 			-- BUY OFFERS
-			{id = 5907, buy = 35000, sell = 0, name = 'slingshot'}
+			-- {id = 5907, buy = 35000, sell = 0, name = 'slingshot'}
 		},
 
 		bigGameHunter_rank = {

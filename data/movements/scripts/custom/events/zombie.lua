@@ -19,7 +19,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	for _, check in ipairs(Game.getPlayers()) do
-		if player:getIp() == check:getIp() and check:getStorageValue(Storage.events) > 0 then
+		if player:getIp() == check:getIp() and check:getStorageValue(ZOMBIE.storage) > 0 then
 			player:sendCancelMessage("You already have another player inside the event.")
 			player:teleportTo(fromPosition)
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
@@ -33,7 +33,7 @@ function onStepIn(creature, item, position, fromPosition)
 	player:registerEvent("Zombie")
 	player:teleportTo(ZOMBIE.positionEnterEvent)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player:setStorageValue(Storage.events, 7)
+	player:setStorageValue(ZOMBIE.storage, 1)
 
 	return true
 end

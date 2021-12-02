@@ -1,17 +1,45 @@
 dofile('data/lib/custom/zombie.lua')
 
-local function checkFinishEvent()
-	for _, player in ipairs(Game.getPlayers()) do
-		if player:getStorageValue(Storage.events) == 7 then
-			player:unregisterEvent("Zombie")
-			player:teleportTo(player:getTown():getTemplePosition())
-			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-			player:setStorageValue(Storage.events, 0)
-		end
+function onLogin(player)
+	if player:getStorageValue(ZOMBIE.storage) > 0 then
+		player:setStorageValue(ZOMBIE.storage, 0)
+		player:teleportTo(player:getTown():getTemplePosition())
+	end
+	return true
+end
+
+function onLogout(player)
+	if player:getStorageValue(ZOMBIE.storage) > 0 then
+		player:sendCancelMessage("You can not logout in event!")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+	return true
+end
+
+local function zombie_removePlayer(uid)
+	local player = Player(uid)
+	if player then
+		player:removeCondition(CONDITION_INFIGHT)
+		player:addHealth(player:getMaxHealth())
+		player:addMana(player:getMaxMana())
+		player:unregisterEvent("Zombie")
+		player:teleportTo(player:getTown():getTemplePosition())
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		player:setStorageValue(ZOMBIE.storage, 0)
 	end
 end
 
-local function clearEvent()
+function zombie_checkFinishEvent()
+	for _, player in ipairs(Game.getPlayers()) do
+		if player:getStorageValue(ZOMBIE.storage) > 0 then
+			zombie_removePlayer(player:getGuid())
+		end
+	end
+	addEvent(zombie_clearEvent, 1000)
+end
+
+function zombie_clearEvent()
 	local spectators = Game.getSpectators(ZOMBIE.positionEnterEvent, false, false, 40, 40, 40, 40)
 	for i = 1, #spectators do
 		local monster = spectators[i]
@@ -25,7 +53,7 @@ end
 function onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
 	if attacker then
 		if attacker:isMonster() and attacker:getName() == "Zombie" then
-			local totalPlayers = zombieTotalPlayers()
+			local totalPlayers = zombie_totalPlayers()
 			if totalPlayers > 0 then
 				if totalPlayers == 1 then
 					creature:say("ZOMBIE EVENT WIN!", TALKTYPE_MONSTER_SAY)
@@ -42,10 +70,9 @@ function onHealthChange(creature, attacker, primaryDamage, primaryType, secondar
 						trophy:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, 'Awarded to '.. creature:getName() ..'.')
 					end
 
-					addEvent(checkFinishEvent, 3000)
-					addEvent(clearEvent, 4000)
+					addEvent(zombie_checkFinishEvent, 3000)
 
-					print("> Zombie event finish, winner: " .. creature:getName())
+					print(">>> Zombie event finish, winner: " .. creature:getName())
 				else
 					attacker:say("DEAD!", TALKTYPE_MONSTER_SAY)
 					attacker:getPosition():sendMagicEffect(CONST_ME_MORTAREA)
@@ -54,10 +81,7 @@ function onHealthChange(creature, attacker, primaryDamage, primaryType, secondar
 				end
 			end
 
-			creature:unregisterEvent("Zombie")
-			creature:teleportTo(creature:getTown():getTemplePosition())
-			creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-			creature:setStorageValue(Storage.events, 0)
+			zombie_removePlayer(creature:getGuid())
 		end
 	end
 

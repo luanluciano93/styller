@@ -4,7 +4,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	player:teleportTo(Position(1012, 960, 9))
+	player:teleportTo(Position(895, 978, 7))
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 
 	return true

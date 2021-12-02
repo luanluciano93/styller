@@ -26,9 +26,3 @@ function Creature:onTargetCombat(target)
 		return RETURNVALUE_NOERROR
 	end
 end
-
-function Creature:onHear(speaker, words, type)
-	if hasEventCallback(EVENT_CALLBACK_ONHEAR) then
-		EventCallback(EVENT_CALLBACK_ONHEAR, self, speaker, words, type)
-	end
-end
