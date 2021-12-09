@@ -12,7 +12,7 @@ Desenvolvimento de um servidor styller usando o TFS 1.4 Nekiro's Downgrades na v
 - Caso tenha dúvidas, ou queira resolver algum bug/erro, dar dicas para o projeto, ou também ajudar em sua construção, crie um [issue](https://github.com/luanluciano93/styller/issues/new) / [pull requests](https://github.com/luanluciano93/styller/pulls) pelo github ou use o [tópico do projeto](https://tibiaking.com/forums/topic/104684-tfs-14-860-styller-2021/) no fórum tibiaking.
 
 ### Website compatível:
-- Em breve ...
+- [ZnoteACC](https://github.com/luanluciano93/ZnoteAAC) para o Styller 2021 (feito em boostrap 5).
 
 ### Créditos:
 - luanluciano93
