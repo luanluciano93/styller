@@ -1,6 +1,6 @@
 function onStepIn(creature, item, position, fromPosition)
 	if not creature:isPlayer() then
-		return true
+		return false
 	end
 
 	creature:teleportTo(creature:getTown():getTemplePosition())

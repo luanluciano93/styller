@@ -24,7 +24,7 @@
 
 local inactiveMonthsToDeleteCharacter = 6 -- quantos meses o player precisa ficar inativo para ser deletado.
 local emptyAccountMonths = 2 -- quantos meses uma conta precisa ficar sem nenhum character criado para ser deletada.
-local inactiveDaysToCleanHouse = 30 -- quantos dias o player precisa ficar inativo para perder a house.
+local inactiveDaysToCleanHouse = 15 -- quantos dias o player precisa ficar inativo para perder a house.
 local inactiveDaysToCleanGuildWithFewPlayers = 7 -- quantos dias após a criação da guild irá verificar a quantidade mínima de players.
 local minimumGuildMembers = 3 -- quantidade minima de membros para a guild não entrar na verificação.
 

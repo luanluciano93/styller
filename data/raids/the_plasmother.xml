@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+	<!--Single Spawns-->
+	<singlespawn delay="1000" name="The Plasmother" x="1055" y="1049" z="11"/>
+</raid>

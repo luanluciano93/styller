@@ -1,6 +1,6 @@
--- Sync outfits that player own with Znote AAC 
--- So its possible to see which full sets player 
--- has in characterprofile.php 
+-- Sincronizar roupas que o jogador possui com Znote AAC
+-- Então é possível ver quais conjuntos completos do jogador
+-- em characterprofile.php
 
 local znote_outfit_list = {
 	{ -- Female (girl) outfits 
@@ -24,12 +24,12 @@ local znote_outfit_list = {
 }
 
 function onLogin(player)
-	-- storage_value + 1000 storages (highest outfit id) must not be used in other script. 
-	-- Must be identical to Znote AAC config.php: $config['EQ_shower'] -> storage_value
+	-- storage_value + 1000 storages (id de roupa mais alta) não deve ser usado em outro script.
+	-- Deve ser idêntico ao Znote AAC config.php: $config['EQ_shower'] -> storage_value
 	local storage_value = Storage.znoteSyncoutfit
 	-- Loop through outfits
 	for _, outfit in pairs(znote_outfit_list[player:getSex() + 1]) do
-		if player:hasOutfit(outfit,3) then 
+		if player:hasOutfit(outfit, 3) then 
 			if player:getStorageValue(storage_value + outfit) ~= 3 then 
 				player:setStorageValue(storage_value + outfit, 3) 
 			end

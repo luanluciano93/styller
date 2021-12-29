@@ -68,7 +68,9 @@ Storage = {
 	ducaEvent = 62009,
 	ducaPoints = 62010,
 	captureTheFlagEvent = 62011,
-	premiumCheck = 62012
+	premiumCheck = 62012,
+	guildBroadcast = 62013,
+	tradeoff_delay = 62014
 }
 
 GlobalStorage = {

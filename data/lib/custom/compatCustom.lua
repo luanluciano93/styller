@@ -270,3 +270,36 @@ function Player.getExhaustion(self)
 
 	return storage - os.time()
 end
+
+function isNumber(str)
+	return tonumber(str) ~= nil
+end
+
+function doRelocate(fromPos, toPos)
+	if fromPos == toPos then
+		return false
+	end
+
+	local fromTile = Tile(fromPos)
+	if fromTile == nil then
+		return false
+	end
+
+	if Tile(toPos) == nil then
+		return false
+	end
+
+	for i = fromTile:getThingCount() - 1, 0, -1 do
+		local thing = fromTile:getThing(i)
+		if thing then
+			if thing:isItem() then
+				if ItemType(thing:getId()):isMovable() then
+					thing:moveTo(toPos)
+				end
+			elseif thing:isCreature() then
+				thing:teleportTo(toPos)
+			end
+		end
+	end
+	return true
+end

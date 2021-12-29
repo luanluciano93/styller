@@ -10,11 +10,15 @@ function onSay(player, words, param)
 		return true
 	end
 
+	if player:getAccountType() < ACCOUNT_TYPE_GOD then
+		return true
+	end
+
 	local target
 	if param == '' then
 		target = player:getTarget()
 		if not target then
-			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, 'Gives players the ability to wear all addons. Usage: /addons <player name>')
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, 'Gives players the ability to wear all addons. Ex: /addons playerName')
 			return false
 		end
 	else
@@ -22,12 +26,7 @@ function onSay(player, words, param)
 	end
 
 	if not target then
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, 'Player ' .. param .. ' is currently not online.')
-		return false
-	end
-
-	if player:getAccountType() < ACCOUNT_TYPE_GOD  then
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, 'Cannot perform action.')
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, 'Player ' .. param .. ' is currently not online.')
 		return false
 	end
 
@@ -37,5 +36,6 @@ function onSay(player, words, param)
 
 	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, 'All addons unlocked for ' .. target:getName() .. '.')
 	target:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, '[Server] All addons unlocked.')
+
 	return false
 end

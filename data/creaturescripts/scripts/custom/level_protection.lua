@@ -1,19 +1,12 @@
-local freeBlessMaxLevel = 50
+dofile('data/lib/custom/styllerConfig.lua')
+
+local freeBlessMaxLevel = STYLLER.freeBlessMaxLevel
 
 function onLogin(player)
 
 	if player:getLevel() < freeBlessMaxLevel then
-		local blessings = 0
-		for i = 1, 5 do
-			if not player:hasBlessing(i) then
-				player:addBlessing(i, 1)
-				blessings = blessings + 1
-			end
-		end
-
-		if blessings > 0 then
-			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, 'You received free blessings for you to be level less than ' .. freeBlessMaxLevel .. '!')
-		end	
+		player:addBlessing(32) ----------- bit representation
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, 'You received free blessings for you to be level less than ' .. freeBlessMaxLevel .. '!')
 	end
 	return true
 end

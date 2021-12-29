@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+	<!--Announcements-->
+	<announce delay="1000" type="Event" message="Pirates are launching a surprise attack! Take care, they seem to be everywhere." />
+	<announce delay="30000" type="Event" message="Pirates have invaded the fortress." />
+	
+	<!--Single Spawns-->
+	<singlespawn delay="30000" name="Ron The Ripper" x="684" y="826" z="4"/>
+	<singlespawn delay="30000" name="Lethal Lissy" x="619" y="826" z="2"/>
+	<singlespawn delay="30000" name="Brutus Bloodbeard" x="589" y="794" z="5"/>
+	<singlespawn delay="30000" name="Deadeye Devious" x="649" y="792" z="6"/>
+</raid>

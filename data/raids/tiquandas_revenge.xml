@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+	<!--Announcements-->
+	<announce delay="1000" type="Event" message="Tiquandas Revenge is back, get ready!" />
+
+	<!--Single Spawns-->
+	<singlespawn delay="1000" name="Tiquandas Revenge" x="551" y="1202" z="7"/>
+</raid>

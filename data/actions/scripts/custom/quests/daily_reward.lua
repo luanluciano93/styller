@@ -1,12 +1,6 @@
-local days = {
-	[1] = {2160, 1, "first"},
-	[2] = {2160, 2, "second"},
-	[3] = {2160, 3, "third"},
-	[4] = {2160, 4, "fourth"},
-	[5] = {2160, 5, "fifth"},
-	[6] = {2160, 6, "sixth"},
-	[7] = {2160, 7, "seventh"}
-}
+dofile('data/lib/custom/styllerConfig.lua')
+
+local days = STYLLER.dailyReward
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	

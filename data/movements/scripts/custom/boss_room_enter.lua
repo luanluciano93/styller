@@ -23,7 +23,7 @@ end
 
 function onStepIn(creature, item, position, fromPosition)
 	if not creature:isPlayer() then
-		return true
+		return false
 	end
 
 	if creature:getExhaustion() <= 0 then
@@ -55,10 +55,10 @@ function onStepIn(creature, item, position, fromPosition)
 								end
 							end
 						elseif hasPlayers and hasMonsters then
-							creature:teleportTo(fromPosition, true)
-							creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 							creature:sendCancelMessage("Boss room is busy.")
 							creature:setExhaustion(5)
+							creature:teleportTo(fromPosition, true)
+							creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 							return false
 						end
 
@@ -72,10 +72,10 @@ function onStepIn(creature, item, position, fromPosition)
 							creature:sendTextMessage(MESSAGE_INFO_DESCR, "You have 10 minutes to kill the boss.")
 							return true
 						else
-							creature:teleportTo(fromPosition, true)
-							creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 							creature:sendCancelMessage("This boss does not exist.")
 							creature:setExhaustion(5)
+							creature:teleportTo(fromPosition, true)
+							creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 							return false
 						end
 
@@ -86,21 +86,23 @@ function onStepIn(creature, item, position, fromPosition)
 			end
 
 			if not bossStorage then
-				creature:teleportTo(fromPosition, true)
-				creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 				creature:sendCancelMessage("There is no boss for you to kill.")
 				creature:setExhaustion(10)
+				creature:teleportTo(fromPosition, true)
+				creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 				return false
 			end
 		else
+			creature:sendCancelMessage("You're exhausted.")
 			creature:teleportTo(fromPosition, true)
 			creature:getPosition():sendMagicEffect(CONST_ME_POFF)
-			creature:sendCancelMessage("You're exhausted.")
 			return false
 		end
 	else
-		creature:teleportTo(fromPosition, true)
 		creature:sendCancelMessage("You're exhausted.")
+		creature:teleportTo(fromPosition, true)
+		creature:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
 	end
 
 	return true

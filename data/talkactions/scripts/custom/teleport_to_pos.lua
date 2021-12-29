@@ -4,23 +4,38 @@ function onSay(player, words, param)
 	end
 
 	if param == '' then
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Command param required. Ex: /pos x, y, z")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
 
 	local tile = param:split(",")
-	local pos
-	if tile[2] and tile[3] then
-		pos = Position(tile[1], tile[2], tile[3])
+	local position
+	if tile[1] and tile[2] and tile[3] then
+		position = Position(tile[1], tile[2], tile[3])
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Invalid param specified.")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Invalid param specified. Ex: /pos x, y, z")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	local positionTile = Tile(position)
+	if not position or not positionTile then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Invalid tile position. Ex: /pos x, y, z")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	if not positionTile:isWalkable() then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Invalid tile position. Ex: /pos x, y, z")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
 
 	local tmp = player:getPosition()
-	if player:teleportTo(pos) and not player:isInGhostMode() then
+	if player:teleportTo(position) and not player:isInGhostMode() then
 		tmp:sendMagicEffect(CONST_ME_POFF)
-		pos:sendMagicEffect(CONST_ME_TELEPORT)
+		position:sendMagicEffect(CONST_ME_TELEPORT)
 	end
 
 	return false

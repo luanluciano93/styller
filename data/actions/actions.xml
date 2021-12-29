@@ -1,113 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 	<!-- -----------------------------------------   CUSTOM STYLLER   --------------------------------------------------------- -->
-		<!-- <action itemid="8976" script="test/autoloot.lua"/> -->
-		<action itemid="12328" script="custom/stamina_refill.lua"/>
-		
-		<!-- Events -->
-		<action itemid="1435" script="custom/events/capturetheflag.lua"/> <!-- Capture the Flag event -->
-		<action itemid="1437" script="custom/events/capturetheflag.lua"/> <!-- Capture the Flag event -->
-		<!-- Demon Oak Quest -->
-		<action uniqueid="7002" script="custom/quests/demon oak/demonOakGravestone.lua" />
-		<action fromuid="7007" touid="7010" script="custom/quests/demon oak/demonOakChest.lua" /> <!-- demon oak reward -->
-		<action itemid="8293" script="custom/quests/demon oak/demonOak.lua" /> <!-- hallowed axe -->
 
-		<!-- Quests -->
-		<action actionid="2000" script="custom/system.lua" />
-		<action fromuid="7011" touid="7013" script="custom/quests/daily_quest.lua" />
-		<action uniqueid="7000" script="custom/quests/annihilator/annihilator_lever.lua" />
-		<action uniqueid="2494" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- demon armor -->
-		<action uniqueid="2400" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- magic sword -->
-		<action uniqueid="2431" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- stonecutter axe -->
-		<action uniqueid="2421" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- thunder hammer -->
-		<action uniqueid="7001" script="custom/quests/demon helmet/demonhelmet_lever.lua" />
-		<action uniqueid="2493" script="custom/quests/demon helmet/demonhelmet_reward.lua" /> <!-- demon helmet -->
-		<action uniqueid="2520" script="custom/quests/demon helmet/demonhelmet_reward.lua" /> <!-- demon shield -->
-		<action uniqueid="2645" script="custom/quests/demon helmet/demonhelmet_reward.lua" /> <!-- steel boots -->
-		<action uniqueid="8883" script="custom/quests/big_quest.lua" /> <!-- windborn colossus armor -->
-		<action uniqueid="8869" script="custom/quests/big_quest.lua" /> <!-- greenwood coat -->
-		<action uniqueid="8867" script="custom/quests/big_quest.lua" /> <!-- dragon robe -->
-		<action uniqueid="8853" script="custom/quests/big_quest.lua" /> <!-- the ironworker -->
-		<action uniqueid="2453" script="custom/quests/pits of inferno/poi_reward.lua" /> <!-- arcane staff -->
-		<action uniqueid="6528" script="custom/quests/pits of inferno/poi_reward.lua" /> <!-- avenger -->
-		<action uniqueid="5803" script="custom/quests/pits of inferno/poi_reward.lua" /> <!--  arbalest -->
-		<action fromuid="7003" touid="7006" script="custom/quests/pits of inferno/poi_vocations_door.lua" />	
-		<action uniqueid="8930" script="custom/quests/inquisition_reward.lua" /> <!-- emerald sword -->
-		<action uniqueid="8918" script="custom/quests/inquisition_reward.lua" /> <!-- spellbook of dark mysteriesd -->
-		<action uniqueid="8888" script="custom/quests/inquisition_reward.lua" /> <!-- master archer's armor -->	
-		<action uniqueid="8890" script="custom/quests/inquisition_reward.lua" /> <!-- robe of the underworld -->
-		<action uniqueid="8881" script="custom/quests/inquisition_reward.lua" /> <!-- fireborn giant armor -->
-		<action uniqueid="8928" script="custom/quests/inquisition_reward.lua" /> <!-- obsidian truncheon -->		
-		<action uniqueid="8851" script="custom/quests/inquisition_reward.lua" /> <!-- royal crossbow -->
-		<action uniqueid="8854" script="custom/quests/inquisition_reward.lua" /> <!-- warsinger bow -->
-		<action uniqueid="8924" script="custom/quests/inquisition_reward.lua" /> <!-- hellforged axe -->
+	<!-- Events -->
+	<action itemid="1435" script="custom/events/capturetheflag.lua"/> <!-- Capture the Flag event -->
+	<action itemid="1437" script="custom/events/capturetheflag.lua"/> <!-- Capture the Flag event -->
 
-		<action uniqueid="2476" script="custom/quests/quests.lua"/> <!-- knight armor -->
-		<action uniqueid="2477" script="custom/quests/quests.lua"/> <!-- knight legs -->
-		<action uniqueid="2392" script="custom/quests/quests.lua"/> <!-- fire sword -->
-		<action uniqueid="2432" script="custom/quests/quests.lua"/> <!-- fire axe -->
-		<action uniqueid="2514" script="custom/quests/quests.lua"/> <!-- legion helmet -->
-		<action uniqueid="2480" script="custom/quests/quests.lua"/> <!-- mastermind shield -->
-		<action uniqueid="2475" script="custom/quests/quests.lua"/> <!-- warrior helmet -->
-		<action uniqueid="2656" script="custom/quests/quests.lua"/> <!-- blue robe -->
-		<action uniqueid="2436" script="custom/quests/quests.lua"/> <!-- skull staff -->
-		<action uniqueid="2187" script="custom/quests/quests.lua"/> <!-- wand of inferno -->
-		<action uniqueid="2536" script="custom/quests/quests.lua"/> <!-- medusa shield -->
-		<action uniqueid="2407" script="custom/quests/quests.lua"/> <!-- bright sword -->
-		<action uniqueid="2472" script="custom/quests/quests.lua"/> <!-- magic plate armor -->
-		<action uniqueid="2506" script="custom/quests/quests.lua"/> <!-- dragon scale helmet -->
-		<action uniqueid="8885" script="custom/quests/quests.lua"/> <!-- divine plate -->
-		<action uniqueid="7388" script="custom/quests/quests.lua"/> <!-- vile axe -->
-		<action uniqueid="2393" script="custom/quests/quests.lua"/> <!-- giant sword -->
-		<action uniqueid="2466" script="custom/quests/quests.lua"/> <!-- golden armor -->
-		<action uniqueid="2427" script="custom/quests/quests.lua"/> <!-- guardian halberd -->
-		<action uniqueid="7885" script="custom/quests/quests.lua"/> <!-- terra legs -->
-		<action uniqueid="8865" script="custom/quests/quests.lua"/> <!-- dark lord's cape -->
-		<action uniqueid="8880" script="custom/quests/quests.lua"/> <!-- swamplair armor -->
-		<action uniqueid="5908" script="custom/quests/quests.lua"/> <!-- obsidian knife -->
-		<action uniqueid="2503" script="custom/quests/quests.lua"/> <!-- dwarven armor -->
-		<action uniqueid="2498" script="custom/quests/quests.lua"/> <!-- royal helmet -->
-		<action uniqueid="6529" script="custom/quests/quests.lua"/> <!-- infernal bolt -->
-		<action uniqueid="2365" script="custom/quests/quests.lua"/> <!-- backpack of holding -->
-		<action uniqueid="5791" script="custom/quests/quests.lua"/> <!-- stuffed dragon -->
-		<action uniqueid="6132" script="custom/quests/quests.lua"/> <!-- soft boots -->
-		<action uniqueid="2361" script="custom/quests/quests.lua"/> <!-- frozen starlight -->
-		<action uniqueid="2354" script="custom/quests/quests.lua"/> <!-- ornamented ankh -->
-		<action uniqueid="8266" script="custom/quests/quests.lua"/> <!-- koshei's ancient amulet -->
-		<action uniqueid="7730" script="custom/quests/quests.lua"/> <!-- blue legs -->
-		<action uniqueid="2195" script="custom/quests/quests.lua"/> <!-- boots of haste -->
-		<action uniqueid="2343" script="custom/quests/quests.lua"/> <!-- helmet of the ancients -->
-		<action uniqueid="9933" script="custom/quests/quests.lua"/> <!-- firewalker boots -->
-		<action uniqueid="8866" script="custom/quests/quests.lua"/> <!-- the robe of the ice queen -->
-		<action uniqueid="8878" script="custom/quests/quests.lua"/> <!-- crystalline armor -->
-		<action uniqueid="2488" script="custom/quests/quests.lua"/> <!-- crown legs -->
-		<action uniqueid="2523" script="custom/quests/quests.lua"/> <!-- blessed shield -->
-		<action uniqueid="2123" script="custom/quests/quests.lua"/> <!-- ring of the sky -->
-		<action uniqueid="5924" script="custom/quests/quests.lua"/> <!-- damaged steel helmet -->
-		<action uniqueid="5947" script="custom/quests/quests.lua"/> <!-- elane's crossbow -->
-		<action uniqueid="5938" script="custom/quests/quests.lua"/> <!-- ceiron's waterskin -->
-		<action uniqueid="5940" script="custom/quests/quests.lua"/> <!-- ceiron's wolf tooth chain -->
-		<action uniqueid="11423" script="custom/quests/quests.lua"/> <!-- coral comb -->
-		<action uniqueid="6107" script="custom/quests/quests.lua"/> <!-- simon the beggar's favorite staff -->
+	<!-- Demon Oak Quest -->
+	<action uniqueid="7002" script="custom/quests/demon oak/demonOakGravestone.lua" />
+	<action fromuid="7007" touid="7010" script="custom/quests/demon oak/demonOakChest.lua" /> <!-- demon oak reward -->
+	<action itemid="8293" script="custom/quests/demon oak/demonOak.lua" /> <!-- hallowed axe -->
 
-		<!-- Levers -->
-		<action fromuid="8001" touid="8003" script="custom/levers.lua" />
+	<!-- Quests -->
+	<action fromuid="7011" touid="7013" script="custom/quests/daily_reward.lua" />
+	<action uniqueid="7000" script="custom/quests/annihilator/annihilator_lever.lua" />
+	<action uniqueid="2494" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- demon armor -->
+	<action uniqueid="2400" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- magic sword -->
+	<action uniqueid="2431" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- stonecutter axe -->
+	<action uniqueid="2421" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- thunder hammer -->
+	<action uniqueid="7001" script="custom/quests/demon helmet/demonhelmet_lever.lua" />
+	<action uniqueid="2493" script="custom/quests/demon helmet/demonhelmet_reward.lua" /> <!-- demon helmet -->
+	<action uniqueid="2520" script="custom/quests/demon helmet/demonhelmet_reward.lua" /> <!-- demon shield -->
+	<action uniqueid="2645" script="custom/quests/demon helmet/demonhelmet_reward.lua" /> <!-- steel boots -->
+	<action uniqueid="8883" script="custom/quests/big_quest.lua" /> <!-- windborn colossus armor -->
+	<action uniqueid="8869" script="custom/quests/big_quest.lua" /> <!-- greenwood coat -->
+	<action uniqueid="8867" script="custom/quests/big_quest.lua" /> <!-- dragon robe -->
+	<action uniqueid="8853" script="custom/quests/big_quest.lua" /> <!-- the ironworker -->
+	<action uniqueid="2453" script="custom/quests/pits of inferno/poi_reward.lua" /> <!-- arcane staff -->
+	<action uniqueid="6528" script="custom/quests/pits of inferno/poi_reward.lua" /> <!-- avenger -->
+	<action uniqueid="5803" script="custom/quests/pits of inferno/poi_reward.lua" /> <!--  arbalest -->
+	<action fromuid="7003" touid="7006" script="custom/quests/pits of inferno/poi_vocations_door.lua" />	
+	<action uniqueid="8930" script="custom/quests/inquisition_reward.lua" /> <!-- emerald sword -->
+	<action uniqueid="8918" script="custom/quests/inquisition_reward.lua" /> <!-- spellbook of dark mysteriesd -->
+	<action uniqueid="8888" script="custom/quests/inquisition_reward.lua" /> <!-- master archer's armor -->	
+	<action uniqueid="8890" script="custom/quests/inquisition_reward.lua" /> <!-- robe of the underworld -->
+	<action uniqueid="8881" script="custom/quests/inquisition_reward.lua" /> <!-- fireborn giant armor -->
+	<action uniqueid="8928" script="custom/quests/inquisition_reward.lua" /> <!-- obsidian truncheon -->		
+	<action uniqueid="8851" script="custom/quests/inquisition_reward.lua" /> <!-- royal crossbow -->
+	<action uniqueid="8854" script="custom/quests/inquisition_reward.lua" /> <!-- warsinger bow -->
+	<action uniqueid="8924" script="custom/quests/inquisition_reward.lua" /> <!-- hellforged axe -->
 
+	<action uniqueid="2476" script="custom/quests/quests.lua"/> <!-- knight armor -->
+	<action uniqueid="2477" script="custom/quests/quests.lua"/> <!-- knight legs -->
+	<action uniqueid="2392" script="custom/quests/quests.lua"/> <!-- fire sword -->
+	<action uniqueid="2432" script="custom/quests/quests.lua"/> <!-- fire axe -->
+	<action uniqueid="2514" script="custom/quests/quests.lua"/> <!-- legion helmet -->
+	<action uniqueid="2480" script="custom/quests/quests.lua"/> <!-- mastermind shield -->
+	<action uniqueid="2475" script="custom/quests/quests.lua"/> <!-- warrior helmet -->
+	<action uniqueid="2656" script="custom/quests/quests.lua"/> <!-- blue robe -->
+	<action uniqueid="2436" script="custom/quests/quests.lua"/> <!-- skull staff -->
+	<action uniqueid="2187" script="custom/quests/quests.lua"/> <!-- wand of inferno -->
+	<action uniqueid="2536" script="custom/quests/quests.lua"/> <!-- medusa shield -->
+	<action uniqueid="2407" script="custom/quests/quests.lua"/> <!-- bright sword -->
+	<action uniqueid="2472" script="custom/quests/quests.lua"/> <!-- magic plate armor -->
+	<action uniqueid="2506" script="custom/quests/quests.lua"/> <!-- dragon scale helmet -->
+	<action uniqueid="8885" script="custom/quests/quests.lua"/> <!-- divine plate -->
+	<action uniqueid="7388" script="custom/quests/quests.lua"/> <!-- vile axe -->
+	<action uniqueid="2393" script="custom/quests/quests.lua"/> <!-- giant sword -->
+	<action uniqueid="2466" script="custom/quests/quests.lua"/> <!-- golden armor -->
+	<action uniqueid="2427" script="custom/quests/quests.lua"/> <!-- guardian halberd -->
+	<action uniqueid="7885" script="custom/quests/quests.lua"/> <!-- terra legs -->
+	<action uniqueid="8865" script="custom/quests/quests.lua"/> <!-- dark lord's cape -->
+	<action uniqueid="8880" script="custom/quests/quests.lua"/> <!-- swamplair armor -->
+	<action uniqueid="5908" script="custom/quests/quests.lua"/> <!-- obsidian knife -->
+	<action uniqueid="2503" script="custom/quests/quests.lua"/> <!-- dwarven armor -->
+	<action uniqueid="2498" script="custom/quests/quests.lua"/> <!-- royal helmet -->
+	<action uniqueid="6529" script="custom/quests/quests.lua"/> <!-- infernal bolt -->
+	<action uniqueid="2365" script="custom/quests/quests.lua"/> <!-- backpack of holding -->
+	<action uniqueid="5791" script="custom/quests/quests.lua"/> <!-- stuffed dragon -->
+	<action uniqueid="6132" script="custom/quests/quests.lua"/> <!-- soft boots -->
+	<action uniqueid="2361" script="custom/quests/quests.lua"/> <!-- frozen starlight -->
+	<action uniqueid="2354" script="custom/quests/quests.lua"/> <!-- ornamented ankh -->
+	<action uniqueid="8266" script="custom/quests/quests.lua"/> <!-- koshei's ancient amulet -->
+	<action uniqueid="7730" script="custom/quests/quests.lua"/> <!-- blue legs -->
+	<action uniqueid="2195" script="custom/quests/quests.lua"/> <!-- boots of haste -->
+	<action uniqueid="2343" script="custom/quests/quests.lua"/> <!-- helmet of the ancients -->
+	<action uniqueid="9933" script="custom/quests/quests.lua"/> <!-- firewalker boots -->
+	<action uniqueid="8866" script="custom/quests/quests.lua"/> <!-- the robe of the ice queen -->
+	<action uniqueid="8878" script="custom/quests/quests.lua"/> <!-- crystalline armor -->
+	<action uniqueid="2488" script="custom/quests/quests.lua"/> <!-- crown legs -->
+	<action uniqueid="2523" script="custom/quests/quests.lua"/> <!-- blessed shield -->
+	<action uniqueid="2123" script="custom/quests/quests.lua"/> <!-- ring of the sky -->
+	<action uniqueid="5924" script="custom/quests/quests.lua"/> <!-- damaged steel helmet -->
+	<action uniqueid="5947" script="custom/quests/quests.lua"/> <!-- elane's crossbow -->
+	<action uniqueid="5938" script="custom/quests/quests.lua"/> <!-- ceiron's waterskin -->
+	<action uniqueid="5940" script="custom/quests/quests.lua"/> <!-- ceiron's wolf tooth chain -->
+	<action uniqueid="11423" script="custom/quests/quests.lua"/> <!-- coral comb -->
+	<action uniqueid="6107" script="custom/quests/quests.lua"/> <!-- simon the beggar's favorite staff -->
 
-		<!-- Offline Training -->
-		<action itemid="1444" script="custom/skilltrainer.lua" />
-		<action itemid="8836" script="custom/skilltrainer.lua" />
-		<action itemid="8626" script="custom/skilltrainer.lua" />
-		<action itemid="10353" script="custom/skilltrainer.lua" />
-		<action itemid="8777" script="custom/skilltrainer.lua" />
+	<!-- Levers -->
+	<action fromuid="8001" touid="8003" script="custom/levers.lua" />
 
-		<!-- Others -->
-		<!--<action fromid="5792" toid="5797" script="custom/dice.lua" />-->
-		<!--<action itemid="5957" script="custom/lotteryticket.lua" />-->
-		<action fromaid="1515" toaid="1522" script="custom/potions_lever.lua" />
+	<!-- Offline Training -->
+	<action itemid="1444" script="custom/skilltrainer.lua" />
+	<action itemid="8836" script="custom/skilltrainer.lua" />
+	<action itemid="8626" script="custom/skilltrainer.lua" />
+	<action itemid="10353" script="custom/skilltrainer.lua" />
+	<action itemid="8777" script="custom/skilltrainer.lua" />
 
-		<!-- Achievements -->
-		<!--<action itemid="2785" script="custom/blueberry_bush.lua" />-->
+	<!-- Others -->
+	<action fromaid="1515" toaid="1522" script="custom/potions_lever.lua" />
+	<action itemid="12328" script="custom/stamina_refill.lua"/>
 
 	<!-- ---------------------------------------------------------------------------------------------------------------------- -->
 	
@@ -237,9 +230,6 @@
 	<action itemid="2095" script="other/bird_cage.lua" />
 	<action itemid="2099" script="other/water_pipe.lua" />
 	<action itemid="2114" script="other/piggy_bank.lua" />
-	<action itemid="2148" script="other/change_gold.lua" />
-	<action itemid="2152" script="other/change_gold.lua" />
-	<action itemid="2160" script="other/change_gold.lua" />
 	<action fromid="2376" toid="2404" script="other/destroy.lua" />
 	<action fromid="2406" toid="2415" script="other/destroy.lua" />
 	<action fromid="2417" toid="2419" script="other/destroy.lua" />

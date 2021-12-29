@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+	<!--Announcements-->
+	<announce delay="1000" type="Event" message="An ancient evil is awakening in the mines beneath Hrodmir." />
+	<announce delay="30000" type="Event" message="Demonic entities are entering the mortal realm in the Hrodmir mines." />
+	<announce delay="60000" type="Event" message="The demonic master has revealed itself in the mines of Hrodmir." />
+	
+	<!--Single Spawns-->
+	<singlespawn delay="60000" name="Ghazbaran" x="987" y="1051" z="9"/>
+
+	<!--Area Spawns-->
+	<areaspawn delay="53000" fromx="986" fromy="1051" fromz="9" tox="986" toy="1051" toz="9">
+		<monster name="Deathslicer" amount="12" />
+	</areaspawn>
+	<areaspawn delay="55000" fromx="989" fromy="1051" fromz="9" tox="989" toy="1051" toz="9">
+		<monster name="Juggernaut" amount="5" />
+	</areaspawn>
+	<areaspawn delay="56000" fromx="987" fromy="1050" fromz="9" tox="987" toy="1050" toz="9">
+		<monster name="Fury" amount="8" />
+	</areaspawn>
+	<areaspawn delay="58000" fromx="987" fromy="1052" fromz="9" tox="987" toy="1052" toz="9">
+		<monster name="Demon" amount="6" />
+	</areaspawn>
+</raid>

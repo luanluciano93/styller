@@ -2139,6 +2139,7 @@
 	</item>
 	<item id="2148" article="a" name="gold coin">
 		<attribute key="weight" value="10" />
+		<attribute key="worth" value="1" />
 	</item>
 	<item id="2149" article="a" name="small emerald">
 		<attribute key="weight" value="10" />
@@ -2152,6 +2153,7 @@
 	</item>
 	<item id="2152" article="a" name="platinum coin">
 		<attribute key="weight" value="10" />
+		<attribute key="worth" value="100" />
 	</item>
 	<item id="2153" article="a" name="violet gem">
 		<attribute key="weight" value="30" />
@@ -2176,6 +2178,7 @@
 	</item>
 	<item id="2160" article="a" name="crystal coin">
 		<attribute key="weight" value="10" />
+		<attribute key="worth" value="10000" />
 	</item>
 	<item id="2161" article="a" name="strange talisman">
 		<attribute key="weight" value="290" />
@@ -17110,7 +17113,7 @@
 	<item id="9692" name="Rerun's ring">
 		<attribute key="weight" value="90" />
 	</item>
-	<item id="9693" article="a" name="jester doll">
+	<item id="9693" article="a" name="addon doll">
 		<attribute key="weight" value="1200" />
 	</item>
 	<item id="9694" name="the head of a jester doll">
@@ -20835,8 +20838,7 @@
 	<item id="12327" article="a" name="snake sceptre">
 		<attribute key="weight" value="1400" />
 	</item>
-	<item id="12328" article="an" name="interdimensional potion">
-		<attribute key="description" value="This potion will help you enter the dreams of any lifeform." />
+	<item id="12328" article="an" name="stamina refill">
 		<attribute key="weight" value="180" />
 	</item>
 	<item fromid="12329" toid="12333" article="a" name="corrupted plantation" />

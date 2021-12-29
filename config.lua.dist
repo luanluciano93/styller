@@ -48,7 +48,7 @@ deathLosePercent = -1
 -- NOTA: os valores válidos para houseRentPeriod são:: "daily", "weekly", "monthly", "yearly"
 -- use qualquer outro valor para desabilitar o sistema de aluguel
 housePriceEachSQM = 10000
-houseRentPeriod = "weekly"
+houseRentPeriod = "never"
 houseOwnedByAccount = false
 houseDoorShowPrice = true
 onlyInvitedCanMoveHouseItems = true
@@ -89,7 +89,7 @@ freePremium = false
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 4
 emoteSpells = true
-classicEquipmentSlots = false
+classicEquipmentSlots = true
 classicAttackSpeed = false
 showScriptsLogInConsole = false
 showOnlineStatusInCharlist = false
@@ -129,14 +129,16 @@ serverSaveShutdown = true
 -- maxlevel é OPCIONAL, mas é considerado infinito por padrão
 -- para desabilitar estágios, crie um estágio com minlevel 1 e sem maxlevel
 experienceStages = {
-	{ minlevel = 1, maxlevel = 50, multiplier = 300 },
-	{ minlevel = 51, maxlevel = 100, multiplier = 150 },
-	{ minlevel = 101, maxlevel = 150, multiplier = 100 },
-	{ minlevel = 151, maxlevel = 200, multiplier = 50 },
-	{ minlevel = 201, maxlevel = 250, multiplier = 30 },
-	{ minlevel = 251, maxlevel = 300, multiplier = 20 },
-	{ minlevel = 301, maxlevel = 350, multiplier = 10 },
-	{ minlevel = 351, multiplier = 5 }
+	{ minlevel = 1, maxlevel = 30, multiplier = 80 },
+	{ minlevel = 31, maxlevel = 60, multiplier = 50 },
+	{ minlevel = 61, maxlevel = 90, multiplier = 40 },
+	{ minlevel = 91, maxlevel = 110, multiplier = 20 },
+	{ minlevel = 111, maxlevel = 150, multiplier = 10 },
+	{ minlevel = 151, maxlevel = 180, multiplier = 5 },
+	{ minlevel = 181, maxlevel = 200, multiplier = 4 },
+	{ minlevel = 201, maxlevel = 250, multiplier = 2 },
+	{ minlevel = 251, maxlevel = 300, multiplier = 1 },
+	{ minlevel = 301, multiplier = 0.5 }
 }
 
 -- Experiência Fixa

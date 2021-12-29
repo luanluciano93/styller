@@ -1,16 +1,16 @@
 function onStepIn(creature, item, position, fromPosition)
-	local player = creature:getPlayer()
-	if not player then
-		return true
+	if not creature:isPlayer() then
+		return false
 	end
 
-	if not player:isPremium() then
-		player:teleportTo(fromPosition)
-		player:getPosition():sendMagicEffect(CONST_ME_POFF)
-		player:sendCancelMessage(Game.getReturnMessage(RETURNVALUE_YOUNEEDPREMIUMACCOUNT))
+	if not creature:isPremium() then
+		creature:sendCancelMessage(Game.getReturnMessage(RETURNVALUE_YOUNEEDPREMIUMACCOUNT))
+		creature:teleportTo(fromPosition, true)
+		creature:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
 	else
-		player:teleportTo(Position(841, 1022, 7))
-		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		creature:teleportTo(Position(841, 1022, 7))
+		creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	end
 
 	return true

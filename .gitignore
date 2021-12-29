@@ -2,3 +2,4 @@
 *.dll
 *.exe
 config.lua
+client_assertions.txt

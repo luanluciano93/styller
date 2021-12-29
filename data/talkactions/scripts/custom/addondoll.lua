@@ -30,36 +30,42 @@ function onSay(player, words, param)
 
 	local addondoll_id = 9693
 
-	if player:getExhaustion() <= 0 then
-		player:setExhaustion(2)
-
-		if param == "" then
-			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
-			return false
-		end
-
-		if player:getItemCount(addondoll_id) > 0 then
-			local word = outfits[string.lower(param)]
-			if param ~= "" and word then
-				if not player:removeItem(addondoll_id, 1) then
-					print("[ERROR] TALKACTION: addon doll, FUNCTION: removeItem, PLAYER: "..player:getName())
-				else
-					player:addOutfitAddon(word[1], 3)
-					player:addOutfitAddon(word[2], 3)
-					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your full addon ".. string.lower(param) .." has been added!")
-					player:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
-				end
-			else
-				player:sendCancelMessage("Invalid param specified.")
-				player:getPosition():sendMagicEffect(CONST_ME_POFF)
-			end
-		else
-			player:sendCancelMessage("You don't have an addon doll!")
-			player:getPosition():sendMagicEffect(CONST_ME_POFF)
-		end
-	else
-		player:sendCancelMessage("You're exhausted.")
+	if param == "" then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Command param required. Ex: !addon outfitName")
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
 	end
+
+	if player:getItemCount(addondoll_id) < 1 then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You don't have an addon doll!")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	local outfit = param:lower()
+	local word = outfits[outfit]
+	if not word then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Invalid param specified. Ex: !addon outfitName")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	if player:hasOutfit(word[1], 3) or player:hasOutfit(word[2], 3) then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You already have this addon.")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return true
+	end
+
+	if player:removeItem(addondoll_id, 1) then
+		player:addOutfitAddon(word[1], 3)
+		player:addOutfitAddon(word[2], 3)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your full addon ".. outfit .." has been added!")
+		player:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
+
+		logCommand(player, words, param)
+	else
+		print("[ERROR] TALKACTION: addon doll, FUNCTION: removeItem, PLAYER: "..player:getName())
+	end
+
 	return false
 end

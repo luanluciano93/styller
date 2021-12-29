@@ -1,11 +1,10 @@
 function onStepIn(creature, item, position, fromPosition)
-	local player = creature:getPlayer()
-	if player == nil then
+	if not creature:isPlayer() then
 		return false
 	end
 
-	player:teleportTo(Position(662, 1152, 8))
-	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	creature:teleportTo(Position(662, 1152, 8))
+	creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 
 	return true
 end

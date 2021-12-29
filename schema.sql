@@ -146,6 +146,7 @@ CREATE TABLE IF NOT EXISTS `guilds` (
   `ownerid` int NOT NULL,
   `creationdata` int NOT NULL,
   `motd` varchar(255) NOT NULL DEFAULT '',
+  `balance` bigint unsigned NOT NULL DEFAULT '0', -- add war system
   PRIMARY KEY (`id`),
   UNIQUE KEY (`name`),
   UNIQUE KEY (`ownerid`),
@@ -189,6 +190,8 @@ CREATE TABLE IF NOT EXISTS `guild_wars` (
   `status` tinyint NOT NULL DEFAULT '0',
   `started` bigint NOT NULL DEFAULT '0',
   `ended` bigint NOT NULL DEFAULT '0',
+  `frags` int NOT NULL DEFAULT '0', -- add war system
+  `payment` bigint unsigned NOT NULL DEFAULT '0', -- add war system
   PRIMARY KEY (`id`),
   KEY `guild1` (`guild1`),
   KEY `guild2` (`guild2`)

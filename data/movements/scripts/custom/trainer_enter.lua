@@ -70,16 +70,15 @@ local function calculatingRoom(uid, position, coluna, linha)
 end
 
 function onStepIn(creature, item, position, fromPosition)
-	local player = creature:getPlayer()
-	if not player then
+	if not creature:isPlayer() then
 		return false
 	end
 
-	if player:getExhaustion() <= 0 then
+	if creature:getExhaustion() <= 0 then
 		calculatingRoom(creature.uid, config.first_room_pos, 0, 0)
 	else
-		player:teleportTo(fromPosition, true)
-		player:sendTextMessage(MESSAGE_INFO_DESCR, "You gotta wait a few seconds before you can enter trainning room again.")
+		creature:teleportTo(fromPosition, true)
+		creature:sendTextMessage(MESSAGE_INFO_DESCR, "You gotta wait a few seconds before you can enter trainning room again.")
 	end
 
 	return true

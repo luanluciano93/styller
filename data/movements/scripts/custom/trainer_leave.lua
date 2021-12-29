@@ -12,15 +12,14 @@ local function removeTrainers(position)
 end
 	
 function onStepIn(creature, item, position, fromPosition)
-	local player = creature:getPlayer()
-	if not player then
+	if not creature:isPlayer() then
 		return false
 	end
 
 	removeTrainers(fromPosition)
-	player:teleportTo(player:getTown():getTemplePosition())
-	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player:setExhaustion(5)
+	creature:teleportTo(creature:getTown():getTemplePosition())
+	creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	creature:setExhaustion(5)
 
 	return true
 end

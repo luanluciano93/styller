@@ -1,7 +1,17 @@
+dofile('data/lib/custom/styllerConfig.lua')
+
+local aolValue = STYLLER.aolValue
+
 function onSay(player, words, param)
 
-	if not Tile(player:getPosition()):hasFlag(TILESTATE_PROTECTIONZONE) then
-		player:sendCancelMessage("To buy amulet of loss you need to be in protection zone.")
+	local tile = Tile(player:getPosition())
+	if not tile then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, 'Invalid tile position.')
+		return false
+	end
+
+	if not tile:hasFlag(TILESTATE_PROTECTIONZONE) then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, 'To buy amulet of loss you need to be in protection zone.')
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
@@ -10,16 +20,24 @@ function onSay(player, words, param)
 	local itemWeight = itemType:getWeight()
 	local playerCap = player:getFreeCapacity()
 	if playerCap < itemWeight then
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found a ' .. itemType:getName() .. ' weighing ' .. itemWeight .. ' oz it\'s too heavy.')
+		itemWeight = itemWeight / 100
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You have found a " .. itemType:getName() .. " weighing " .. itemWeight .. " oz it's too heavy.")
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
 
-	if player:removeTotalMoney(10000) then
+	local backpack = player:getSlotItem(CONST_SLOT_BACKPACK)			
+	if not backpack or backpack:getEmptySlots(false) < 1 then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Your main backpack is full. You need to free up 1 available slots to get " .. itemType:getName() .. ".")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	if player:removeTotalMoney(aolValue) then
 		player:addItem(2173, 1)
 		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)
 	else
-		player:sendCancelMessage("You don't have 10000 gold coins to buy an amulet of loss.")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You don't have ".. aolValue .." gold coins to buy an amulet of loss.")
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 	end
 

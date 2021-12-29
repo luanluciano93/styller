@@ -52,12 +52,12 @@
 	<!--<talkaction words="!x" separator=" " script="animationeffect.lua" />-->
 
 	<!----------------------- Custom Systems ------------------------->
-	
+
 	<!-- commands -->
 	<talkaction words="/serversave" script="custom/serversave.lua" />
 	<talkaction words="/addons" separator=" " script="custom/alladdons.lua" />
 	<talkaction words="/pos" separator=" " script="custom/teleport_to_pos.lua" />
-	<talkaction words="!report" separator=" " script="custom/znote_adminreport.lua"/>
+	<talkaction words="/test" script="custom/test.lua" />
 	
 	<!-- events talkactions -->
 	<talkaction words="/battlefield" script="custom/events/battlefield.lua" />
@@ -73,6 +73,8 @@
 	<talkaction words="!aol" script="custom/aol.lua" />
 	<talkaction words="!bless" script="custom/bless.lua" />
 	<talkaction words="!addon" separator=" " script="custom/addondoll.lua" />
-	<talkaction words="!offer" separator=" " script="custom/auction_system.lua" />
 	<talkaction words="!shop" script="custom/znote_shop.lua"/>
+	<talkaction words="!war" separator=" " script="custom/war.lua"/>
+	<talkaction words="!report" separator=" " script="custom/znote_adminreport.lua"/>
+	<talkaction words="!guild" separator=" " script="custom/guild_broadcast.lua"/>
 </talkactions>

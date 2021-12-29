@@ -1,6 +1,8 @@
+dofile('data/lib/custom/styllerConfig.lua')
+
 local config = {
-	level = 150,
-	onlyPremium = false
+	level = STYLLER.buyHouse.level,
+	onlyPremium = STYLLER.buyHouse.onlyPremium
 }
 
 function onSay(player, words, param)

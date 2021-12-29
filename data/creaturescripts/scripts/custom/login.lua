@@ -1,14 +1,13 @@
 local events = {
-    'PlayerDeath',
 	'DropLoot',
+	'DeathCast',
 	'AdvanceSave',
 	'LevelReward',
-	'BossParticipation',
-	'KosheiKill',
-	'PythiusTheRotten',
-	'Tasks',
+    'znotePlayerDeath',
 	'BossAchievements',
-	'DeathCast'
+	'Tasks',
+	'KosheiKill',
+	'PythiusTheRotten'
 }
 
 function onLogin(player)
@@ -26,9 +25,6 @@ function onLogin(player)
 		loginStr = string.format("Your last visit in %s: %s.", serverName, os.date("%d %b %Y %X", player:getLastLoginSaved()))
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
-
-	-- Stamina
-	nextUseStaminaTime[player.uid] = 0
 
 	-- Events
 	for i = 1, #events do
@@ -51,6 +47,8 @@ function onLogin(player)
 	else
 		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You have "..player:getPremiumDays().." days of premium account.")
 	end
+
+	player:openChannel(9) -- Deathcast
 
 	return true
 end

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <raids>
-	<!--
-		<raid name="Testraid" file="testraid.xml" interval2="30" margin="0" />
-		executed on average once every 30 minutes
-	-->
+	<raid name="Ferumbras" file="ferumbras.xml" interval2="1440" margin="120" />
+	<raid name="Morgaroth" file="morgaroth.xml" interval2="1440" margin="90" />
+	<raid name="Ghazbaran" file="ghazbaran.xml" interval2="1440" margin="100" />
+	<raid name="Pirates" file="pirates.xml" interval2="1440" margin="120" />
+	<raid name="The Horned Fox" file="the_horned_fox.xml" interval2="1440" margin="120" />
+	<raid name="Tiquandas Revenge" file="tiquandas_revenge.xml" interval2="1440" margin="120" />
+	
+	<!-- Raids POI -->
+	<raid name="Massacre" file="massacre.xml" interval2="1440" margin="50" />
+	<raid name="The Plasmother" file="the_plasmother.xml" interval2="1440" margin="50" />
+	<raid name="Mr. Punish" file="mr_punish.xml" interval2="1440" margin="50" />
+	<raid name="The Handmaiden" file="the_handmaiden.xml" interval2="1440" margin="50" />
+	<raid name="Dracola" file="dracola.xml" interval2="1440" margin="50" />
+	<raid name="The Imperor" file="the_imperor.xml" interval2="1440" margin="50" />
 </raids>

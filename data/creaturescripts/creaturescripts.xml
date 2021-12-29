@@ -4,7 +4,7 @@
 	<event type="logout" name="PlayerLogout" script="logout.lua" />
 	<!--<event type="login" name="FirstItems" script="firstitems.lua" />-->
 	<event type="login" name="RegenerateStamina" script="regeneratestamina.lua" />
-	<event type="death" name="PlayerDeath" script="playerdeath.lua" />				   
+	<!--<event type="death" name="PlayerDeath" script="playerdeath.lua" />-->				   
 	<event type="death" name="DropLoot" script="droploot.lua" />
 	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
 
@@ -12,19 +12,22 @@
 
 	<event type="login" name="PlayerLoginCustom" script="custom/login.lua" />
 	<event type="login" name="FirstItemsCustom" script="custom/firstitems.lua" />
-	<event type="login" name="EventLogin" script="custom/EventLogin.lua" />
-	<event type="logout" name="EventLogout" script="custom/EventLogout.lua" />
 	<event type="death" name="DeathCast" script="custom/deathCast.lua" />
 	<event type="advance" name="AdvanceSave" script="custom/advance_save.lua" />
 	<event type="login" name="AntiMc" script="custom/anti_mc.lua" />
 	<event type="login" name="LevelProtection" script="custom/level_protection.lua" />
 	<!--<event type="login" name="OfflineTraining" script="custom/offline_training.lua" />-->
 	<event type="advance" name="LevelReward" script="custom/level_reward.lua"/>
+	
+	<!-- Znote Scripts -->
+	<event type="login" name="znoteSyncoutfits" script="custom/znote_syncoutfit.lua" />
+	<event type="death" name="znotePlayerDeath" script="custom/znote_playerdeath.lua" />
+
+	<!-- Monsters Kill -->
+	<event type="kill" name="BossAchievements" script="custom/boss_achievements.lua" />
+	<event type="kill" name="Tasks" script="custom/task.lua" />
 	<event type="kill" name="KosheiKill" script="custom/koshei_the_deathless.lua"/>
 	<event type="kill" name="PythiusTheRotten" script="custom/pythius_the_rotten.lua" />
-	<event type="kill" name="Tasks" script="custom/task.lua" />
-	<event type="kill" name="BossAchievements" script="custom/boss_achievements.lua" />
-	<event type="login" name="znoteSyncoutfits" script="custom/znote_syncoutfit.lua" />																			 
 
 	<!-- PVP Arena -->
 	<event type="login" name="Arena-Login" script="custom/pvp_arena.lua"/>
@@ -35,21 +38,21 @@
 	<event type="login" name="Battlefield-Login" script="custom/events/battlefield.lua"/>
 	<event type="logout" name="Battlefield-Logout" script="custom/events/battlefield.lua"/>
 	<event type="preparedeath" name="Battlefield" script="custom/events/battlefield.lua"/>
-	
+
 	<!-- Zombie Event -->
 	<event type="login" name="Zombie-Login" script="custom/events/zombie.lua"/>
 	<event type="logout" name="Zombie-Logout" script="custom/events/zombie.lua"/>
 	<event type="healthchange" name="Zombie" script="custom/events/zombie.lua" />
-	
+
 	<!-- DUCA Event -->
 	<event type="login" name="Duca-Login" script="custom/events/duca.lua"/>
 	<event type="logout" name="Duca-Logout" script="custom/events/duca.lua"/>
 	<event type="preparedeath" name="Duca" script="custom/events/duca.lua"/>
-	
+
 	<!-- Safezone Event -->
 	<event type="login" name="Safezone-Login" script="custom/events/safezone.lua"/>
 	<event type="logout" name="Safezone-Logout" script="custom/events/safezone.lua"/>
-	
+
 	<!-- Capture the Flag Event -->
 	<event type="login" name="CaptureTheFlag-Login" script="custom/events/capturetheflag.lua"/>
 	<event type="logout" name="CaptureTheFlag-Logout" script="custom/events/capturetheflag.lua"/>
