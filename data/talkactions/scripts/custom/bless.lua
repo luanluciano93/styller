@@ -1,5 +1,3 @@
-dofile('data/lib/custom/styllerConfig.lua')
-
 local allBlessValue = STYLLER.allBlessValue
 
 function onSay(player, words, param)

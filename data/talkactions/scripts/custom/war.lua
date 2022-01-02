@@ -8,8 +8,6 @@
 -- !war deposity, money
 -- !war withdraw, money
 
-dofile('data/lib/custom/styllerConfig.lua')
-
 local frags = STYLLER.warSystem.frags
 local timeDaysMax = STYLLER.warSystem.daysMaxToInviteWar
 

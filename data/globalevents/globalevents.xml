@@ -18,6 +18,16 @@
 	<globalevent name="Save7" time="03:00:00" script="custom/save.lua" />
 	<globalevent name="Save8" time="05:30:00" script="custom/save.lua" />
 
+	<!-- Lottery -->
+	<globalevent name="Lottery1" time="07:00:00" script="custom/lottery.lua" />
+	<globalevent name="Lottery2" time="10:00:00" script="custom/lottery.lua" />
+	<globalevent name="Lottery3" time="13:00:00" script="custom/lottery.lua" />
+	<globalevent name="Lottery4" time="16:00:00" script="custom/lottery.lua" />
+	<globalevent name="Lottery5" time="19:00:00" script="custom/lottery.lua" />
+	<globalevent name="Lottery6" time="22:00:00" script="custom/lottery.lua" />
+	<globalevent name="Lottery7" time="01:00:00" script="custom/lottery.lua" />
+	<globalevent name="Lottery8" time="04:30:00" script="custom/lottery.lua" />
+
 	<!-- Battlefield Event -->
 	<globalevent name="Battlefield1" time="00:00:00" script="custom/events/battlefield.lua" />
 	<globalevent name="Battlefield2" time="05:00:00" script="custom/events/battlefield.lua" />

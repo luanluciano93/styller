@@ -1,7 +1,5 @@
 -- Styller Config --
 
--- dofile('data/lib/custom/styllerConfig.lua')
-
 STYLLER = {
 	-- actions
 	dailyReward = {
@@ -17,6 +15,17 @@ STYLLER = {
 	
 	-- creaturescripts
 	freeBlessMaxLevel = 50,
+
+	-- globalevents
+	lottery = {
+		interval = "3 hour",
+		rewards = { -- {item_id, item_count},
+			{2160, 50}, -- 50 crystal coins
+			{2472, 1}, -- magic plater armor
+			{2470, 1}, -- golden legs
+		},
+		website = true
+	},
 
 	-- talkactions
 	warSystem = {

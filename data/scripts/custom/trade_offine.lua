@@ -40,8 +40,6 @@ db.query([[
 	) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 ]])
 
-dofile('data/lib/custom/styllerConfig.lua')
-
 local config = STYLLER.tradeOffine
 
 local function retornarItemsdoContainer(uid)

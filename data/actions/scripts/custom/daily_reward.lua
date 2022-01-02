@@ -1,5 +1,3 @@
-dofile('data/lib/custom/styllerConfig.lua')
-
 local days = STYLLER.dailyReward
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

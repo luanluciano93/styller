@@ -12,7 +12,6 @@
 	<action itemid="8293" script="custom/quests/demon oak/demonOak.lua" /> <!-- hallowed axe -->
 
 	<!-- Quests -->
-	<action fromuid="7011" touid="7013" script="custom/quests/daily_reward.lua" />
 	<action uniqueid="7000" script="custom/quests/annihilator/annihilator_lever.lua" />
 	<action uniqueid="2494" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- demon armor -->
 	<action uniqueid="2400" script="custom/quests/annihilator/annihilator_reward.lua" /> <!-- magic sword -->
@@ -101,6 +100,7 @@
 	<!-- Others -->
 	<action fromaid="1515" toaid="1522" script="custom/potions_lever.lua" />
 	<action itemid="12328" script="custom/stamina_refill.lua"/>
+	<action fromuid="7011" touid="7013" script="custom/daily_reward.lua" />
 
 	<!-- ---------------------------------------------------------------------------------------------------------------------- -->
 	

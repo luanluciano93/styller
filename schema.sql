@@ -377,6 +377,18 @@ CREATE TABLE IF NOT EXISTS `towns` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 
+-- lottery system
+CREATE TABLE IF NOT EXISTS `lottery` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `player_id` int NOT NULL,
+  `item_id` smallint unsigned NOT NULL,
+  `item_count` smallint unsigned NOT NULL DEFAULT '1',
+  `item_name` varchar(255) NOT NULL,
+  `addData` int NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+
 INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '30'), ('motd_hash', ''), ('motd_num', '0'), ('players_record', '0');
 
 DROP TRIGGER IF EXISTS `ondelete_players`;

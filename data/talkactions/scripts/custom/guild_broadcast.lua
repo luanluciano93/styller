@@ -1,10 +1,10 @@
-dofile('data/lib/custom/styllerConfig.lua')
+local config = STYLLER.valueForSendGuildBroadcast
 
 function onSay(player, words, param)
     
 	local storage = Storage.guildBroadcast
 	local cooldown = 1 * 60
-	local value = STYLLER.valueForSendGuildBroadcast
+	local value = config
 
 	local delayMinutes = player:getStorageValue(storage) - os.time()
 	if delayMinutes > 0 then

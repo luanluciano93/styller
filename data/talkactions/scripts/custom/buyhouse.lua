@@ -1,9 +1,4 @@
-dofile('data/lib/custom/styllerConfig.lua')
-
-local config = {
-	level = STYLLER.buyHouse.level,
-	onlyPremium = STYLLER.buyHouse.onlyPremium
-}
+local config = STYLLER.buyHouse
 
 function onSay(player, words, param)
 	local housePrice = configManager.getNumber(configKeys.HOUSE_PRICE)

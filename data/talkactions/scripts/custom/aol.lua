@@ -1,5 +1,3 @@
-dofile('data/lib/custom/styllerConfig.lua')
-
 local aolValue = STYLLER.aolValue
 
 function onSay(player, words, param)

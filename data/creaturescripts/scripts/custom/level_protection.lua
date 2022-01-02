@@ -1,5 +1,3 @@
-dofile('data/lib/custom/styllerConfig.lua')
-
 local freeBlessMaxLevel = STYLLER.freeBlessMaxLevel
 
 function onLogin(player)
