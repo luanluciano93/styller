@@ -77,4 +77,5 @@
 	<talkaction words="!war" separator=" " script="custom/war.lua"/>
 	<talkaction words="!report" separator=" " script="custom/znote_adminreport.lua"/>
 	<talkaction words="!guild" separator=" " script="custom/guild_broadcast.lua"/>
+	<talkaction words="!guildpoints" separator=" " script="custom/guild_points.lua"/>
 </talkactions>

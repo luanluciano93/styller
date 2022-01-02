@@ -6,7 +6,7 @@ Desenvolvimento de um servidor Styller usando o TFS 1.5 Nekiro's Downgrades na v
 - Versão: 8.60
 - Sources: [TFS 1.5 Nekiro's Downgrades](https://github.com/nekiro/TFS-1.5-Downgrades/tree/8.60) - Branch: 8.60 (Dec 23, 2021, 67 commits)
 - [Server Info](https://github.com/luanluciano93/styller/wiki)
-- [Atualizações](https://github.com/luanluciano93/styller/wiki/CHANGES).
+- [Atualizações](https://github.com/luanluciano93/styller/wiki/Atualiza%C3%A7%C3%B5es).
 
 ### Dúvidas, erros, dicas e contribuições:
 - Caso tenha dúvidas, ou queira resolver algum bug/erro, dar dicas para o projeto, ou também ajudar em sua construção, crie um [issue](https://github.com/luanluciano93/styller/issues/new) / [pull requests](https://github.com/luanluciano93/styller/pulls) pelo github ou use o [tópico do projeto](https://tibiaking.com/forums/topic/104684-tfs-14-860-styller-2021/) no fórum tibiaking.

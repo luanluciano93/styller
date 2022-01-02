@@ -45,6 +45,7 @@ STYLLER = {
 		.. "!war" .. "\n"
 		.. "!report" .. "\n"
 		.. "!guild" .. "\n"
+		.. "!guildpoints" .. "\n"
 		.. "!uptime",
 	valueForSendGuildBroadcast = 1000,
 
@@ -69,5 +70,15 @@ STYLLER = {
 			2167 -- energy ring
 		},
 		diasParaRemoverAOferta = 7
+	},
+	
+	guildPoints = {
+		executeInterval = 24, -- em horas
+		minimumLevel = 80,
+		membersNeeded = 4,
+		checkDifferentIps = true,
+		minimumDifferentIps = 4,
+		pointAmount = 10,
+		accountStorage = 9999
 	}
 }

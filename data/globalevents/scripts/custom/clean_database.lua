@@ -49,15 +49,15 @@ end
 
 local function doCheckEmptyAccounts() -- deleta automaticamente o dados das tabelas  "player_viplist"
 	local timeStamp = os.time() - (86400 * (emptyAccountMonths * 30))
-	local fromClause = "`accounts` WHERE `accounts`.`creation` <= ".. timeStamp .." AND NOT EXISTS (SELECT `id` FROM `players` WHERE `accounts`.`id` = `players`.`account_id`)"
+	local fromClause = "`accounts` WHERE `accounts`.`creation` <= ".. timeStamp .." AND `type` = 1 AND NOT EXISTS (SELECT `id` FROM `players` WHERE `accounts`.`id` = `players`.`account_id`)"
 	return executeDatabase(fromClause)
 end
 
 local function doCheckInactiveHouses()
-	local timeStamp = os.time() - (86400 * (inactiveDaysToCleanHouse * 24))
+	local timeStamp = os.time() - (86400 * (inactiveDaysToCleanHouse))
 	local totalClear = 0
 	
-	local resultId = db.storeQuery("SELECT `houses`.`owner`, `houses`.`id` FROM `houses`, `players` WHERE `houses`.`owner` != 0 AND `houses`.`owner` = `players`.`id` AND `players`.`lastlogin` <= " .. timeStamp .. ";")
+	local resultId = db.storeQuery("SELECT `houses`.`owner`, `houses`.`id` FROM `houses`, `players` WHERE `houses`.`owner` != 0 AND `houses`.`owner` = `players`.`id` AND `players`.`group_id` = 1 AND `players`.`lastlogin` <= " .. timeStamp .. ";")
 	if resultId ~= false then		
 		repeat
 			local owner = result.getNumber(resultId, "owner")
@@ -80,38 +80,42 @@ local function doCheckInactiveHouseLists() -- Apagando "house_lists" do player
 end
 
 local function doCheckInactiveGuilds() -- deleta automaticamente o dados das tabelas  "guild_invites, guild_membership, guild_ranks"
-	local timeStamp = os.time() - (86400 * (inactiveDaysToCleanGuildWithFewPlayers * 24))
+	local timeStamp = os.time() - (86400 * (inactiveDaysToCleanGuildWithFewPlayers))
 	local fromClause = "`guilds` WHERE `guilds`.`creationdata` <= ".. timeStamp .." AND (SELECT COUNT(*) from `guild_membership` WHERE `guild_membership`.`guild_id` = `guilds`.`id`) < " .. minimumGuildMembers .. ""
 	return executeDatabase(fromClause)
 end
 
 -- Executando as funções de limpeza ao iniciar o servidor.
 function onStartup()
-	print("[[ DATABASE CLEAN ]]")
 
 	local inactivePlayer = doCheckInactivePlayer()
-	if inactivePlayer > 0 then
-		print(">> ".. inactivePlayer .. " deleted inactive players.")
-	end
-
 	local emptyAccounts = doCheckEmptyAccounts()
-	if emptyAccounts > 0 then
-		print(">> ".. emptyAccounts .." empty deleted accounts.")
-	end
-
 	local inactiveHouses = doCheckInactiveHouses()
-	if inactiveHouses > 0 then
-		print(">> ".. inactiveHouses .." houses that were expropriated.")
-	end
-
 	local inactiveHouseLists = doCheckInactiveHouseLists()
-	if inactiveHouseLists > 0 then
-		print(">> ".. inactiveHouseLists .." deleted inactive house lists.")
-	end
-
 	local inactiveGuilds = doCheckInactiveGuilds()
-	if inactiveGuilds > 0 then
-		print(">> ".. inactiveGuilds .." deleted inactive guilds.")
+
+	if inactivePlayer > 0 or emptyAccounts > 0 or inactiveHouses > 0 or inactiveHouseLists > 0 or inactiveGuilds > 0 then
+		print(">> [[ DATABASE CLEAN ]]")
+
+		if inactivePlayer > 0 then
+			print(">> ".. inactivePlayer .. " deleted inactive players.")
+		end
+
+		if emptyAccounts > 0 then
+			print(">> ".. emptyAccounts .." empty deleted accounts.")
+		end
+
+		if inactiveHouses > 0 then
+			print(">> ".. inactiveHouses .." houses that were expropriated.")
+		end
+
+		if inactiveHouseLists > 0 then
+			print(">> ".. inactiveHouseLists .." deleted inactive house lists.")
+		end
+
+		if inactiveGuilds > 0 then
+			print(">> ".. inactiveGuilds .." deleted inactive guilds.")
+		end
 	end
 
 	addEvent(saveServer, 10000)

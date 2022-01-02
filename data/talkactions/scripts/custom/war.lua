@@ -117,7 +117,7 @@ function onSay(player, words, param)
 		return false
 	end	
 
-	if not guildId or (player:getGuildLevel() < 3) then
+	if player:getGuildLevel() < 3 then
 		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, '[GUILD WAR] You need to be the guild leader to execute this command.')
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
