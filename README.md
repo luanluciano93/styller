@@ -1,10 +1,10 @@
-# STYLLER 2021 - TFS 1.5 (8.60)
+# STYLLER 2022 - TFS 1.5 (8.60)
 
 Desenvolvimento de um servidor Styller usando o TFS 1.5 Nekiro's Downgrades na versão 8.60 do Tibia.
 
 ### Informações do Servidor e Sistemas:
 - Versão: 8.60
-- Sources: [TFS 1.5 Nekiro's Downgrades](https://github.com/nekiro/TFS-1.5-Downgrades/tree/8.60) - Branch: 8.60 (Dec 23, 2021, 67 commits)
+- Sources: [TFS 1.5 Nekiro's Downgrades](https://github.com/nekiro/TFS-1.5-Downgrades/tree/8.60) - Branch: 8.60 (Jan 12, 2022, 72 commits)
 - [Server Info](https://github.com/luanluciano93/styller/wiki)
 - [Atualizações](https://github.com/luanluciano93/styller/wiki/Atualiza%C3%A7%C3%B5es).
 
@@ -12,7 +12,7 @@ Desenvolvimento de um servidor Styller usando o TFS 1.5 Nekiro's Downgrades na v
 - Caso tenha dúvidas, ou queira resolver algum bug/erro, dar dicas para o projeto, ou também ajudar em sua construção, crie um [issue](https://github.com/luanluciano93/styller/issues/new) / [pull requests](https://github.com/luanluciano93/styller/pulls) pelo github ou use o [tópico do projeto](https://tibiaking.com/forums/topic/104684-tfs-14-860-styller-2021/) no fórum tibiaking.
 
 ### Website compatível:
-- [ZnoteACC](https://github.com/Znote/ZnoteAAC/tree/v2) - Branch: v2 (Dec 23, 2021, 608 commits)
+- [ZnoteACC](https://github.com/Znote/ZnoteAAC/tree/v2) - Branch: v2 (Jan 2, 2022, 609 commits)
 
 ### Créditos:
 - luanluciano93

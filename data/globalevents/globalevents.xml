@@ -7,6 +7,7 @@
 	<!-- Custom -->
 	<globalevent type="startup" name="CleanDatabase" script="custom/clean_database.lua" />
 	<globalevent name="PowerGamers" interval="60000" script="custom/znote_powergamers.lua"/>
+	<globalevent name="TextEffect" interval="4000" script="custom/text_effect.lua" />
 
 	<!-- Save -->
 	<globalevent name="Save1" time="09:00:00" script="custom/save.lua" />
