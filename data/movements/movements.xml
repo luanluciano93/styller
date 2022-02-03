@@ -968,16 +968,24 @@
 		<vocation name="Elder Druid" showInDescription="0" />
 	</movevent>
 	<movevent event="DeEquip" itemid="12647" slot="shield" function="onDeEquipItem" />
-	<!-- VIP BOOTS -->
+
+	<!-- STYLLER BOOTS -->
 	<movevent event="Equip" itemid="2358" slot="feet" function="onEquipItem" />
 	<movevent event="DeEquip" itemid="2358" slot="feet" function="onDeEquipItem" />
 
-	<!-- VIP EK HELMET -->
+	<!-- STYLLER HELMET -->
 	<movevent event="Equip" itemid="2496" slot="head" function="onEquipItem">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</movevent>
 	<movevent event="DeEquip" itemid="2496" slot="head" function="onDeEquipItem" />
+
+	<!-- LEGENDARY HELMET -->
+	<movevent event="Equip" itemid="9735" slot="head" function="onEquipItem">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</movevent>
+	<movevent event="DeEquip" itemid="9735" slot="head" function="onDeEquipItem" />
 
 	<!-- VIP EK SHIELD -->
 	<movevent event="Equip" itemid="2538" slot="shield" function="onEquipItem">
@@ -993,6 +1001,13 @@
 	</movevent>
 	<movevent event="DeEquip" itemid="2474" slot="head" function="onDeEquipItem" />
 
+	<!-- STYLLER TIARA -->
+	<movevent event="Equip" itemid="3971" slot="head" function="onEquipItem">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</movevent>
+	<movevent event="DeEquip" itemid="3971" slot="head" function="onDeEquipItem" />
+
 	<!-- VIP RP SHIELD -->
 	<movevent event="Equip" itemid="2537" slot="shield" function="onEquipItem">
 		<vocation name="Paladin" />
@@ -1000,7 +1015,7 @@
 	</movevent>
 	<movevent event="DeEquip" itemid="2537" slot="shield" function="onDeEquipItem" />
 
-	<!-- VIP MASK -->
+	<!-- STYLLER MASK -->
 	<movevent event="Equip" itemid="2501" slot="head" function="onEquipItem">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" showInDescription="0" />
@@ -1014,7 +1029,7 @@
 	</movevent>
 	<movevent event="DeEquip" itemid="2542" slot="shield" function="onDeEquipItem" />
 	
-	<!-- VIP HAT -->
+	<!-- STYLLER HAT -->
 	<movevent event="Equip" itemid="2323" slot="head" function="onEquipItem">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" showInDescription="0" />
@@ -1028,21 +1043,21 @@
 	</movevent>
 	<movevent event="DeEquip" itemid="2539" slot="shield" function="onDeEquipItem" />
 	
-	<!-- VIP thaian sword -->
+	<!-- STYLLER SWORD -->
 	<movevent event="Equip" itemid="7391" slot="left-hand" function="onEquipItem">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</movevent>
 	<movevent event="DeEquip" itemid="7391" slot="left-hand" function="onDeEquipItem" />
 	
-	<!-- VIP mythril axe -->
+	<!-- STYLLER AXE -->
 	<movevent event="Equip" itemid="7455" slot="left-hand" function="onEquipItem">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</movevent>
 	<movevent event="DeEquip" itemid="7455" slot="left-hand" function="onDeEquipItem" />
 	
-	<!-- VIP hammer -->
+	<!-- STYLLER HAMMER -->
 	<movevent event="Equip" itemid="7450" slot="left-hand" function="onEquipItem">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />

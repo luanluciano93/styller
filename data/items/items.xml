@@ -3941,7 +3941,7 @@
 		<attribute key="armor" value="9" />
 		<attribute key="slotType" value="legs" />
 	</item>
-	<item id="2496" article="a" name="styller horned helmet"> <!-- horned helmet -->
+	<item id="2496" article="a" name="styller helmet"> <!-- horned helmet -->
 		<attribute key="weight" value="5100" />
 		<attribute key="armor" value="15" />
 		<attribute key="absorbPercentPhysical" value="5" />
@@ -7412,9 +7412,12 @@
 		<attribute key="armor" value="2" />
 		<attribute key="slotType" value="head" />
 	</item>
-	<item id="3971" article="a" name="charmer's tiara">
-		<attribute key="weight" value="2200" />
-		<attribute key="armor" value="2" />
+	<item id="3971" article="a" name="styller tiara">
+		<attribute key="weight" value="1200" />
+		<attribute key="armor" value="14" />
+		<attribute key="speed" value="10" />
+		<attribute key="skillDist" value="2" />
+		<attribute key="absorbPercentDeath" value="10" />
 		<attribute key="slotType" value="head" />
 	</item>
 	<item id="3972" article="a" name="bonelord helmet">
@@ -12611,7 +12614,7 @@
 		<attribute key="extradef" value="3" />
 		<attribute key="description" value="This sword is only granted to a warlord of the Svargrond arena." />
 	</item>
-	<item id="7391" article="a" name="styller thaian sword"> <!-- -->
+	<item id="7391" article="a" name="styller sword"> <!-- thaian sword -->
 		<attribute key="weight" value="6100" />
 		<attribute key="defense" value="40" />
 		<attribute key="attack" value="56" />
@@ -12960,12 +12963,12 @@
 		<attribute key="weaponType" value="sword" />
 		<attribute key="slotType" value="two-handed" />
 	</item>
-	<item id="7450" article="a" name="hammer of prophecy">
-		<attribute key="weight" value="11000" />
-		<attribute key="defense" value="35" />
-		<attribute key="attack" value="52" />
+	<item id="7450" article="a" name="styller hammer"> <!-- thaian sword -->
+		<attribute key="weight" value="8100" />
+		<attribute key="defense" value="42" />
+		<attribute key="attack" value="56" />
+		<attribute key="skillClub" value="4" />
 		<attribute key="weaponType" value="club" />
-		<attribute key="slotType" value="two-handed" />
 	</item>
 	<item id="7451" article="a" name="shadow sceptre">
 		<attribute key="weight" value="4100" />
@@ -12994,10 +12997,11 @@
 		<attribute key="weaponType" value="axe" />
 		<attribute key="slotType" value="two-handed" />
 	</item>
-	<item id="7455" article="a" name="mythril axe">
+	<item id="7455" article="a" name="styller axe"> <!-- mythril axe -->
 		<attribute key="weight" value="5500" />
-		<attribute key="defense" value="28" />
-		<attribute key="attack" value="48" />
+		<attribute key="defense" value="38" />
+		<attribute key="attack" value="56" />
+		<attribute key="skillAxe" value="4" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="extradef" value="2" />
 	</item>
@@ -17181,7 +17185,7 @@
 	<item id="9734" name="animal cure">
 		<attribute key="weight" value="180" />
 	</item>
-	<item id="9735" name="styller EK helmet"> <!-- Morik's helmet -->
+	<item id="9735" name="legendary helmet"> <!-- Morik's helmet -->
 		<attribute key="description" value="It belonged to a famous gladiator." />
 		<attribute key="skillSword" value="3" />
 		<attribute key="skillAxe" value="3" />

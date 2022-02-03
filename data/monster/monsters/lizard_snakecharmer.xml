@@ -65,7 +65,6 @@
 		<item name="small amethyst" chance="370" />
 		<item name="life ring" chance="190" />
 		<item name="snakebite rod" chance="120" />
-		<item name="charmer's tiara" chance="100" />
 		<item name="yellow gem" chance="30" />
 	</loot>
 </monster>
