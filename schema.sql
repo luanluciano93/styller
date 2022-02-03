@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `guilds` (
   `creationdata` int NOT NULL,
   `motd` varchar(255) NOT NULL DEFAULT '',
   `balance` bigint unsigned NOT NULL DEFAULT '0', -- add war system
-  `last_execute_points` int NOT NULL DEFAULT '0'; -- guild shop system
+  `last_execute_points` int NOT NULL DEFAULT '0', -- guild shop system
   PRIMARY KEY (`id`),
   UNIQUE KEY (`name`),
   UNIQUE KEY (`ownerid`),

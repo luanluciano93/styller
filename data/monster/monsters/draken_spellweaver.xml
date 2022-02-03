@@ -81,7 +81,5 @@
 		<item name="Zaoan robe" chance="770" />
 		<item name="luminous orb" chance="1980" />
 		<item name="draken sulphur" chance="3930" />
-		<item name="harness" chance="30" />
-		<item name="bamboo leaves" chance="180" />
 	</loot>
 </monster>

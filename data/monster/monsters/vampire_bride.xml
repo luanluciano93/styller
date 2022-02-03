@@ -78,6 +78,5 @@
 		<item id="9837" chance="970" /><!-- velvet tapestry -->
 		<item name="vampire teeth" chance="10000" />
 		<item name="blood preservation" chance="4950" />
-		<item name="leather whip" chance="20" />
 	</loot>
 </monster>

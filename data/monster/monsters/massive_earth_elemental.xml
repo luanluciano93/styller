@@ -70,6 +70,5 @@
 		<item name="small topaz" countmax="2" chance="5280" />
 		<item name="lump of earth" chance="40680" />
 		<item name="clay lump" chance="480" />
-		<item id="13757" chance="430" /><!-- coal -->
 	</loot>
 </monster>

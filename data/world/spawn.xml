@@ -645,10 +645,6 @@
 		<monster name="Infernalist" x="-18" y="1" z="5" spawntime="10" />
 		<monster name="Hellspawn" x="0" y="1" z="5" spawntime="10" />
 	</spawn>
-	<spawn centerx="903" centery="968" centerz="5" radius="1">
-		<monster name="Blue Djinn" x="-1" y="0" z="5" spawntime="20" />
-		<monster name="Hydra" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
 	<spawn centerx="745" centery="972" centerz="5" radius="10">
 		<monster name="Demon" x="-3" y="-6" z="5" spawntime="60" />
 		<monster name="Demon" x="-7" y="-5" z="5" spawntime="60" />

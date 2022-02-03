@@ -29,7 +29,9 @@ function onSay(player, words, param)
 	end
 
 	if player:removeTotalMoney(allBlessValue) then
-		player:addBlessing(32) -- bit representation
+		for i = 1, bless do
+			player:addBlessing(i)
+		end
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have been blessed by the gods!")
 		player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_YELLOW)
 	else

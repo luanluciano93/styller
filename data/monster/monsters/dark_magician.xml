@@ -62,6 +62,5 @@
 		<item name="health potion" chance="12000" />
 		<item name="mana potion" chance="11900" />
 		<item name="small enchanted emerald" chance="510" />
-		<item name="reins" chance="20" />
 	</loot>
 </monster>

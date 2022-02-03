@@ -40,7 +40,6 @@
 		<item name="mouldy cheese" chance="10000" />
 		<item name="leather boots" chance="10000" />
 		<item name="swamp grass" chance="3100" />
-		<item name="medicine pouch" chance="2400" />
 		<item id="5901" chance="2000" /><!-- wood -->
 		<item name="troll green" chance="1000" />
 		<item name="fishing rod" chance="80" />
