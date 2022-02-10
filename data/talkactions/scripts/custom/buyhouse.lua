@@ -1,10 +1,10 @@
-local config = STYLLER.buyHouse
-
 function onSay(player, words, param)
 	local housePrice = configManager.getNumber(configKeys.HOUSE_PRICE)
 	if housePrice == -1 then
 		return true
 	end
+
+	local config = CUSTOM.buyHouse
 
 	if player:getLevel() < config.level then
 		player:sendCancelMessage("You need level " .. config.level .. " or higher to buy a house.")

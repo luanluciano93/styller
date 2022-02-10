@@ -1,4 +1,5 @@
 function onSay(player, words, param)
-	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, STYLLER.playerTalkactionsCommands)
+	local commands = CUSTOM.playerTalkactionsCommands
+	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, commands)
 	return false
 end

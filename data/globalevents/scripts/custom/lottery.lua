@@ -11,11 +11,10 @@ CREATE TABLE IF NOT EXISTS `lottery` (
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 ]]--
 
-local config = STYLLER.lottery
-
 function onTime(interval)
 	local playersOnline = Game.getPlayers()
-    local rewards = config.rewards
+	local config = CUSTOM.lottery
+	local rewards = config.rewards
 
 	if #playersOnline > 0 and #rewards > 0 then
 

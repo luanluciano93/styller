@@ -2,16 +2,14 @@
 
 function onSay(player, words, param)
 
-	local storage = Storage.znoteShop
-	local cooldown = 15 -- in seconds.
-
-	if player:getStorageValue(storage) > os.time() then
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "Can only be executed once every " .. cooldown .. " seconds. Remaining cooldown: " .. player:getStorageValue(storage) - os.time() .. ".")
+	local exaust = player:getExhaustion(Storage.exhaustion.znoteShop)
+	if exaust > 0 then
+		player:sendTextMessage(MESSAGE_INFO_DESCR, "[GUILD BROADCAST] You're exhausted for ".. exaust .. " seconds.")
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
 
-	player:setStorageValue(storage, os.time() + cooldown)
+	player:setExhaustion(15, Storage.exhaustion.znoteShop)
 
 	logCommand(player, words, param)
 

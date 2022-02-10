@@ -26,7 +26,8 @@ function onStepIn(creature, item, position, fromPosition)
 		return false
 	end
 
-	if creature:getExhaustion() <= 0 then
+	local exaust = creature:getExhaustion(Storage.exhaustion.bossRoom)
+	if exaust <= 0 then
 		if creature:getStorageValue(Storage.task.storageJoin) == 1 then
 			local bossStorage = false
 			for key, value in pairs(config) do
@@ -56,7 +57,7 @@ function onStepIn(creature, item, position, fromPosition)
 							end
 						elseif hasPlayers and hasMonsters then
 							creature:sendCancelMessage("Boss room is busy.")
-							creature:setExhaustion(5)
+							creature:setExhaustion(5, Storage.exhaustion.bossRoom)
 							creature:teleportTo(fromPosition, true)
 							creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 							return false
@@ -73,7 +74,7 @@ function onStepIn(creature, item, position, fromPosition)
 							return true
 						else
 							creature:sendCancelMessage("This boss does not exist.")
-							creature:setExhaustion(5)
+							creature:setExhaustion(5, Storage.exhaustion.bossRoom)
 							creature:teleportTo(fromPosition, true)
 							creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 							return false
@@ -87,7 +88,7 @@ function onStepIn(creature, item, position, fromPosition)
 
 			if not bossStorage then
 				creature:sendCancelMessage("There is no boss for you to kill.")
-				creature:setExhaustion(10)
+				creature:setExhaustion(10, Storage.exhaustion.bossRoom)
 				creature:teleportTo(fromPosition, true)
 				creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 				return false
@@ -99,7 +100,7 @@ function onStepIn(creature, item, position, fromPosition)
 			return false
 		end
 	else
-		creature:sendCancelMessage("You're exhausted.")
+		creature:sendTextMessage(MESSAGE_INFO_DESCR, "You're exhausted for ".. exaust .. " seconds.")
 		creature:teleportTo(fromPosition, true)
 		creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false

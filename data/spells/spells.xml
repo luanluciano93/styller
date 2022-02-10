@@ -43,7 +43,7 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant group="attack" spellid="19" name="Fire Wave" words="exevo flam hur" level="18" mana="25" direction="0" cooldown="4000" groupcooldown="2000" needlearn="0" script="attack/fire_wave.lua">
+	<instant group="attack" spellid="19" name="Fire Wave" words="exevo flam hur" level="18" mana="25" direction="1" cooldown="4000" groupcooldown="2000" needlearn="0" script="attack/fire_wave.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>

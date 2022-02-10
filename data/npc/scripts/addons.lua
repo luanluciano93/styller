@@ -41,7 +41,7 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
         end
         
 		if player:getMoney() >= addoninfo.cost and (items_number == table.maxn(itemsTable)) then
-            if player:removeMoney(addoninfo.cost) then
+            if player:removeTotalMoney(addoninfo.cost) then
 				if table.maxn(itemsTable) > 0 then
 					for i = 1, table.maxn(itemsTable) do
 						local item = itemsTable[i]

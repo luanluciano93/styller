@@ -1,5 +1,3 @@
-local days = STYLLER.dailyReward
-
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	
 	local timeQuest = player:getStorageValue(Storage.dailyQuestTime) > 0 and player:getStorageValue(Storage.dailyQuestTime) or 0
@@ -12,6 +10,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	local day = player:getStorageValue(Storage.dailyQuest) > 0 and player:getStorageValue(Storage.dailyQuest) or 1
+	local days = CUSTOM.dailyReward
 	local dayReward = days[day]
 	if dayReward then
 		local reward = ItemType(dayReward[1])

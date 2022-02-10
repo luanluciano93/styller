@@ -40,7 +40,7 @@ db.query([[
 	) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 ]])
 
-local config = STYLLER.tradeOffine
+local config = CUSTOM.tradeOffine
 
 local function retornarItemsdoContainer(uid)
 	local container = Container(uid)

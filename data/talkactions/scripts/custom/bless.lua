@@ -1,6 +1,13 @@
-local allBlessValue = STYLLER.allBlessValue
-
 function onSay(player, words, param)
+
+	local exaust = player:getExhaustion(Storage.exhaustion.talkaction)
+	if exaust > 0 then
+		player:sendTextMessage(MESSAGE_INFO_DESCR, "You're exhausted for ".. exaust .. " seconds.")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	player:setExhaustion(2, Storage.exhaustion.talkaction)
 
 	local tile = Tile(player:getPosition())
 	if not tile then
@@ -27,6 +34,8 @@ function onSay(player, words, param)
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
+
+	local allBlessValue = CUSTOM.allBlessValue
 
 	if player:removeTotalMoney(allBlessValue) then
 		for i = 1, bless do

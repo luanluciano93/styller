@@ -18,8 +18,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local potionId = ItemType(potion.id)
 	local itemWeight = potionId:getWeight() * potion.charges
 	if player:getFreeCapacity() >= itemWeight then
-		if not player:removeMoney(potion.value) then
-			player:sendCancelMessage("You don't have ".. potion.value .." gold coins to buy ".. potion.charges .." ".. potionId:getName() ..".")
+		if not player:removeTotalMoney(potion.value) then
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You don't have ".. potion.value .." gold coins to buy ".. potion.charges .." ".. potionId:getName() ..".")
+			player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		else
 			player:getPosition():sendMagicEffect(CONST_ME_DRAWBLOOD)
 			player:addItem(potion.id, potion.charges)

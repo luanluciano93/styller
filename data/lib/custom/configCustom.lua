@@ -1,6 +1,6 @@
--- Styller Config --
+-- Config Custom--
 
-STYLLER = {
+CUSTOM = {
 	-- actions
 	dailyReward = {
 		-- [dia] = {itemId, itemCount, "ordem"},
@@ -15,6 +15,7 @@ STYLLER = {
 	
 	-- creaturescripts
 	freeBlessMaxLevel = 50,
+	maxAccPorIp = 4,
 
 	-- globalevents
 	lottery = {
@@ -25,6 +26,15 @@ STYLLER = {
 			{2470, 1}, -- golden legs
 		},
 		website = true
+	},
+
+	-- movements
+	trainersConfig = {
+		first_room_pos = Position(985, 858, 9), -- posicao da primeira pos (linha 1 coluna 1)
+		distX= 12, -- distancia em X entre cada sala (de uma mesma linha)
+		distY= 10, -- distancia em Y entre cada sala (de uma mesma coluna)
+		rX= 6, -- numero de colunas
+		rY= 8 -- numero de linhas
 	},
 
 	-- talkactions

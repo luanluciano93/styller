@@ -1,6 +1,6 @@
-local freeBlessMaxLevel = STYLLER.freeBlessMaxLevel
-
 function onLogin(player)
+	local freeBlessMaxLevel = CUSTOM.freeBlessMaxLevel
+
 	if player:getLevel() < freeBlessMaxLevel then
 		local bless = 5
 		for i = 1, bless do

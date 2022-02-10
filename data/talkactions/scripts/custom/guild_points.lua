@@ -1,9 +1,14 @@
 -- ALTER TABLE `guilds` ADD `last_execute_points` int NOT NULL DEFAULT '0';
 -- ALTER TABLE `znote_accounts` ADD `guild_points` smallint unsigned NOT NULL DEFAULT '0';
 
-local config = STYLLER.guildPoints
-
 function onSay(player, words, param)
+
+	local exaust = player:getExhaustion(Storage.exhaustion.talkaction)
+	if exaust > 0 then
+		player:sendTextMessage(MESSAGE_INFO_DESCR, "You're exhausted for ".. exaust .. " seconds.")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
 
 	local guild = player:getGuild()
 	if not guild then
@@ -24,6 +29,10 @@ function onSay(player, words, param)
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
+
+	local config = CUSTOM.guildPoints
+
+	player:setExhaustion(2, Storage.exhaustion.talkaction)
 
 	local resultId = db.storeQuery('SELECT `last_execute_points` FROM `guilds` WHERE `id` = '.. guildId)
 	if not resultId then

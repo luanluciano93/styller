@@ -257,18 +257,16 @@ function createFunctions(class)
 	end
 end
 
-
-function Player.setExhaustion(self, time)
-	return self:setStorageValue(Storage.exhaustion, time + os.time())
+function Player.setExhaustion(self, time, storage)
+	return self:setStorageValue(storage, time + os.time())
 end
 
-function Player.getExhaustion(self)
-	local storage = self:getStorageValue(Storage.exhaustion)
-	if storage <= 0 then
+function Player.getExhaustion(self, storage)
+	local storageExhaustion = self:getStorageValue(storage)
+	if storageExhaustion <= 0 then
 		return 0
 	end
-
-	return storage - os.time()
+	return storageExhaustion - os.time()
 end
 
 function isNumber(str)

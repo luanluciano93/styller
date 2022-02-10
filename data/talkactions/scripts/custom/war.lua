@@ -8,39 +8,16 @@
 -- !war deposity, money
 -- !war withdraw, money
 
-local frags = STYLLER.warSystem.frags
-local timeDaysMax = STYLLER.warSystem.daysMaxToInviteWar
-
-local function getEnemyId(enemyName)
-	local resultId = db.storeQuery("SELECT `id` FROM `guilds` WHERE `name` = " .. db.escapeString(enemyName))
-	if resultId == false then
-		return false
-	end
-
-	local enemyId = result.getNumber(resultId, "id")
-	result.free(resultId)
-	return enemyId
-end
-
-local function getEnemyName(enemyId)
-	local resultId = db.storeQuery("SELECT `name` FROM `guilds` WHERE `id` = " .. enemyId)
-	if resultId == false then
-		return false
-	end
-
-	local enemyName = result.getString(resultId, "name")
-	result.free(resultId)
-	return enemyName
-end
-
-local function isValidMoneyGuild(value)
-	if not value then
-		return false
-	end
-	return (value > 0 and value <= 99999999999999)
-end
-
 function onSay(player, words, param)
+
+	local exaust = player:getExhaustion(Storage.exhaustion.trainer)
+	if exaust > 0 then
+		player:sendTextMessage(MESSAGE_INFO_DESCR, "You're exhausted for ".. exaust .. " seconds.")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	player:setExhaustion(3, Storage.exhaustion.talkaction)
 
 	local guild = player:getGuild()
 	if not guild then
@@ -83,7 +60,6 @@ function onSay(player, words, param)
 			.. "!war balance" .. "\n"
 			.. "!war deposity, money" .. "\n"
 			.. "!war withdraw, money")
-		player:getPosition():sendMagicEffect(CONST_ME_POFF)	
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)		
 		return false
 	end
@@ -131,6 +107,13 @@ function onSay(player, words, param)
 			return false
 		end		
 
+		local function isValidMoneyGuild(value)
+			if not value then
+				return false
+			end
+			return (value > 0 and value <= 99999999999999)
+		end
+
 		if not isValidMoneyGuild(money) then
 			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, '[GUILD WAR] Invalid amount of money specified.')
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
@@ -165,13 +148,8 @@ function onSay(player, words, param)
 	
 		elseif split[1] == 'deposity' then
 
-			if player:getMoney() < money then
+			if not player:removeTotalMoney(money) then
 				player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, '[GUILD WAR] You don\'t have enough money.')
-				player:getPosition():sendMagicEffect(CONST_ME_POFF)
-				return false
-			end
-
-			if not player:removeMoney(money) then
 				player:getPosition():sendMagicEffect(CONST_ME_POFF)
 				return false
 			end
@@ -182,12 +160,34 @@ function onSay(player, words, param)
 		
 		return false
 	end
-	
+
+	local function getEnemyId(enemyName)
+		local resultId = db.storeQuery("SELECT `id` FROM `guilds` WHERE `name` = " .. db.escapeString(enemyName))
+		if resultId == false then
+			return false
+		end
+
+		local enemyId = result.getNumber(resultId, "id")
+		result.free(resultId)
+		return enemyId
+	end
+
 	local enemy = getEnemyId(split[2])
 	if not enemy then
 		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, '[GUILD WAR] Guild '.. split[2] ..' does not exists.')
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
+	end
+
+	local function getEnemyName(enemyId)
+		local resultId = db.storeQuery("SELECT `name` FROM `guilds` WHERE `id` = " .. enemyId)
+		if resultId == false then
+			return false
+		end
+
+		local enemyName = result.getString(resultId, "name")
+		result.free(resultId)
+		return enemyName
 	end
 
 	local enemyName = getEnemyName(enemy)
@@ -270,6 +270,7 @@ function onSay(player, words, param)
 		end
 
 		local fragLimit, fragsSplit = 0, tonumber(split[3])
+		local frags = CUSTOM.warSystem.frags
 		if not fragsSplit then
 			fragLimit = frags.standard
 		else
@@ -302,6 +303,7 @@ function onSay(player, words, param)
 
 		local begining, ending, days = os.time(), tonumber(split[5]), 0
 		if ending and ending ~= 0 then
+			local timeDaysMax = CUSTOM.warSystem.daysMaxToInviteWar
 			if ending > timeDaysMax then
 				player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, '[GUILD WAR] Invalid amount of days specified. The maximum value for days of war is ' .. timeDaysMax ..' days.')
 				player:getPosition():sendMagicEffect(CONST_ME_POFF)

@@ -1,10 +1,4 @@
-local config = {
-	first_room_pos = {x = 985, y = 858, z = 9}, -- posicao da primeira pos (linha 1 coluna 1)
-	distX= 12, -- distancia em X entre cada sala (de uma mesma linha)
-	distY= 10, -- distancia em Y entre cada sala (de uma mesma coluna)
-	rX= 6, -- numero de colunas
-	rY= 8 -- numero de linhas
-}
+local config = CUSTOM.trainersConfig
 
 local function isBusyable(position)
 	local player = Tile(position):getTopCreature()
@@ -74,11 +68,12 @@ function onStepIn(creature, item, position, fromPosition)
 		return false
 	end
 
-	if creature:getExhaustion() <= 0 then
+	local exaust = creature:getExhaustion(Storage.exhaustion.trainer)
+	if exaust <= 0 then
 		calculatingRoom(creature.uid, config.first_room_pos, 0, 0)
 	else
 		creature:teleportTo(fromPosition, true)
-		creature:sendTextMessage(MESSAGE_INFO_DESCR, "You gotta wait a few seconds before you can enter trainning room again.")
+		creature:sendTextMessage(MESSAGE_INFO_DESCR, "You gotta wait a ".. exaust .. " seconds before you can enter trainning room again.")
 	end
 
 	return true

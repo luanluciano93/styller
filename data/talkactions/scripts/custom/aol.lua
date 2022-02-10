@@ -1,6 +1,13 @@
-local aolValue = STYLLER.aolValue
-
 function onSay(player, words, param)
+
+	local exaust = player:getExhaustion(Storage.exhaustion.trainer)
+	if exaust > 0 then
+		player:sendTextMessage(MESSAGE_INFO_DESCR, "You're exhausted for ".. exaust .. " seconds.")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	player:setExhaustion(2, Storage.exhaustion.talkaction)
 
 	local tile = Tile(player:getPosition())
 	if not tile then
@@ -30,6 +37,8 @@ function onSay(player, words, param)
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end
+
+	local aolValue = CUSTOM.aolValue
 
 	if player:removeTotalMoney(aolValue) then
 		player:addItem(2173, 1)

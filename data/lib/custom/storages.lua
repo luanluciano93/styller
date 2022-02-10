@@ -24,7 +24,7 @@ Storage = {
 	bigQuest = 50015,
 	pvpArena = 50016,
 	blueLegsQuest = 50017,
-	exhaustion = 50018,
+	premiumCheck = 50018,
 	events = 50019,
 	ducaPoints = 50020,
 	achievements = {
@@ -59,18 +59,24 @@ Storage = {
 	
 	-- used for 40000 at 41000
 	znoteSyncoutfit = 40000,
-	
-	znoteAdminReport = 62004,
-	znoteShop = 62005,
+
+	tradeoff_delay = 62004,
+	captureTheFlagEvent = 62005,
 	safezoneEvent = 62006,
 	battlefieldEvent = 62007,
 	zombieEvent = 62008,
 	ducaEvent = 62009,
 	ducaPoints = 62010,
-	captureTheFlagEvent = 62011,
-	premiumCheck = 62012,
-	guildBroadcast = 62013,
-	tradeoff_delay = 62014
+
+	exhaustion = {
+		bossRoom = 62300,
+		trainer = 62301,
+		talkaction = 62302,
+		guildBroadcast = 62303,
+		znoteAdminReport = 62304,
+		znoteShop = 62305,
+		savePlayer = 62306,
+	},
 }
 
 GlobalStorage = {

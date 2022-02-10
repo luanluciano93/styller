@@ -11418,8 +11418,8 @@
 	<item id="6526" article="a" name="skeleton decoration">
 		<attribute key="weight" value="1000" />
 	</item>
-	<item id="6527" article="a" name="event token">
-		<attribute key="description" value="Collect enough of these to trade them for valuable prizes." />
+	<item id="6527" article="a" name="premium token">
+		<attribute key="description" value="This token is exchanged for points on the website" />
 		<attribute key="weight" value="5" />
 	</item>
 	<item id="6528" name="the avenger">
@@ -16634,8 +16634,8 @@
 	<item id="9019" article="a" name="vampire doll">
 		<attribute key="weight" value="940" />
 	</item>
-	<item id="9020" article="a" name="vampire lord token">
-		<attribute key="description" value="It proves that you have killed a vampire lord." />
+	<item id="9020" article="a" name="event token"> <!-- vampire lord token -->
+		<attribute key="description" value="This token is acquired in events." />
 		<attribute key="weight" value="5" />
 	</item>
 	<item fromid="9021" toid="9025" name="dirt floor" />
@@ -19167,8 +19167,9 @@
 	<item id="10558" article="a" name="piece of scarab shell" plural="pieces of scarab shell">
 		<attribute key="weight" value="142" />
 	</item>
-	<item id="10559" article="a" name="spooky blue eye">
-		<attribute key="weight" value="86" />
+	<item id="10559" article="a" name="special coin"> <!-- spooky blue eye -->
+		<attribute key="weight" value="10" />
+		<attribute key="worth" value="1000000" />
 	</item>
 	<item id="10560" article="a" name="thorn">
 		<attribute key="weight" value="120" />

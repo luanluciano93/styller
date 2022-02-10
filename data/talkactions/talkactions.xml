@@ -44,7 +44,7 @@
 	<talkaction words="!uptime" script="uptime.lua" />
 	<!--<talkaction words="!deathlist" separator=" " script="deathlist.lua" />-->
 	<talkaction words="!kills" script="kills.lua" />
-	<talkaction words="!online;/online" script="online.lua" />
+	<!--<talkaction words="!online;/online" script="online.lua" />-->
 	<talkaction words="!serverinfo" script="serverinfo.lua" />
 
 	<!-- test talkactions -->
@@ -67,6 +67,7 @@
 	<talkaction words="/capturetheflag" script="custom/events/capturetheflag.lua" />
 
 	<!-- player talkactions -->
+	<talkaction words="!online" script="custom/online.lua" />
 	<talkaction words="!buyhouse" script="custom/buyhouse.lua" />
 	<talkaction words="!save" script="custom/save.lua" />
 	<talkaction words="!commands" script="custom/commands.lua" />
