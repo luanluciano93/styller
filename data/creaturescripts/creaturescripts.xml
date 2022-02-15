@@ -8,9 +8,10 @@
 	<event type="death" name="DropLoot" script="droploot.lua" />
 	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
 
-	<!----------------------- Custom Styller --------------------------->
+	<!------------------------------- Custom ----------------------------------->
 
 	<event type="login" name="PlayerLoginCustom" script="custom/login.lua" />
+	<event type="login" name="CheckPremiumLogin" script="custom/check_premium.lua" />
 	<event type="login" name="FirstItemsCustom" script="custom/firstitems.lua" />
 	<event type="death" name="DeathCast" script="custom/deathCast.lua" />
 	<event type="advance" name="AdvanceSave" script="custom/advance_save.lua" />

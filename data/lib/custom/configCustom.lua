@@ -16,6 +16,7 @@ CUSTOM = {
 	-- creaturescripts
 	freeBlessMaxLevel = 50,
 	maxAccPorIp = 4,
+	cityPremiumId = 3,
 
 	-- globalevents
 	lottery = {
