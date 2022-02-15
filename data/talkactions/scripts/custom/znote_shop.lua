@@ -4,7 +4,7 @@ function onSay(player, words, param)
 
 	local exaust = player:getExhaustion(Storage.exhaustion.znoteShop)
 	if exaust > 0 then
-		player:sendTextMessage(MESSAGE_INFO_DESCR, "[GUILD BROADCAST] You're exhausted for ".. exaust .. " seconds.")
+		player:sendTextMessage(MESSAGE_INFO_DESCR, "You're exhausted for ".. exaust .. " seconds.")
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end

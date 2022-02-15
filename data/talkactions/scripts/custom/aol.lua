@@ -1,6 +1,6 @@
 function onSay(player, words, param)
 
-	local exaust = player:getExhaustion(Storage.exhaustion.trainer)
+	local exaust = player:getExhaustion(Storage.exhaustion.talkaction)
 	if exaust > 0 then
 		player:sendTextMessage(MESSAGE_INFO_DESCR, "You're exhausted for ".. exaust .. " seconds.")
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)

@@ -15571,8 +15571,9 @@
 		<attribute key="description" value="It contains the clothes of a dwarf." />
 		<attribute key="weight" value="1000" />
 	</item>
-	<item id="8694" article="a" name="deed of ownership">
-		<attribute key="description" value="It declares the ownership of the dwarf bridge, but is obviously a fake." />
+	<item id="8694" article="a" name="premium scroll"> <!-- deed of ownership -->
+		<!-- <attribute key="description" value="It declares the ownership of the dwarf bridge, but is obviously a fake." /> -->
+		<attribute key="description" value="Using this scroll will add 30 days of premium time to your account." />
 		<attribute key="weight" value="150" />
 	</item>
 	<item id="8695" name="wooden floor" />
@@ -16634,8 +16635,7 @@
 	<item id="9019" article="a" name="vampire doll">
 		<attribute key="weight" value="940" />
 	</item>
-	<item id="9020" article="a" name="event token"> <!-- vampire lord token -->
-		<attribute key="description" value="This token is acquired in events." />
+	<item id="9020" article="a" name="vampire lord token">
 		<attribute key="weight" value="5" />
 	</item>
 	<item fromid="9021" toid="9025" name="dirt floor" />
@@ -21116,8 +21116,9 @@
 	<item id="12410" article="a" name="luminous orb">
 		<attribute key="weight" value="94" />
 	</item>
-	<item id="12411" article="a" name="cultish symbol">
-		<attribute key="weight" value="82" />
+	<item id="12411" article="a" name="event token"> <!-- cultish symbol -->
+		<attribute key="description" value="This token is acquired in events." />
+		<attribute key="weight" value="1" />
 	</item>
 	<item id="12412" article="a" name="dirty turban">
 		<attribute key="weight" value="134" />

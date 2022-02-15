@@ -11,6 +11,7 @@
 	<movevent event="StepIn" actionid="9615" script="custom/boss_room_enter.lua" />
 	<movevent event="StepIn" actionid="9616" script="custom/boss_room_leave.lua" />
 	<movevent event="StepIn" actionid="9622" script="custom/addon_teleport.lua" />
+	<movevent event="StepIn" actionid="9623" script="custom/trainer_add.lua" />
 
 	<movevent event="StepIn" actionid="30021" script="custom/citizen.lua" />
 	<movevent event="StepIn" actionid="30022" script="custom/citizen.lua" />

@@ -11,6 +11,7 @@
 	<monster name="Ferumbras" file="monsters/custom/ferumbras.xml" />
 	<monster name="Mahrdis" file="monsters/custom/mahrdis.xml" />
 	<monster name="Ushuriel" file="monsters/custom/ushuriel.xml" />
+	<monster name="Pirate Skeleton" file="monsters/custom/pirate_skeleton.xml" />
 
 	<!-- Monsters -->
 	<monster name="a carved stone tile" file="monsters/a_carved_stone_tile.xml" />
@@ -507,7 +508,7 @@
 	<monster name="Pirate Cutthroat" file="monsters/pirate_cutthroat.xml" />
 	<monster name="Pirate Ghost" file="monsters/pirate_ghost.xml" />
 	<monster name="Pirate Marauder" file="monsters/pirate_marauder.xml" />
-	<monster name="Pirate Skeleton" file="monsters/pirate_skeleton.xml" />
+	<!-- <monster name="Pirate Skeleton" file="monsters/pirate_skeleton.xml" /> -->
 	<monster name="Plagirath" file="monsters/plagirath.xml" />
 	<monster name="Plaguesmith" file="monsters/plaguesmith.xml" />
 	<monster name="Plaguethrower" file="monsters/plaguethrower.xml" />

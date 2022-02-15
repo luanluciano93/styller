@@ -101,6 +101,7 @@
 	<action fromaid="1515" toaid="1522" script="custom/potions_lever.lua" />
 	<action itemid="12328" script="custom/stamina_refill.lua"/>
 	<action fromuid="7011" touid="7013" script="custom/daily_reward.lua" />
+	<action itemid="8694" script="custom/premium_scroll.lua"/>
 
 	<!-- ---------------------------------------------------------------------------------------------------------------------- -->
 	
