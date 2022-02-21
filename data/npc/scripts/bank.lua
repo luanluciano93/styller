@@ -170,12 +170,12 @@ local function creatureSayCallback(cid, type, msg)
 			if #parts == 2 then
 				-- Immediate topicList.TRANSFER_PLAYER_GOLD simulation
 				count[cid] = getMoneyCount(parts[2])
-				if player:getBankBalance() < count[cid] then
-					npcHandler:say("There is not enough gold in your account.", cid)
-					npcHandler.topic[cid] = topicList.NONE
-					return true
-				end
-				if isValidMoney(count[cid]) then
+				if count[cid] ~= -1 then
+					if player:getBankBalance() < count[cid] then
+						npcHandler:say("There is not enough gold in your account.", cid)
+						npcHandler.topic[cid] = topicList.NONE
+						return true
+					end
 					npcHandler:say("Who would you like transfer " .. count[cid] .. " gold to?", cid)
 					npcHandler.topic[cid] = topicList.TRANSFER_PLAYER_WHO
 				else
@@ -200,21 +200,21 @@ local function creatureSayCallback(cid, type, msg)
 
 			-- Immediate topicList.TRANSFER_PLAYER_GOLD simulation
 			count[cid] = getMoneyCount(parts[2])
-			if player:getBankBalance() < count[cid] then
-				npcHandler:say("There is not enough gold in your account.", cid)
-				npcHandler.topic[cid] = topicList.NONE
-				return true
-			end
-			if isValidMoney(count[cid]) then
-				-- Immediate topicList.TRANSFER_PLAYER_WHO simulation
-				transfer[cid] = getPlayerDatabaseInfo(receiver)
-				if player:getName() == transfer[cid].name then
-					npcHandler:say("Why would you want to transfer money to yourself? You already have it!", cid)
+			if count[cid] ~= -1 then
+				if player:getBankBalance() < count[cid] then
+					npcHandler:say("There is not enough gold in your account.", cid)
 					npcHandler.topic[cid] = topicList.NONE
 					return true
 				end
-
+				-- Immediate topicList.TRANSFER_PLAYER_WHO simulation
+				transfer[cid] = getPlayerDatabaseInfo(receiver)
 				if transfer[cid] then
+					if player:getName() == transfer[cid].name then
+						npcHandler:say("Why would you want to transfer money to yourself? You already have it!", cid)
+						npcHandler.topic[cid] = topicList.NONE
+						return true
+					end
+
 					if transfer[cid].vocation == VOCATION_NONE and Player(cid):getVocation() ~= 0 then
 						npcHandler:say("I'm afraid this character only holds a junior account at our bank. Do not worry, though. Once he has chosen his vocation, his account will be upgraded.", cid)
 						npcHandler.topic[cid] = topicList.NONE
@@ -234,12 +234,12 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif npcHandler.topic[cid] == topicList.TRANSFER_PLAYER_GOLD then
 		count[cid] = getMoneyCount(msg)
-		if player:getBankBalance() < count[cid] then
-			npcHandler:say("There is not enough gold in your account.", cid)
-			npcHandler.topic[cid] = topicList.NONE
-			return true
-		end
-		if isValidMoney(count[cid]) then
+		if count[cid] ~= -1 then
+			if player:getBankBalance() < count[cid] then
+				npcHandler:say("There is not enough gold in your account.", cid)
+				npcHandler.topic[cid] = topicList.NONE
+				return true
+			end
 			npcHandler:say("Who would you like transfer " .. count[cid] .. " gold to?", cid)
 			npcHandler.topic[cid] = topicList.TRANSFER_PLAYER_WHO
 		else
@@ -248,13 +248,13 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif npcHandler.topic[cid] == topicList.TRANSFER_PLAYER_WHO then
 		transfer[cid] = getPlayerDatabaseInfo(msg)
-		if player:getName() == transfer[cid].name then
-			npcHandler:say("Fill in this field with person who receives your gold!", cid)
-			npcHandler.topic[cid] = topicList.NONE
-			return true
-		end
-
 		if transfer[cid] then
+			if player:getName() == transfer[cid].name then
+				npcHandler:say("Fill in this field with person who receives your gold!", cid)
+				npcHandler.topic[cid] = topicList.NONE
+				return true
+			end
+
 			if transfer[cid].vocation == VOCATION_NONE and Player(cid):getVocation() ~= 0 then
 				npcHandler:say("I'm afraid this character only holds a junior account at our bank. Do not worry, though. Once he has chosen his vocation, his account will be upgraded.", cid)
 				npcHandler.topic[cid] = topicList.NONE

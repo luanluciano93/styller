@@ -25,8 +25,7 @@ function onSay(player, words, param)
 	local itemWeight = itemType:getWeight()
 	local playerCap = player:getFreeCapacity()
 	if playerCap < itemWeight then
-		itemWeight = itemWeight / 100
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You have found a " .. itemType:getName() .. " weighing " .. itemWeight .. " oz it's too heavy.")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You have found a " .. itemType:getName() .. " weighing " .. (itemWeight / 100) .. " oz it's too heavy.")
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return false
 	end

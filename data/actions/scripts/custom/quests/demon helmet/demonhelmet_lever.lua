@@ -6,7 +6,7 @@ local position = {
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 1945 then
-		local tile = position[1]:getTile()
+		local tile = Tile(position[1])
 		if tile then
 			local stone = tile:getItemById(1355)
 			if stone then
@@ -20,7 +20,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			position[2]:sendMagicEffect(CONST_ME_TELEPORT)
 		end
 	elseif item.itemid == 1946 then
-		local tile = position[2]:getTile()
+		local tile = Tile(position[2])
 		if tile then
 			local teleport = tile:getItemById(1387)
 			if teleport and teleport:isTeleport() then

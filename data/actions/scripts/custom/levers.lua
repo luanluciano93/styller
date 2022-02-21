@@ -11,7 +11,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	local tile = position:getTile()
+	local tile = Tile(position)
 	if tile then
 		local stone = tile:getItemById(1355)
 		if stone then
