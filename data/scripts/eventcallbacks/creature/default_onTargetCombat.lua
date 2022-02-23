@@ -27,40 +27,35 @@ ec.onTargetCombat = function(self, target)
 		return true
 	end
 
-	dofile('data/lib/custom/battlefield.lua')
-	dofile('data/lib/custom/zombie.lua')
-	dofile('data/lib/custom/duca.lua')
-	dofile('data/lib/custom/capturetheflag.lua')
-
-	-- Battlefield event
 	if self:isPlayer() and target:isPlayer() then
+
+		dofile('data/lib/custom/battlefield.lua')
+		dofile('data/lib/custom/zombie.lua')
+		dofile('data/lib/custom/duca.lua')
+		dofile('data/lib/custom/capturetheflag.lua')
+
+		-- Battlefield event
 		if self:getStorageValue(BATTLEFIELD.storage) > 0 then
 			if self:getStorageValue(BATTLEFIELD.storage) == target:getStorageValue(BATTLEFIELD.storage) then
 				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
 			end
 		end
-	end
 
-	-- Zombie event
-	if self:isPlayer() and target:isPlayer() then
+		-- Zombie event
 		if self:getStorageValue(ZOMBIE.storage) > 0 then
 			if self:getStorageValue(ZOMBIE.storage) == target:getStorageValue(ZOMBIE.storage) then
 				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
 			end
 		end
-	end
 
-	-- Duca event
-	if self:isPlayer() and target:isPlayer() then
+		-- Duca event
 		if self:getStorageValue(DUCA.storage) > 0 then
 			if self:getStorageValue(DUCA.storage) == target:getStorageValue(DUCA.storage) then
 				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
 			end
 		end
-	end
 
-	-- Capture the Flag event
-	if self:isPlayer() and target:isPlayer() then
+		-- Capture the Flag event
 		if self:getStorageValue(CAPTURETHEFLAG.storage) > 0 then
 			if self:getStorageValue(CAPTURETHEFLAG.storage) == target:getStorageValue(CAPTURETHEFLAG.storage) then
 				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER

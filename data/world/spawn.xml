@@ -1461,6 +1461,10 @@
 		<monster name="Hydra" x="1" y="4" z="6" spawntime="60" />
 		<monster name="Hydra" x="0" y="6" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="995" centery="1105" centerz="6" radius="5">
+		<monster name="Hydra" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Serpent Spawn" x="1" y="-1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="926" centery="1107" centerz="6" radius="6">
 		<monster name="Hydra" x="5" y="-2" z="6" spawntime="60" />
 		<monster name="Hydra" x="-2" y="0" z="6" spawntime="60" />
@@ -2839,7 +2843,7 @@
 		<monster name="Hydra" x="-5" y="-11" z="7" spawntime="60" />
 		<monster name="Hydra" x="15" y="-6" z="7" spawntime="60" />
 		<monster name="Hydra" x="5" y="-5" z="7" spawntime="60" />
-		<monster name="Hydra" x="-13" y="-2" z="7" spawntime="60" />
+		<monster name="Hydra" x="-13" y="-3" z="7" spawntime="60" />
 		<monster name="Serpent Spawn" x="2" y="0" z="7" spawntime="60" />
 		<monster name="Hydra" x="-5" y="5" z="7" spawntime="60" />
 	</spawn>

@@ -6,6 +6,7 @@
 	<raid name="Pirates" file="pirates.xml" interval2="1440" margin="120" />
 	<raid name="The Horned Fox" file="the_horned_fox.xml" interval2="1440" margin="120" />
 	<raid name="Tiquandas Revenge" file="tiquandas_revenge.xml" interval2="1440" margin="120" />
+	<raid name="Giant Spider Wyda" file="giant_spider_wyda.xml" interval2="1440" margin="120" />
 	
 	<!-- Raids POI -->
 	<raid name="Massacre" file="massacre.xml" interval2="1440" margin="50" />

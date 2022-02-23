@@ -69,10 +69,11 @@
 			gold ingots,9971,500;
 			small topazs,9970,500;
 			black skull,9969,500;
-			Red Crystal Table,9976,500;
-			Blue Crystal Table,9977,500;
-			Light Blue Crystal Table,9978,500;
-			Green Crystal Table,9979,500;"
+			red crystal table,9976,500;
+			blue Crystal table,9977,500;
+			light blue crystal table,9978,500;
+			green crystal table,9979,500;
+			empty goldfish bowl,5928,10000;"
 		/>
 	</parameters>
 </npc>
