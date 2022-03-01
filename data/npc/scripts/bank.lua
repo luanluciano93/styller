@@ -76,7 +76,7 @@ local function creatureSayCallback(cid, type, msg)
 			return true
 		else
 			if string.match(msg,"%d+") then
-				count[cid] = getMoneyCount(msg)
+				count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
 				if count[cid] < 1 then
 					npcHandler:say("You do not have enough gold.", cid)
 					npcHandler.topic[cid] = topicList.NONE
@@ -97,8 +97,8 @@ local function creatureSayCallback(cid, type, msg)
 			return false
 		end
 	elseif npcHandler.topic[cid] == topicList.DEPOSIT_GOLD then
-		count[cid] = getMoneyCount(msg)
-		if isValidMoney(count[cid]) then
+		count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+		if count[cid] > 0 then
 			npcHandler:say("Would you really like to deposit " .. count[cid] .. " gold?", cid)
 			npcHandler.topic[cid] = topicList.DEPOSIT_CONSENT
 			return true
@@ -122,8 +122,8 @@ local function creatureSayCallback(cid, type, msg)
 		return true
 	elseif msgcontains(msg, "withdraw") then
 		if string.match(msg,"%d+") then
-			count[cid] = getMoneyCount(msg)
-			if isValidMoney(count[cid]) then
+			count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+			if count[cid] > 0 then
 				npcHandler:say("Are you sure you wish to withdraw " .. count[cid] .. " gold from your bank account?", cid)
 				npcHandler.topic[cid] = topicList.WITHDRAW_GOLD
 			else
@@ -137,8 +137,8 @@ local function creatureSayCallback(cid, type, msg)
 			return true
 		end
 	elseif npcHandler.topic[cid] == topicList.WITHDRAW_CONSENT then
-		count[cid] = getMoneyCount(msg)
-		if isValidMoney(count[cid]) then
+		count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+		if count[cid] > 0 then
 			npcHandler:say("Are you sure you wish to withdraw " .. count[cid] .. " gold from your bank account?", cid)
 			npcHandler.topic[cid] = topicList.WITHDRAW_GOLD
 		else
@@ -169,8 +169,8 @@ local function creatureSayCallback(cid, type, msg)
 		if #parts < 3 then
 			if #parts == 2 then
 				-- Immediate topicList.TRANSFER_PLAYER_GOLD simulation
-				count[cid] = getMoneyCount(parts[2])
-				if count[cid] ~= -1 then
+				count[cid] = tonumber(parts[2]) and getMoneyCount(parts[2]) or 0
+				if count[cid] > 0 then
 					if player:getBankBalance() < count[cid] then
 						npcHandler:say("There is not enough gold in your account.", cid)
 						npcHandler.topic[cid] = topicList.NONE
@@ -199,8 +199,8 @@ local function creatureSayCallback(cid, type, msg)
 			receiver = receiver:trim()
 
 			-- Immediate topicList.TRANSFER_PLAYER_GOLD simulation
-			count[cid] = getMoneyCount(parts[2])
-			if count[cid] ~= -1 then
+			count[cid] = tonumber(parts[2]) and getMoneyCount(parts[2]) or 0
+			if count[cid] > 0 then
 				if player:getBankBalance() < count[cid] then
 					npcHandler:say("There is not enough gold in your account.", cid)
 					npcHandler.topic[cid] = topicList.NONE
@@ -233,8 +233,8 @@ local function creatureSayCallback(cid, type, msg)
 			end
 		end
 	elseif npcHandler.topic[cid] == topicList.TRANSFER_PLAYER_GOLD then
-		count[cid] = getMoneyCount(msg)
-		if count[cid] ~= -1 then
+		count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+		if count[cid] > 0 then
 			if player:getBankBalance() < count[cid] then
 				npcHandler:say("There is not enough gold in your account.", cid)
 				npcHandler.topic[cid] = topicList.NONE
@@ -305,11 +305,11 @@ local function creatureSayCallback(cid, type, msg)
 		npcHandler:say("How many crystal coins would you like to change into platinum?", cid)
 		npcHandler.topic[cid] = topicList.CHANGE_CRYSTAL_PLATINUM
 	elseif npcHandler.topic[cid] == topicList.CHANGE_GOLD_PLATINUM then
-		if getMoneyCount(msg) < 1 then
+		count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+		if count[cid] < 1 then
 			npcHandler:say("Sorry, you do not have enough gold coins.", cid)
 			npcHandler.topic[cid] = topicList.NONE
 		else
-			count[cid] = getMoneyCount(msg)
 			npcHandler:say("So you would like me to change " .. count[cid] * 100 .. " of your gold coins into " .. count[cid] .. " platinum coins?", cid)
 			npcHandler.topic[cid] = topicList.CHANGE_GOLD_PLATINUM_CONSENT
 		end
@@ -337,11 +337,11 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = topicList.NONE
 		end
 	elseif npcHandler.topic[cid] == topicList.CHANGE_PLATINUM_GOLD then
-		if getMoneyCount(msg) < 1 then
+		count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+		if count[cid] < 1 then
 			npcHandler:say("Sorry, you do not have enough platinum coins.", cid)
 			npcHandler.topic[cid] = topicList.NONE
 		else
-			count[cid] = getMoneyCount(msg)
 			npcHandler:say("So you would like me to change " .. count[cid] .. " of your platinum coins into " .. count[cid] * 100 .. " gold coins for you?", cid)
 			npcHandler.topic[cid] = topicList.CHANGE_PLATINUM_GOLD_CONSENT
 		end
@@ -362,11 +362,11 @@ local function creatureSayCallback(cid, type, msg)
 		end
 		npcHandler.topic[cid] = topicList.NONE
 	elseif npcHandler.topic[cid] == topicList.CHANGE_PLATINUM_CRYSTAL then
-		if getMoneyCount(msg) < 1 then
+		count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+		if count[cid] < 1 then
 			npcHandler:say("Sorry, you do not have enough platinum coins.", cid)
 			npcHandler.topic[cid] = topicList.NONE
 		else
-			count[cid] = getMoneyCount(msg)
 			npcHandler:say("So you would like me to change " .. count[cid] * 100 .. " of your platinum coins into " .. count[cid] .. " crystal coins for you?", cid)
 			npcHandler.topic[cid] = topicList.CHANGE_PLATINUM_CRYSTAL_CONSENT
 		end
@@ -383,11 +383,11 @@ local function creatureSayCallback(cid, type, msg)
 		end
 		npcHandler.topic[cid] = topicList.NONE
 	elseif npcHandler.topic[cid] == topicList.CHANGE_CRYSTAL_PLATINUM then
-		if getMoneyCount(msg) < 1 then
+		count[cid] = tonumber(msg) and getMoneyCount(msg) or 0
+		if count[cid] < 1 then
 			npcHandler:say("Sorry, you do not have enough crystal coins.", cid)
 			npcHandler.topic[cid] = topicList.NONE
 		else
-			count[cid] = getMoneyCount(msg)
 			npcHandler:say("So you would like me to change " .. count[cid] .. " of your crystal coins into " .. count[cid] * 100 .. " platinum coins for you?", cid)
 			npcHandler.topic[cid] = topicList.CHANGE_CRYSTAL_PLATINUM_CONSENT
 		end
