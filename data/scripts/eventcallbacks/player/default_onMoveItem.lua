@@ -11,6 +11,16 @@ ec.onMoveItem = function(self, item, count, fromPosition, toPosition, fromCylind
 		end
 	end]]--
 
+	local tile = Tile(toPosition)
+	if tile then
+		local maxItemsPerTile = CUSTOM.maxItemsPerTile
+		if tile:getDownItemCount() >= maxItemsPerTile then
+			if self:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You can not add more items on this tile.") then
+				return false
+			end
+		end
+	end
+
 	if toPosition.x ~= CONTAINER_POSITION then
 		return true
 	end

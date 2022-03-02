@@ -12,7 +12,7 @@ CUSTOM = {
 		[6] = {12328, 6, "sixth"}, -- stamina refill
 		[7] = {2160, 7, "seventh"}
 	},
-	
+
 	-- creaturescripts
 	freeBlessMaxLevel = 50,
 	maxAccPorIp = 4,
@@ -43,7 +43,7 @@ CUSTOM = {
 		frags = {min = 1, max = 100, standard = 1},
 		daysMaxToInviteWar = 30,
 	},
-	buyHouse = { 
+	buyHouse = {
 		level = 150,
 		onlyPremium = false
 	},
@@ -69,6 +69,17 @@ CUSTOM = {
 		.. "!uptime",
 	valueForSendGuildBroadcast = 1000,
 
+	guildPoints = {
+		executeInterval = 24, -- em horas
+		minimumLevel = 80,
+		membersNeeded = 4,
+		checkDifferentIps = true,
+		minimumDifferentIps = 4,
+		pointAmount = 10,
+		accountStorage = 9999
+	},
+
+	-- revscripts
 	tradeOffine = {
 		aguardarStorage = Storage.tradeoff_delay,
 		levelParaAddOferta = 50,
@@ -91,14 +102,6 @@ CUSTOM = {
 		},
 		diasParaRemoverAOferta = 7
 	},
-	
-	guildPoints = {
-		executeInterval = 24, -- em horas
-		minimumLevel = 80,
-		membersNeeded = 4,
-		checkDifferentIps = true,
-		minimumDifferentIps = 4,
-		pointAmount = 10,
-		accountStorage = 9999
-	}
+
+	maxItemsPerTile = 15,
 }
