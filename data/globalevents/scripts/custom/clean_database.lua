@@ -43,11 +43,11 @@ end
 
 local function doCheckInactivePlayer() -- deleta automaticamente o dados das tabelas "houses, player_items, player_depotitems, player_deaths, guilds, player_storage"
 	local timeStamp = os.time() - (86400 * (inactiveMonthsToDeleteCharacter * 30))
-	local fromClause = "`players` WHERE `group_id` = 1 AND lastlogin <= ".. timeStamp
+	local fromClause = "`players` WHERE `group_id` = 1 AND `lastlogin` > 0 AND `lastlogin` <= ".. timeStamp
 	return executeDatabase(fromClause)
 end
 
-local function doCheckEmptyAccounts() -- deleta automaticamente o dados das tabelas  "player_viplist"
+local function doCheckEmptyAccounts() -- deleta automaticamente o dados das tabelas "player_viplist"
 	local timeStamp = os.time() - (86400 * (emptyAccountMonths * 30))
 	local fromClause = "`accounts` WHERE `accounts`.`creation` <= ".. timeStamp .." AND `type` = 1 AND NOT EXISTS (SELECT `id` FROM `players` WHERE `accounts`.`id` = `players`.`account_id`)"
 	return executeDatabase(fromClause)
@@ -79,7 +79,7 @@ local function doCheckInactiveHouseLists() -- Apagando "house_lists" do player
 	return executeDatabase(fromClause)
 end
 
-local function doCheckInactiveGuilds() -- deleta automaticamente o dados das tabelas  "guild_invites, guild_membership, guild_ranks"
+local function doCheckInactiveGuilds() -- deleta automaticamente o dados das tabelas "guild_invites, guild_membership, guild_ranks"
 	local timeStamp = os.time() - (86400 * (inactiveDaysToCleanGuildWithFewPlayers))
 	local fromClause = "`guilds` WHERE `guilds`.`creationdata` <= ".. timeStamp .." AND (SELECT COUNT(*) from `guild_membership` WHERE `guild_membership`.`guild_id` = `guilds`.`id`) < " .. minimumGuildMembers .. ""
 	return executeDatabase(fromClause)

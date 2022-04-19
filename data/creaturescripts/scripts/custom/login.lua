@@ -37,7 +37,7 @@ function onLogin(player)
 		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, "You have "..player:getPremiumDays().." days of premium account.")
 	end
 
-	player:openChannel(9) -- Deathcast
+	player:openChannel(11) -- Deathcast
 
 	return true
 end

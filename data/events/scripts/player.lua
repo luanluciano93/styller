@@ -153,7 +153,7 @@ function Player:onGainExperience(source, exp, rawExp)
 	end
 
 	if self:isPremium() then
-		exp = exp * 0.2
+		exp = exp * 1.2
 	end
 
 	return hasEventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE) and EventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE, self, source, exp, rawExp) or exp
