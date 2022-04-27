@@ -57,11 +57,14 @@ local function retornarItemsdoContainer(uid)
 		end
 
 		-- Verifique se há recipientes com itens dentro
-		local containerDentroDoContainer = Container(itemDentroDoContainer)
+		local containerDentroDoContainer = itemDentroDoContainer:isContainer()
 		if containerDentroDoContainer then
-			local containerComItemDentroDoContainer = containerDentroDoContainer:getItem(0)
-			if containerComItemDentroDoContainer then
-				return false
+			local tamanhoDoContainerDentroDoContainer = itemDentroDoContainer:getSize()
+			for i = (tamanhoDoContainerDentroDoContainer - 1), 0, -1 do
+				local itemDentroDoContainerDentroDoContainer = itemDentroDoContainer:getItem(i)
+				if itemDentroDoContainerDentroDoContainer then
+					return false
+				end
 			end
 		end
 
