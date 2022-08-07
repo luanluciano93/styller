@@ -48,6 +48,11 @@ Storage = {
 		demodras = 50037,
 		demons = 50038
 	},
+
+	-- used for 50100 at 50150
+	autolootBase = 50100,
+	autolootGoldAtive = 50151,
+
 	task = {
 		storageTaskBase = 60000,
 		killsTaskBase = 61000,
