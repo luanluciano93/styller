@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `premium_ends_at` int unsigned NOT NULL DEFAULT '0',
   `email` varchar(255) NOT NULL DEFAULT '',
   `creation` int NOT NULL DEFAULT '0',
+  `tibia_coins` int unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
@@ -286,17 +287,6 @@ CREATE TABLE IF NOT EXISTS `player_deaths` (
   KEY `mostdamage_by` (`mostdamage_by`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 
-CREATE TABLE IF NOT EXISTS `player_depotitems` (
-  `player_id` int NOT NULL,
-  `sid` int NOT NULL COMMENT 'any given range eg 0-100 will be reserved for depot lockers and all > 100 will be then normal items inside depots',
-  `pid` int NOT NULL DEFAULT '0',
-  `itemtype` smallint unsigned NOT NULL,
-  `count` smallint NOT NULL DEFAULT '0',
-  `attributes` blob NOT NULL,
-  UNIQUE KEY `player_id_2` (`player_id`, `sid`),
-  FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
-
 CREATE TABLE IF NOT EXISTS `player_inboxitems` (
   `player_id` int NOT NULL,
   `sid` int NOT NULL,
@@ -330,11 +320,22 @@ CREATE TABLE IF NOT EXISTS `player_depotlockeritems` (
   FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 
+CREATE TABLE IF NOT EXISTS `player_depotitems` (
+  `player_id` int NOT NULL,
+  `sid` int NOT NULL COMMENT 'any given range eg 0-100 will be reserved for depot lockers and all > 100 will be then normal items inside depots',
+  `pid` int NOT NULL DEFAULT '0',
+  `itemtype` smallint unsigned NOT NULL,
+  `count` smallint NOT NULL DEFAULT '0',
+  `attributes` blob NOT NULL,
+  UNIQUE KEY `player_id_2` (`player_id`, `sid`),
+  FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+
 CREATE TABLE IF NOT EXISTS `player_items` (
   `player_id` int NOT NULL DEFAULT '0',
   `pid` int NOT NULL DEFAULT '0',
   `sid` int NOT NULL DEFAULT '0',
-  `itemtype` smallint unsigned NOT NULL DEFAULT '0',
+  `itemtype` smallint unsigned NOT NULL,
   `count` smallint NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL,
   FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE,
@@ -352,6 +353,14 @@ CREATE TABLE IF NOT EXISTS `player_storage` (
   `key` int unsigned NOT NULL DEFAULT '0',
   `value` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`player_id`,`key`),
+  FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+
+CREATE TABLE IF NOT EXISTS `player_outfits` (
+  `player_id` int NOT NULL DEFAULT '0',
+  `outfit_id` smallint unsigned NOT NULL DEFAULT '0',
+  `addons` tinyint unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`player_id`,`outfit_id`),
   FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 
@@ -377,18 +386,6 @@ CREATE TABLE IF NOT EXISTS `towns` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 
--- lottery system
-CREATE TABLE IF NOT EXISTS `lottery` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `player_id` int NOT NULL,
-  `item_id` smallint unsigned NOT NULL,
-  `item_count` smallint unsigned NOT NULL DEFAULT '1',
-  `item_name` varchar(255) NOT NULL,
-  `addData` int NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
-
 INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '30'), ('motd_hash', ''), ('motd_num', '0'), ('players_record', '0');
 
 DROP TRIGGER IF EXISTS `ondelete_players`;
@@ -408,3 +405,15 @@ CREATE TRIGGER `oncreate_guilds` AFTER INSERT ON `guilds`
 END
 //
 DELIMITER ;
+
+-- lottery system
+CREATE TABLE IF NOT EXISTS `lottery` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `player_id` int NOT NULL,
+  `item_id` smallint unsigned NOT NULL,
+  `item_count` smallint unsigned NOT NULL DEFAULT '1',
+  `item_name` varchar(255) NOT NULL,
+  `addData` int NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
