@@ -99,8 +99,10 @@ minimumLevelToSendPrivate = 1
 premiumToSendPrivate = false
 forceMonsterTypesOnLoad = true
 cleanProtectionZones = false
-luaItemDesc = false
 showPlayerLogInConsole = true
+healthGainColour = 95
+manaGainColour = 5
+manaLossColour = 5
 
 -- VIP e Depot limites
 -- NOTA: você pode definir limites personalizados por grupo em data/XML/groups.xml
