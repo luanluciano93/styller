@@ -1,0 +1,13 @@
+root = true
+
+# General configuration
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{lua,xml}]
+tab_width = 4
+indent_size = tab
+indent_style = tab
