@@ -1,6 +1,5 @@
 
-*.dll
-*.exe
 config.lua
 client_assertions.txt
 data/talkactions/scripts/custom/test.lua
+vc17/
