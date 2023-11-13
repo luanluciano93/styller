@@ -18,6 +18,6 @@ Desenvolvimento de um servidor Styller usando o TFS 1.5 MillhioreBT Downgrade na
 ### Créditos:
 - luanluciano93
 - GOD Bon (mapa yourots)
-- Nekiro e TFS team (pela engine do servidor)
+- MillhioreBT, Nekiro e TFS team (pela engine do servidor)
 - leoloko12 (mapa styller)
 - [outros](https://github.com/luanluciano93/styller/wiki/COLABORADORES)
